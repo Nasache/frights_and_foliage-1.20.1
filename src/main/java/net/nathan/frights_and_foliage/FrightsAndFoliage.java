@@ -2,6 +2,12 @@ package net.nathan.frights_and_foliage;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.entity.ModBlockEntities;
+import net.nathan.frights_and_foliage.entity.ModBoats;
+import net.nathan.frights_and_foliage.item.ModItemGroup;
+import net.nathan.frights_and_foliage.item.ModItems;
+import net.nathan.frights_and_foliage.particle.ModParticles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +17,24 @@ public class FrightsAndFoliage implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroup.registerItemGroups();
+		ModItems.registerModItems();
+
+		ModBlocks.registerModBlocks();
+
+		//ModRegistries.registerModStuffs();
+
+		//ModEntities.registerModEntities();
+
+		//ModWorldGeneration.generateModWorldGeneration();
+
+		//ModSounds.registerSounds();
+
+		ModBlockEntities.registerBlockEntities();
+		ModBoats.registerBoats();
+
+		ModParticles.registerParticles();
+
+		//ModPaintings.registerPaintings();
 	}
 }
