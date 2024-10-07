@@ -9,11 +9,5 @@ import net.nathan.frights_and_foliage.world.ModPlacedFeatures;
 
 public class ModTreeGeneration {
     public static void generateTrees() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RED_ACER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ORANGE_ACER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_ACER_PLACED_KEY);
     }
 }

@@ -6,7 +6,7 @@ public class ModWorldGeneration {
 
         //ModOreGeneration.generateOres();
 
-        ModTreeGeneration.generateTrees();
+        //ModTreeGeneration.generateTrees();
 
         //ModFlowerGeneration.generateFlowers();
 

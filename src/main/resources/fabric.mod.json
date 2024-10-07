@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.nathan.frights_and_foliage.FrightsAndFoliageClient"
+		],
+		"terrablender": [
+			"net.nathan.frights_and_foliage.world.biome.ModTerraBlenderAPI"
 		]
 	},
 	"mixins": [

@@ -28,9 +28,9 @@ public class AcerFoliagePlacer extends FoliagePlacer {
     @Override
     protected void generate(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, int trunkHeight,
                             TreeNode treeNode, int foliageHeight, int radius, int offset) {
-        for(int i = 2; i < 3; i++) {
+        for(int i = 3; i < 5; i++) {
             this.generateSquare(world, placer, random, config, treeNode.getCenter(), 0, i, treeNode.isGiantTrunk());
-        } for(int i = 0; i < 2; i++) {
+        } for(int i = 0; i < 3; i++) {
             this.generateSquare(world, placer, random, config, treeNode.getCenter(), 1, i, treeNode.isGiantTrunk());
         } for(int i = -4; i < 0; i++) {
             this.generateSquare(world, placer, random, config, treeNode.getCenter(), 2, i, treeNode.isGiantTrunk());
@@ -46,7 +46,8 @@ public class AcerFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected boolean isInvalidForLeaves(Random random, int dx, int y, int dz, int radius, boolean giantTrunk) {
-        return dx == radius && dz == radius &&  y == 1 ||
+        return dx == radius && dz == radius &&  y == 2 ||
+                dx == radius && dz == radius &&  y == 1 ||
                 dx == 2 && dz >= 1 &&  y == -1 ||
                 dx == 1 && dz == 2 &&  y == -1 ||
                 dx == radius && dz == radius &&  y <= -2;
