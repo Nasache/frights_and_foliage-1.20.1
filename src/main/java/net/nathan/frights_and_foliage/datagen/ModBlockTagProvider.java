@@ -44,6 +44,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.RED_ACER_LEAVES,
+                        ModBlocks.ORANGE_ACER_LEAVES,
                         ModBlocks.YELLOW_ACER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)

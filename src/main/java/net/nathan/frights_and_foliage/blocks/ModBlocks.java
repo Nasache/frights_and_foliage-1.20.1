@@ -11,6 +11,9 @@ import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.custom.*;
 import net.nathan.frights_and_foliage.util.ModWoodTypes;
+import net.nathan.frights_and_foliage.world.tree.OrangeAcerSaplingGenerator;
+import net.nathan.frights_and_foliage.world.tree.RedAcerSaplingGenerator;
+import net.nathan.frights_and_foliage.world.tree.YellowAcerSaplingGenerator;
 
 public class ModBlocks {
 
@@ -46,18 +49,24 @@ public class ModBlocks {
             new OrangeAcerLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE)));
     public static final Block YELLOW_ACER_LEAVES = registerBlock("yellow_acer_leaves",
             new YellowAcerLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.YELLOW)));
-    //public static final Block RED_ACER_SAPLING = registerBlock("red_acer_sapling",
-    //        new SaplingBlock(new RedAcerSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
-    //public static final Block POTTED_RED_ACER_SAPLING = registerBlockWithoutBlockItem("potted_red_acer_sapling",
-    //        new FlowerPotBlock(RED_ACER_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
 
-    //public static final Block YELLOW_ACER_SAPLING = registerBlock("yellow_acer_sapling",
-    //        new SaplingBlock(new YellowMapleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.YELLOW)));
-    //public static final Block POTTED_YELLOW_ACER_SAPLING = registerBlockWithoutBlockItem("potted_yellow_acer_sapling",
-    //        new FlowerPotBlock(YELLOW_ACER_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.YELLOW)));
+    public static final Block RED_ACER_SAPLING = registerBlock("red_acer_sapling",
+            new SaplingBlock(new RedAcerSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
+    public static final Block POTTED_RED_ACER_SAPLING = registerBlockWithoutBlockItem("potted_red_acer_sapling",
+            new FlowerPotBlock(RED_ACER_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
+
+    public static final Block ORANGE_ACER_SAPLING = registerBlock("orange_acer_sapling",
+            new SaplingBlock(new OrangeAcerSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.ORANGE)));
+    public static final Block POTTED_ORANGE_ACER_SAPLING = registerBlockWithoutBlockItem("potted_orange_acer_sapling",
+            new FlowerPotBlock(ORANGE_ACER_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.ORANGE)));
+
+    public static final Block YELLOW_ACER_SAPLING = registerBlock("yellow_acer_sapling",
+            new SaplingBlock(new YellowAcerSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.YELLOW)));
+    public static final Block POTTED_YELLOW_ACER_SAPLING = registerBlockWithoutBlockItem("potted_yellow_acer_sapling",
+            new FlowerPotBlock(YELLOW_ACER_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.YELLOW)));
 
     public static final Block ACER_LEAVES = registerBlock("acer_leaves",
-            new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).mapColor(MapColor.ORANGE)));
+            new AcerLeavesBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).mapColor(MapColor.ORANGE)));
 
     public static final Block ACER_SIGN = registerBlockWithoutBlockItem("acer_sign",
             new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN), ModWoodTypes.ACER));

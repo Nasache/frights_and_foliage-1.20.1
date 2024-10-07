@@ -1,0 +1,34 @@
+{
+  "block.frights_and_foliage.acer_planks": "Acer Planks",
+  "block.frights_and_foliage.acer_stairs": "Acer Stairs",
+  "block.frights_and_foliage.acer_slab": "Acer Slab",
+  "block.frights_and_foliage.acer_button": "Acer Button",
+  "block.frights_and_foliage.acer_pressure_plate": "Acer Pressure Plate",
+  "block.frights_and_foliage.acer_fence": "Acer Fence",
+  "block.frights_and_foliage.acer_fence_gate": "Acer Fence Gate",
+  "block.frights_and_foliage.acer_door": "Acer Door",
+  "block.frights_and_foliage.acer_trapdoor": "Acer Trapdoor",
+  "block.frights_and_foliage.acer_log": "Acer Log",
+  "block.frights_and_foliage.acer_wood": "Acer Wood",
+  "block.frights_and_foliage.stripped_acer_log": "Stripped Acer Log",
+  "block.frights_and_foliage.stripped_acer_wood": "Stripped Acer Wood",
+
+  "block.frights_and_foliage.acer_sign": "Acer Sign",
+  "block.frights_and_foliage.acer_hanging_sign": "Acer Hanging Sign",
+
+  "item.frights_and_foliage.acer_boat": "Acer Boat",
+  "item.frights_and_foliage.acer_chest_boat": "Acer Chest Boat",
+
+  "block.frights_and_foliage.red_acer_sapling": "Red Acer Sapling",
+  "block.frights_and_foliage.orange_acer_sapling": "Orange Acer Sapling",
+  "block.frights_and_foliage.yellow_acer_sapling": "Yellow Acer Sapling",
+
+  "block.frights_and_foliage.red_acer_leaves": "Red Acer Leaves",
+  "block.frights_and_foliage.orange_acer_leaves": "Orange Acer Leaves",
+  "block.frights_and_foliage.yellow_acer_leaves": "Yellow Acer Leaves",
+
+  "block.frights_and_foliage.acer_leaves": "Acer Leaves",
+
+  "itemgroup.frights_and_foliage": "Frights And Foliage"
+
+}

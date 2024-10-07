@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.item.ModItems;
 
 import static net.minecraft.data.client.BlockStateModelGenerator.TintType.NOT_TINTED;
 
@@ -36,13 +37,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORANGE_ACER_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_ACER_LEAVES);
 
-        blockStateModelGenerator.registerFlowerbed(ModBlocks.ACER_LEAVES);
 
-        //blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ACER_SAPLING, ModBlocks.POTTED_RED_ACER_SAPLING, NOT_TINTED);
-        //blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_ACER_SAPLING, ModBlocks.POTTED_YELLOW_ACER_SAPLING, NOT_TINTED);
+
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ACER_SAPLING, ModBlocks.POTTED_RED_ACER_SAPLING, NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_ACER_SAPLING, ModBlocks.POTTED_ORANGE_ACER_SAPLING, NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_ACER_SAPLING, ModBlocks.POTTED_YELLOW_ACER_SAPLING, NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
+        itemModelGenerator.register(ModItems.ACER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ACER_CHEST_BOAT, Models.GENERATED);
     }
 }

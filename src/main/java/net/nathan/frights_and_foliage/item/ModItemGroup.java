@@ -32,9 +32,9 @@ public class ModItemGroup {
                         entries.add(ModBlocks.ACER_TRAPDOOR);
                         entries.add(ModItems.ACER_SIGN);
                         entries.add(ModItems.ACER_HANGING_SIGN);
-                        //entries.add(ModBlocks.RED_ACER_SAPLING);
-                        //entries.add(ModBlocks.ORANGE_ACER_SAPLING);
-                        //entries.add(ModBlocks.YELLOW_ACER_SAPLING);
+                        entries.add(ModBlocks.RED_ACER_SAPLING);
+                        entries.add(ModBlocks.ORANGE_ACER_SAPLING);
+                        entries.add(ModBlocks.YELLOW_ACER_SAPLING);
                         entries.add(ModBlocks.RED_ACER_LEAVES);
                         entries.add(ModBlocks.ORANGE_ACER_LEAVES);
                         entries.add(ModBlocks.YELLOW_ACER_LEAVES);

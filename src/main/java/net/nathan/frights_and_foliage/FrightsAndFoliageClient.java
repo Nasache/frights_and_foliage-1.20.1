@@ -23,11 +23,14 @@ import net.nathan.frights_and_foliage.util.ModWoodTypes;
 public class FrightsAndFoliageClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACER_SAPLING, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_RED_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ORANGE_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_ORANGE_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_ACER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_YELLOW_ACER_SAPLING, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACER_LEAVES, RenderLayer.getCutout());
-
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_ACER_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_ACER_LEAVES, RenderLayer.getCutout());
@@ -41,7 +44,6 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.ACER, TexturedRenderLayers.getSignTextureId(ModWoodTypes.ACER));
 
-        assert ModBoats.ACER_BOAT_ID != null;
         TerraformBoatClientHelper.registerModelLayers(ModBoats.ACER_BOAT_ID, false);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.RED_ACER_PARTICLE, RedAcerParticles.Factory::new);
