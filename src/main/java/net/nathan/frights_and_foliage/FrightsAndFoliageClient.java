@@ -50,6 +50,9 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.ORANGE_ACER_PARTICLE, OrangeAcerParticles.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.YELLOW_ACER_PARTICLE, YellowAcerParticles.Factory::new);
 
-
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_PUMPKIN_STEM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
     }
 }

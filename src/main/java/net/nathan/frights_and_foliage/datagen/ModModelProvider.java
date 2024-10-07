@@ -42,6 +42,20 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ACER_SAPLING, ModBlocks.POTTED_RED_ACER_SAPLING, NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_ACER_SAPLING, ModBlocks.POTTED_ORANGE_ACER_SAPLING, NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_ACER_SAPLING, ModBlocks.POTTED_YELLOW_ACER_SAPLING, NOT_TINTED);
+
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.WARPED_PUMPKIN, TexturedModel.CUBE_COLUMN);
+        blockStateModelGenerator.registerGourd(ModBlocks.WARPED_PUMPKIN_STEM, ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CARVED_WARPED_PUMPKIN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.WARPED_JACK_O_LANTERN);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.CRIMSON_PUMPKIN, TexturedModel.CUBE_COLUMN);
+        blockStateModelGenerator.registerGourd(ModBlocks.CRIMSON_PUMPKIN_STEM, ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CARVED_CRIMSON_PUMPKIN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CRIMSON_JACK_O_LANTERN);
+
     }
 
     @Override
@@ -49,5 +63,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.ACER_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ACER_CHEST_BOAT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.WARPED_PUMPKIN_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
     }
 }

@@ -2,8 +2,10 @@ package net.nathan.frights_and_foliage.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
@@ -61,5 +63,44 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerBoatRecipe(exporter, ModItems.ACER_BOAT, ModBlocks.ACER_PLANKS);
         offerChestBoatRecipe(exporter, ModItems.ACER_CHEST_BOAT, ModItems.ACER_BOAT);
+
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_SEEDS, 4)
+                .group("pumpkin_seeds")
+                .input(ModBlocks.WARPED_PUMPKIN)
+                .criterion(hasItem(ModBlocks.WARPED_PUMPKIN), conditionsFromItem(ModBlocks.WARPED_PUMPKIN))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WARPED_JACK_O_LANTERN)
+                .group("jack_o_lanterns")
+                .input(ModBlocks.CARVED_WARPED_PUMPKIN)
+                .input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(ModBlocks.CARVED_WARPED_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_WARPED_PUMPKIN))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_PIE)
+                .group("pumpkin_pies")
+                .input(ModBlocks.WARPED_PUMPKIN)
+                .input(Items.SUGAR)
+                .input(Items.EGG)
+                .criterion(hasItem(ModBlocks.WARPED_PUMPKIN), conditionsFromItem(ModBlocks.WARPED_PUMPKIN))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRIMSON_PUMPKIN_SEEDS, 4)
+                .group("pumpkin_seeds")
+                .input(ModBlocks.CRIMSON_PUMPKIN)
+                .criterion(hasItem(ModBlocks.CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CRIMSON_PUMPKIN))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CRIMSON_JACK_O_LANTERN)
+                .group("jack_o_lanterns")
+                .input(ModBlocks.CARVED_CRIMSON_PUMPKIN)
+                .input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(ModBlocks.CARVED_CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_CRIMSON_PUMPKIN))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRIMSON_PUMPKIN_PIE)
+                .group("pumpkin_pies")
+                .input(ModBlocks.CRIMSON_PUMPKIN)
+                .input(Items.SUGAR)
+                .input(Items.EGG)
+                .criterion(hasItem(ModBlocks.CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CRIMSON_PUMPKIN))
+                .offerTo(exporter);
     }
 }

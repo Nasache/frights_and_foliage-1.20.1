@@ -42,6 +42,18 @@ public class ModItemGroup {
 
                         entries.add(ModItems.ACER_BOAT);
                         entries.add(ModItems.ACER_CHEST_BOAT);
+
+                        entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
+                        entries.add(ModBlocks.WARPED_PUMPKIN);
+                        entries.add(ModBlocks.CARVED_WARPED_PUMPKIN);
+                        entries.add(ModBlocks.WARPED_JACK_O_LANTERN);
+                        entries.add(ModItems.WARPED_PUMPKIN_PIE);
+
+                        entries.add(ModItems.CRIMSON_PUMPKIN_SEEDS);
+                        entries.add(ModBlocks.CRIMSON_PUMPKIN);
+                        entries.add(ModBlocks.CARVED_CRIMSON_PUMPKIN);
+                        entries.add(ModBlocks.CRIMSON_JACK_O_LANTERN);
+                        entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
                     }).build());
 
     public static void registerItemGroups() {

@@ -11,6 +11,7 @@ import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -36,24 +37,27 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_PUMPKIN_KEY = registerKey("autumn_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_FLOWER_KEY = registerKey("autumn_flower");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CRIMSON_PUMPKIN_KEY = registerKey("crimson_pumpkin");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WARPED_PUMPKIN_KEY = registerKey("warped_pumpkin");
+
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
         register(context, RED_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(8, 2, 3),
+                new StraightTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.RED_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, ORANGE_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(8, 2, 3),
+                new StraightTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.ORANGE_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, YELLOW_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(8, 2, 3),
+                new StraightTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.YELLOW_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
@@ -86,10 +90,20 @@ public class ModConfiguredFeatures {
                                 List.of(Blocks.DANDELION.getDefaultState(),
                                         Blocks.POPPY.getDefaultState(),
                                         Blocks.RED_TULIP.getDefaultState(),
-                                        Blocks.ORANGE_TULIP.getDefaultState(),
-                                        Blocks.LILY_OF_THE_VALLEY.getDefaultState()))))));
+                                        Blocks.ORANGE_TULIP.getDefaultState()))))));
 
 
+        ConfiguredFeatures.register(context, PATCH_CRIMSON_PUMPKIN_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchFeatureConfig(48, 6, 3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CRIMSON_PUMPKIN)),
+                        BlockPredicate.allOf(BlockPredicate.replaceable(),
+                                BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.CRIMSON_NYLIUM, Blocks.NETHERRACK)))));
+
+        ConfiguredFeatures.register(context, PATCH_WARPED_PUMPKIN_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchFeatureConfig(48, 6, 3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WARPED_PUMPKIN)),
+                        BlockPredicate.allOf(BlockPredicate.replaceable(),
+                                BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.WARPED_NYLIUM, Blocks.NETHERRACK)))));
     }
 
 

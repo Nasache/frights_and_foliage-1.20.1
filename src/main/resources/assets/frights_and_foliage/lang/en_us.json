@@ -29,6 +29,18 @@
 
   "block.frights_and_foliage.acer_leaves": "Acer Leaves",
 
+  "item.frights_and_foliage.warped_pumpkin_seeds": "Warped Pumpkin Seeds",
+  "block.frights_and_foliage.warped_pumpkin": "Warped Pumpkin",
+  "block.frights_and_foliage.carved_warped_pumpkin": "Carved Warped Pumpkin",
+  "block.frights_and_foliage.warped_jack_o_lantern": "Warped Jack o'Lantern",
+
+  "item.frights_and_foliage.crimson_pumpkin_seeds": "Crimson Pumpkin Seeds",
+  "block.frights_and_foliage.crimson_pumpkin": "Crimson Pumpkin",
+  "block.frights_and_foliage.carved_crimson_pumpkin": "Carved Crimson Pumpkin",
+  "block.frights_and_foliage.crimson_jack_o_lantern": "Crimson Jack o'Lantern",
+  
+  
+
   "itemgroup.frights_and_foliage": "Frights And Foliage"
 
 }

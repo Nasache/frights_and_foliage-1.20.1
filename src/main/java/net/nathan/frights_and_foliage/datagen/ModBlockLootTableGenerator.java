@@ -3,6 +3,7 @@ package net.nathan.frights_and_foliage.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.item.ModItems;
 
 
 public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
@@ -40,6 +41,21 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POTTED_YELLOW_ACER_SAPLING, pottedPlantDrops(ModBlocks.YELLOW_ACER_SAPLING));
 
         addDrop(ModBlocks.ACER_LEAVES, flowerbedDrops(ModBlocks.ACER_LEAVES));
+
+        addDrop(ModBlocks.WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.WARPED_PUMPKIN_STEM,
+                ModItems.WARPED_PUMPKIN_SEEDS));
+        addDrop(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM,
+                ModItems.WARPED_PUMPKIN_SEEDS));
+        addDrop(ModBlocks.CRIMSON_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.CRIMSON_PUMPKIN_STEM,
+                ModItems.CRIMSON_PUMPKIN_SEEDS));
+        addDrop(ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM,
+                ModItems.CRIMSON_PUMPKIN_SEEDS));
+        addDrop(ModBlocks.WARPED_PUMPKIN);
+        addDrop(ModBlocks.CARVED_WARPED_PUMPKIN);
+        addDrop(ModBlocks.WARPED_JACK_O_LANTERN);
+        addDrop(ModBlocks.CRIMSON_PUMPKIN);
+        addDrop(ModBlocks.CARVED_CRIMSON_PUMPKIN);
+        addDrop(ModBlocks.CRIMSON_JACK_O_LANTERN);
 
     }
 }

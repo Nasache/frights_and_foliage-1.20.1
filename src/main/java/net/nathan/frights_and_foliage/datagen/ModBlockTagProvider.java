@@ -36,8 +36,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ACER_HANGING_SIGN,
                         ModBlocks.ACER_SIGN,
                         ModBlocks.ACER_WALL_SIGN,
-                        ModBlocks.ACER_WALL_HANGING_SIGN);
-
+                        ModBlocks.ACER_WALL_HANGING_SIGN,
+                        ModBlocks.CRIMSON_PUMPKIN,
+                        ModBlocks.CARVED_CRIMSON_PUMPKIN,
+                        ModBlocks.CRIMSON_JACK_O_LANTERN,
+                        ModBlocks.WARPED_PUMPKIN,
+                        ModBlocks.CARVED_WARPED_PUMPKIN,
+                        ModBlocks.WARPED_JACK_O_LANTERN);
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.ACER_PLANKS);
