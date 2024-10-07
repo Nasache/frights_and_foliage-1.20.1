@@ -58,5 +58,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         createSignRecipe(ModItems.ACER_SIGN, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
                 .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_SIGN)));
+
+        offerBoatRecipe(exporter, ModItems.ACER_BOAT, ModBlocks.ACER_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.ACER_CHEST_BOAT, ModItems.ACER_BOAT);
     }
 }

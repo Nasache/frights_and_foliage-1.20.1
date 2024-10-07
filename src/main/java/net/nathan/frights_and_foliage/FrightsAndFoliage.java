@@ -8,6 +8,7 @@ import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.item.ModItemGroup;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.particle.ModParticles;
+import net.nathan.frights_and_foliage.util.ModRegistries;
 import net.nathan.frights_and_foliage.world.biome.ModBiomes;
 import net.nathan.frights_and_foliage.world.gen.ModWorldGeneration;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
@@ -25,7 +26,7 @@ public class FrightsAndFoliage implements ModInitializer {
 
 		ModBlocks.registerModBlocks();
 
-		//ModRegistries.registerModStuffs();
+		ModRegistries.registerModStuffs();
 
 		//ModEntities.registerModEntities();
 
