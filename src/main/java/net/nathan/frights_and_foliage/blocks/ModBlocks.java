@@ -85,43 +85,43 @@ public class ModBlocks {
 
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
-            new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN)));
+            new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block CARVED_WARPED_PUMPKIN = registerBlock("carved_warped_pumpkin",
-            new WearableCarvedPumpkinBlock(FabricBlockSettings.copyOf(CARVED_PUMPKIN)));
+            new WearableCarvedPumpkinBlock(FabricBlockSettings.copyOf(CARVED_PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block WARPED_JACK_O_LANTERN = registerBlock("warped_jack_o_lantern",
-            new CarvedPumpkinBlock(FabricBlockSettings.copyOf(JACK_O_LANTERN)));
+            new CarvedPumpkinBlock(FabricBlockSettings.copyOf(JACK_O_LANTERN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block WARPED_PUMPKIN_STEM = registerBlockWithoutBlockItem("warped_pumpkin_stem",
             (Block)new WarpedPumpkinStemBlock((WarpedGourdBlock) WARPED_PUMPKIN, () -> ModItems.WARPED_PUMPKIN_SEEDS,
-                    AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN)
+                    AbstractBlock.Settings.create().mapColor(MapColor.CYAN)
                             .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.STEM)
                             .pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block ATTACHED_WARPED_PUMPKIN_STEM = registerBlockWithoutBlockItem("attached_warped_pumpkin_stem",
             (Block)new AttachedWarpedPumpkinStemBlock((WarpedGourdBlock) WARPED_PUMPKIN, () -> ModItems.WARPED_PUMPKIN_SEEDS,
-                    AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN)
+                    AbstractBlock.Settings.create().mapColor(MapColor.CYAN)
                             .noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
 
 
     public static final Block CRIMSON_PUMPKIN = registerBlock("crimson_pumpkin",
-            new CrimsonPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN)));
+            new CrimsonPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.DARK_RED).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block CARVED_CRIMSON_PUMPKIN = registerBlock("carved_crimson_pumpkin",
-            new WearableCarvedPumpkinBlock(FabricBlockSettings.copyOf(CARVED_PUMPKIN)));
+            new WearableCarvedPumpkinBlock(FabricBlockSettings.copyOf(CARVED_PUMPKIN).mapColor(MapColor.DARK_RED).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block CRIMSON_JACK_O_LANTERN = registerBlock("crimson_jack_o_lantern",
-            new CarvedPumpkinBlock(FabricBlockSettings.copyOf(JACK_O_LANTERN)));
+            new CarvedPumpkinBlock(FabricBlockSettings.copyOf(JACK_O_LANTERN).mapColor(MapColor.DARK_RED).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block CRIMSON_PUMPKIN_STEM = registerBlockWithoutBlockItem("crimson_pumpkin_stem",
             (Block)new CrimsonPumpkinStemBlock((CrimsonGourdBlock) CRIMSON_PUMPKIN, () -> ModItems.CRIMSON_PUMPKIN_SEEDS,
-                    AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN)
+                    AbstractBlock.Settings.create().mapColor(MapColor.BROWN)
                             .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.STEM)
                             .pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block ATTACHED_CRIMSON_PUMPKIN_STEM = registerBlockWithoutBlockItem("attached_crimson_pumpkin_stem",
             (Block)new AttachedCrimsonPumpkinStemBlock((CrimsonGourdBlock) CRIMSON_PUMPKIN, () -> ModItems.CRIMSON_PUMPKIN_SEEDS,
-                    AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN)
+                    AbstractBlock.Settings.create().mapColor(MapColor.BROWN)
                             .noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
 

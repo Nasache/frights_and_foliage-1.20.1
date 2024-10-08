@@ -4,10 +4,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.item.ModItems;
@@ -70,10 +72,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModBlocks.WARPED_PUMPKIN)
                 .criterion(hasItem(ModBlocks.WARPED_PUMPKIN), conditionsFromItem(ModBlocks.WARPED_PUMPKIN))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WARPED_JACK_O_LANTERN)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.WARPED_JACK_O_LANTERN)
                 .group("jack_o_lanterns")
-                .input(ModBlocks.CARVED_WARPED_PUMPKIN)
-                .input(Blocks.SOUL_TORCH)
+                .pattern("A")
+                .pattern("B")
+                .input('A', ModBlocks.CARVED_WARPED_PUMPKIN)
+                .input('B', Blocks.SOUL_TORCH)
                 .criterion(hasItem(ModBlocks.CARVED_WARPED_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_WARPED_PUMPKIN))
                 .offerTo(exporter);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_PIE)
@@ -89,10 +93,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModBlocks.CRIMSON_PUMPKIN)
                 .criterion(hasItem(ModBlocks.CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CRIMSON_PUMPKIN))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CRIMSON_JACK_O_LANTERN)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CRIMSON_JACK_O_LANTERN)
                 .group("jack_o_lanterns")
-                .input(ModBlocks.CARVED_CRIMSON_PUMPKIN)
-                .input(Blocks.SOUL_TORCH)
+                .pattern("A")
+                .pattern("B")
+                .input('A', ModBlocks.CARVED_CRIMSON_PUMPKIN)
+                .input('B', Blocks.SOUL_TORCH)
                 .criterion(hasItem(ModBlocks.CARVED_CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_CRIMSON_PUMPKIN))
                 .offerTo(exporter);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRIMSON_PUMPKIN_PIE)
