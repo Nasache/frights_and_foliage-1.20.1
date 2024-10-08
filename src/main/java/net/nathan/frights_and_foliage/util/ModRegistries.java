@@ -1,11 +1,14 @@
 package net.nathan.frights_and_foliage.util;
 
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.ComposterBlock;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 import net.nathan.frights_and_foliage.item.ModItems;
 
 public class ModRegistries {
@@ -14,10 +17,11 @@ public class ModRegistries {
         registerModCompostables();
         registerStrippables();
         registerFlammables();
-        //registerAttributes();
+        registerAttributes();
     }
 
     private static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.STALK, StalkEntity.createStalkAttributes());
     }
 
     private static void registerFuels() {

@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.blocks.entity.ModBlockEntities;
 import net.nathan.frights_and_foliage.entity.ModBoats;
+import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.ModItemGroup;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.particle.ModParticles;
@@ -28,7 +29,7 @@ public class FrightsAndFoliage implements ModInitializer {
 
 		ModRegistries.registerModStuffs();
 
-		//ModEntities.registerModEntities();
+		ModEntities.registerModEntities();
 
 		ModWorldGeneration.generateModWorldGeneration();
 		ModFoliagePlacerTypes.register();

@@ -14,6 +14,10 @@ import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.blocks.entity.ModBlockEntities;
 import net.nathan.frights_and_foliage.entity.ModBoats;
+import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.entity.client.ModEntityModelLayers;
+import net.nathan.frights_and_foliage.entity.client.StalkModel;
+import net.nathan.frights_and_foliage.entity.client.StalkRenderer;
 import net.nathan.frights_and_foliage.particle.ModParticles;
 import net.nathan.frights_and_foliage.particle.OrangeAcerParticles;
 import net.nathan.frights_and_foliage.particle.RedAcerParticles;
@@ -54,5 +58,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
+
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.STALK, StalkModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.STALK, StalkRenderer::new);
     }
 }
