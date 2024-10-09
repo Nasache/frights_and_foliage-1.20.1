@@ -2,16 +2,17 @@ package net.nathan.frights_and_foliage.item;
 
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.HangingSignItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SignItem;
+import net.minecraft.entity.EntityType;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
+import net.nathan.frights_and_foliage.entity.ModEntities;
 
 public class ModItems {
     public static final Item ACER_SIGN = registerItem("acer_sign",
@@ -32,6 +33,9 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.WARPED_PUMPKIN_PIE)));
     public static final Item CRIMSON_PUMPKIN_PIE = registerItem("crimson_pumpkin_pie",
             new Item(new FabricItemSettings().food(ModFoodComponents.CRIMSON_PUMPKIN_PIE)));
+
+    public static final Item BOTTLE_O_WISP = registerItem("bottle_o_wisp",
+            new EntityBucketItem(ModEntities.WISP, Fluids.EMPTY, SoundEvents.ITEM_BOTTLE_EMPTY, (new Item.Settings()).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FrightsAndFoliage.MOD_ID, name), item);
