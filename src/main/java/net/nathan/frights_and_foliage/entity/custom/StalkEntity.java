@@ -30,10 +30,14 @@ public class StalkEntity extends HostileEntity implements Angerable {
     private int idleAnimationTimeout = 0;
 
     private int angerTime; // Time to track how long the Stalk is angry
-    private UUID angryAtUUID; // Now we track the player's UUID instead of PlayerEntity
+    private UUID angryAtUUID; // Track the player's UUID
+    private boolean isStaring; // To track if the mob is in the warning/staring phase
+    private boolean isAttacking; // To track if the mob is already attacking
 
     public StalkEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+        this.isStaring = false;
+        this.isAttacking = false;
     }
 
     @Override
@@ -61,6 +65,14 @@ public class StalkEntity extends HostileEntity implements Angerable {
         super.tick();
         if (this.getWorld().isClient()) {
             this.setupAnimationStates();
+        }
+
+        // Handle anger time countdown
+        if (this.angerTime > 0) {
+            this.angerTime--;
+        } else if (this.angryAtUUID != null && !isAttacking) {
+            // Reset if not attacking
+            this.resetAnger();
         }
     }
 
@@ -97,7 +109,7 @@ public class StalkEntity extends HostileEntity implements Angerable {
     }
 
     protected SoundEvent getHostileSound() {
-        return SoundEvents.ENTITY_GHAST_SCREAM; // Use a more aggressive sound when hostile
+        return SoundEvents.ENTITY_PHANTOM_BITE; // Use a more aggressive sound when hostile
     }
 
     public void playAlertSound() {
@@ -110,7 +122,6 @@ public class StalkEntity extends HostileEntity implements Angerable {
 
     // Anger behavior: Set and get methods for the anger time and tracking the player
 
-    // Set the anger time for how long the mob stays angry
     @Override
     public void setAngerTime(int ticks) {
         this.angerTime = ticks;
@@ -123,13 +134,13 @@ public class StalkEntity extends HostileEntity implements Angerable {
 
     @Override
     public void setAngryAt(@Nullable UUID angryAt) {
-        this.angryAtUUID = angryAt; // Track the player's UUID when angry
+        this.angryAtUUID = angryAt;
     }
 
     @Nullable
     @Override
     public UUID getAngryAt() {
-        return this.angryAtUUID; // Return the UUID of the player that angered the Stalk
+        return this.angryAtUUID;
     }
 
     @Override
@@ -137,10 +148,11 @@ public class StalkEntity extends HostileEntity implements Angerable {
         this.setAngerTime(600); // Set anger time to 600 ticks (30 seconds)
     }
 
-    // Reset anger state when behavior ends
     public void resetAnger() {
         this.angerTime = 0;
         this.angryAtUUID = null;
+        this.isStaring = false;
+        this.isAttacking = false;
     }
 
     @Override
@@ -149,14 +161,41 @@ public class StalkEntity extends HostileEntity implements Angerable {
             return false;
         }
 
-        // Automatically get angry if attacked by the player
+        // If the Stalk is already attacking, don't enter the warning phase again
+        if (isAttacking) {
+            return super.damage(source, amount);
+        }
+
+        // Automatically attack if the player attacks the Stalk directly
         if (source.getAttacker() instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) source.getAttacker();
             this.setAngryAt(player.getUuid()); // Store the player's UUID
             this.setAngerTime(600); // Stay angry for 600 ticks (30 seconds)
+            this.isAttacking = true; // Start attacking
             this.playHostileSound(); // Play the hostile sound when angry
+            this.setTarget(player); // Immediately set the player as target
         }
 
         return super.damage(source, amount);
+    }
+
+    public void startWarningPhase(PlayerEntity player) {
+        if (!isAttacking) {
+            this.setAngryAt(player.getUuid()); // Store the player's UUID
+            this.setAngerTime(600); // Set anger time
+            this.isStaring = true; // Enter staring phase
+            this.playAlertSound(); // Play warning sound
+            this.getNavigation().startMovingTo(player, 1.5D); // Move towards the player
+        }
+    }
+
+    public void handleWarningCompletion(PlayerEntity player) {
+        // Once the mob is staring, it will attack if the player repeats an action
+        if (this.isStaring && !isAttacking) {
+            // Stalk will attack if the player does something again
+            this.setTarget(player);
+            this.isAttacking = true; // Start attacking
+            this.playHostileSound(); // Hostile sound when attacking
+        }
     }
 }
