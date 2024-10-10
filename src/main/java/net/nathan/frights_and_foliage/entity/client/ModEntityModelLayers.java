@@ -5,6 +5,6 @@ import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 
 public class ModEntityModelLayers {
-    public static final EntityModelLayer WISP =
-            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "wisp"), "main");
+    public static final EntityModelLayer STALK =
+            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "stalk"), "main");
 }

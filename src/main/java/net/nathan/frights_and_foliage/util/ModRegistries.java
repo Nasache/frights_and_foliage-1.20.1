@@ -8,7 +8,7 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.ComposterBlock;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModEntities;
-import net.nathan.frights_and_foliage.entity.custom.WispEntity;
+import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 import net.nathan.frights_and_foliage.item.ModItems;
 
 public class ModRegistries {
@@ -21,7 +21,7 @@ public class ModRegistries {
     }
 
     private static void registerAttributes() {
-        FabricDefaultAttributeRegistry.register(ModEntities.WISP, WispEntity.createWispAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.STALK, StalkEntity.createStalkAttributes());
     }
 
     private static void registerFuels() {

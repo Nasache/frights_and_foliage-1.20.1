@@ -8,13 +8,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
-import net.nathan.frights_and_foliage.entity.custom.WispEntity;
+import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 
 public class ModEntities {
 
-    public static final EntityType<WispEntity> WISP = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(FrightsAndFoliage.MOD_ID, "wisp"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.6f)).build());
+    public static final EntityType<StalkEntity> STALK = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(FrightsAndFoliage.MOD_ID, "stalk"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, StalkEntity::new).dimensions(EntityDimensions.fixed(0.8f, 2.0f)).build());
 
 
     public static void registerModEntities() {

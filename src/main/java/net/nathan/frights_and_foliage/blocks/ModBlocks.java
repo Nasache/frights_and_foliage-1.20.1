@@ -125,6 +125,10 @@ public class ModBlocks {
                             .noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
 
+
+    public static final Block RED_WISP_CAMPFIRE = registerBlock("red_wisp_campfire",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(FrightsAndFoliage.MOD_ID, name), block);
