@@ -126,8 +126,7 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)));
 
 
-    public static final Block RED_WISP_CAMPFIRE = registerBlock("red_wisp_campfire",
-            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

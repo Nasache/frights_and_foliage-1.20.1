@@ -7,8 +7,6 @@ import net.minecraft.client.render.entity.animation.Transformation;
 
 public class StalkAnimations {
 
-
-    public static final Animation IDLE = Animation.Builder.create(0f).build();
     public static final Animation WALK = Animation.Builder.create(1f).looping()
             .addBoneAnimation("larm",
                     new Transformation(Transformation.Targets.ROTATE,

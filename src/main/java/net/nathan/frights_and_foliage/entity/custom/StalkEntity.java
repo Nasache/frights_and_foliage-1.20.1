@@ -41,10 +41,18 @@ public class StalkEntity extends HostileEntity {
 
         PlayerEntity closestPlayer = this.getWorld().getClosestPlayer(this, 30);
 
-        if (closestPlayer != null && !isHostile) {
+        // Check if there is a valid player and the mob isn't hostile
+        if (closestPlayer != null) {
             double distanceToPlayer = this.squaredDistanceTo(closestPlayer);
             long currentTime = this.getWorld().getTime();
 
+            // Ignore players in creative mode or dead players, and reset hostility
+            if (closestPlayer.isCreative() || closestPlayer.isDead()) {
+                this.resetHostility();
+                return;  // Exit early since player is invalid
+            }
+
+            // Handle alert state for players within 30 blocks
             if (distanceToPlayer >= 25 && distanceToPlayer <= 900) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
@@ -58,11 +66,12 @@ public class StalkEntity extends HostileEntity {
                     this.followPlayerTicks = 200;
                 }
 
+                // Follow player while in alert state
                 if (this.isAlerted && this.followPlayerTicks > 0) {
                     if (this.squaredDistanceTo(closestPlayer) < 6.25) {
                         this.getNavigation().stop();
                     } else {
-                        this.getNavigation().startMovingTo(closestPlayer, 1.0);  // Keep moving towards the player
+                        this.getNavigation().startMovingTo(closestPlayer, 1.0);
                     }
                     this.followPlayerTicks--;
                 } else {
@@ -70,7 +79,8 @@ public class StalkEntity extends HostileEntity {
                 }
             }
 
-            if (distanceToPlayer < 25) {
+            // Check if player is close and can see the mob for hostility trigger
+            if (distanceToPlayer < 25 && closestPlayer.canSee(this)) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
                     this.playHostileSound();
@@ -87,27 +97,41 @@ public class StalkEntity extends HostileEntity {
                     this.setTarget(closestPlayer);
                 }
             }
+
+            // Reset hostility if player is out of range or invalid
+            if (distanceToPlayer > 900) {
+                this.resetHostility();
+            }
+        } else {
+            this.resetHostility();  // If no player is found, reset hostility
         }
     }
 
     @Override
     public boolean damage(DamageSource source, float amount) {
         if (source.getAttacker() instanceof PlayerEntity && !isHostile) {
-            this.playHostileSound();
-            this.isHostile = true;
-            this.setTarget((PlayerEntity) source.getAttacker());  // Attack the attacker
+            PlayerEntity attacker = (PlayerEntity) source.getAttacker();
+            if (!attacker.isCreative()) {  // Ignore players in creative mode
+                this.playHostileSound();
+                this.isHostile = true;
+                this.setTarget(attacker);  // Attack the attacker
+            }
         }
         return super.damage(source, amount);
     }
 
     @Override
     public void onDeath(DamageSource source) {
-        if (source.getAttacker() instanceof PlayerEntity) {
-            this.isHostile = false;
-            this.isAlerted = false;
-            this.followPlayerTicks = 0;
-        }
+        this.resetHostility();  // Reset hostility on death
         super.onDeath(source);
+    }
+
+    // Helper method to reset hostility
+    private void resetHostility() {
+        this.isHostile = false;
+        this.isAlerted = false;
+        this.followPlayerTicks = 0;
+        this.setTarget(null);  // Reset the target
     }
 
     public static DefaultAttributeContainer.Builder createStalkAttributes() {
