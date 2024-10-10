@@ -41,18 +41,15 @@ public class StalkEntity extends HostileEntity {
 
         PlayerEntity closestPlayer = this.getWorld().getClosestPlayer(this, 30);
 
-        // Check if there is a valid player and the mob isn't hostile
         if (closestPlayer != null) {
             double distanceToPlayer = this.squaredDistanceTo(closestPlayer);
             long currentTime = this.getWorld().getTime();
 
-            // Ignore players in creative mode or dead players, and reset hostility
             if (closestPlayer.isCreative() || closestPlayer.isDead()) {
                 this.resetHostility();
-                return;  // Exit early since player is invalid
+                return;
             }
 
-            // Handle alert state for players within 30 blocks
             if (distanceToPlayer >= 25 && distanceToPlayer <= 900) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
@@ -66,7 +63,6 @@ public class StalkEntity extends HostileEntity {
                     this.followPlayerTicks = 200;
                 }
 
-                // Follow player while in alert state
                 if (this.isAlerted && this.followPlayerTicks > 0) {
                     if (this.squaredDistanceTo(closestPlayer) < 6.25) {
                         this.getNavigation().stop();
@@ -79,7 +75,6 @@ public class StalkEntity extends HostileEntity {
                 }
             }
 
-            // Check if player is close and can see the mob for hostility trigger
             if (distanceToPlayer < 25 && closestPlayer.canSee(this)) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
@@ -98,12 +93,11 @@ public class StalkEntity extends HostileEntity {
                 }
             }
 
-            // Reset hostility if player is out of range or invalid
             if (distanceToPlayer > 900) {
                 this.resetHostility();
             }
         } else {
-            this.resetHostility();  // If no player is found, reset hostility
+            this.resetHostility();
         }
     }
 
@@ -111,10 +105,10 @@ public class StalkEntity extends HostileEntity {
     public boolean damage(DamageSource source, float amount) {
         if (source.getAttacker() instanceof PlayerEntity && !isHostile) {
             PlayerEntity attacker = (PlayerEntity) source.getAttacker();
-            if (!attacker.isCreative()) {  // Ignore players in creative mode
+            if (!attacker.isCreative()) {
                 this.playHostileSound();
                 this.isHostile = true;
-                this.setTarget(attacker);  // Attack the attacker
+                this.setTarget(attacker);
             }
         }
         return super.damage(source, amount);
@@ -122,16 +116,15 @@ public class StalkEntity extends HostileEntity {
 
     @Override
     public void onDeath(DamageSource source) {
-        this.resetHostility();  // Reset hostility on death
+        this.resetHostility();
         super.onDeath(source);
     }
 
-    // Helper method to reset hostility
     private void resetHostility() {
         this.isHostile = false;
         this.isAlerted = false;
         this.followPlayerTicks = 0;
-        this.setTarget(null);  // Reset the target
+        this.setTarget(null);
     }
 
     public static DefaultAttributeContainer.Builder createStalkAttributes() {

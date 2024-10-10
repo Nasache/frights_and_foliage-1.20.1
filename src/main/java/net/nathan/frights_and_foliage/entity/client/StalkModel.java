@@ -48,18 +48,14 @@ public class StalkModel<T extends StalkEntity> extends SinglePartEntityModel<T> 
         this.getPart().traverse().forEach(ModelPart::resetTransform);
         this.setHeadAngles(entity, netHeadYaw, headPitch, ageInTicks);
 
-        // Shifted cosine wave: we add 1 to ensure no negative values
-        float armSway = (MathHelper.cos(ageInTicks * 0.1F) + 1) * 0.05F;  // Shifted cosine, amplitude adjusted
+        float armSway = (MathHelper.cos(ageInTicks * 0.1F) + 1) * 0.05F;
 
-        float maxSwayOutwards = 0.15F;  // Max sway outward
+        float maxSwayOutwards = 0.15F;
 
-        // Left arm: sway outward (negative roll)
         this.stalk.getChild("body").getChild("larm").roll = MathHelper.clamp(-armSway, -maxSwayOutwards, 0.0F);
 
-        // Right arm: sway outward (positive roll)
         this.stalk.getChild("body").getChild("rarm").roll = MathHelper.clamp(armSway, 0.0F, maxSwayOutwards);
 
-        // Apply the same sway to other animations (walking, idle, etc.)
         this.animateMovement(StalkAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
     }
 
