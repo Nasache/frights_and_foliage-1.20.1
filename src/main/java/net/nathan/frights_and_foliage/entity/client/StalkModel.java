@@ -48,7 +48,7 @@ public class StalkModel<T extends StalkEntity> extends SinglePartEntityModel<T> 
             this.setHeadAngles(entity, netHeadYaw, headPitch, ageInTicks);
 
             this.animateMovement(StalkAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-            this.updateAnimation(entity.idleAnimationState, StalkAnimations.IDLE, ageInTicks, 1f);
+            //this.updateAnimation(entity.idleAnimationState, StalkAnimations.IDLE, ageInTicks, 1f);
         }
 
         private void setHeadAngles(StalkEntity entity, float headYaw, float headPitch, float animationProgress) {
