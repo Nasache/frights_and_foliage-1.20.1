@@ -21,6 +21,8 @@ public class StalkEntity extends HostileEntity {
     private boolean isAlerted = false;
     private boolean isHostile = false;
     private int followPlayerTicks = 0;
+    private long lastWarningTime = 0; // To store the last time the warning scream was played
+    private static final long WARNING_COOLDOWN_TICKS = 100; // Cooldown duration in ticks (5 seconds, as 20 ticks = 1 second)
 
     public StalkEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
@@ -53,14 +55,18 @@ public class StalkEntity extends HostileEntity {
             if (distanceToPlayer >= 25 && distanceToPlayer <= 900) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
-                    this.playAlertSound();
-                    this.isAlerted = true;
-                    this.followPlayerTicks = 200;
+                    if (canPlayWarningScream(currentTime)) {
+                        this.playAlertSound();
+                        this.isAlerted = true;
+                        this.followPlayerTicks = 200;
+                    }
                 } else if (ModEventHandler.recentMobDamage.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentMobDamage.get(closestPlayer) < 2) {
-                    this.playAlertSound();
-                    this.isAlerted = true;
-                    this.followPlayerTicks = 200;
+                    if (canPlayWarningScream(currentTime)) {
+                        this.playAlertSound();
+                        this.isAlerted = true;
+                        this.followPlayerTicks = 200;
+                    }
                 }
 
                 if (this.isAlerted && this.followPlayerTicks > 0) {
@@ -164,9 +170,14 @@ public class StalkEntity extends HostileEntity {
 
     public void playAlertSound() {
         this.playSound(this.getAlertSound(), 2.0F, 1.0F);
+        this.lastWarningTime = this.getWorld().getTime(); // Update last warning time
     }
 
     public void playHostileSound() {
         this.playSound(this.getHostileSound(), 1.0F, 1.0F);
+    }
+
+    private boolean canPlayWarningScream(long currentTime) {
+        return currentTime - lastWarningTime >= WARNING_COOLDOWN_TICKS;
     }
 }
