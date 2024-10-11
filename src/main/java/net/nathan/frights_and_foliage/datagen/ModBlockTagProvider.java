@@ -30,6 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.ACER_DOOR,
                         ModBlocks.ACER_TRAPDOOR,
                         ModBlocks.ACER_LOG,
+                        ModBlocks.ACER_SYRUP_LOG,
                         ModBlocks.ACER_WOOD,
                         ModBlocks.STRIPPED_ACER_LOG,
                         ModBlocks.STRIPPED_ACER_WOOD,
@@ -61,12 +62,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.ACER_LOG,
                         ModBlocks.ACER_WOOD,
+                        ModBlocks.ACER_SYRUP_LOG,
                         ModBlocks.STRIPPED_ACER_LOG,
                         ModBlocks.STRIPPED_ACER_WOOD);
 
         getOrCreateTagBuilder(ModTags.Blocks.ACER_LOGS)
-                .add(ModBlocks.ACER_LOG, ModBlocks.ACER_WOOD, ModBlocks.STRIPPED_ACER_LOG, ModBlocks.STRIPPED_ACER_WOOD);
-
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric","needs_tool_level_4")));
+                .add(ModBlocks.ACER_LOG, ModBlocks.ACER_SYRUP_LOG, ModBlocks.ACER_WOOD, ModBlocks.STRIPPED_ACER_LOG, ModBlocks.STRIPPED_ACER_WOOD);
     }
 }

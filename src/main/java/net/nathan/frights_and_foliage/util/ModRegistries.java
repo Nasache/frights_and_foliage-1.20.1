@@ -34,6 +34,10 @@ public class ModRegistries {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
         registry.add(ModBlocks.ACER_PLANKS, 300);
+        registry.add(ModBlocks.ACER_LOG, 300);
+        registry.add(ModBlocks.STRIPPED_ACER_LOG, 300);
+        registry.add(ModBlocks.ACER_WOOD, 300);
+        registry.add(ModBlocks.STRIPPED_ACER_WOOD, 300);
         registry.add(ModBlocks.ACER_STAIRS, 300);
         registry.add(ModBlocks.ACER_SLAB, 300);
         registry.add(ModBlocks.ACER_BUTTON, 300);
@@ -89,6 +93,7 @@ public class ModRegistries {
 
     private static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.ACER_LOG, ModBlocks.STRIPPED_ACER_LOG);
+        StrippableBlockRegistry.register(ModBlocks.ACER_SYRUP_LOG, ModBlocks.STRIPPED_ACER_LOG);
         StrippableBlockRegistry.register(ModBlocks.ACER_WOOD, ModBlocks.STRIPPED_ACER_WOOD);
     }
 }

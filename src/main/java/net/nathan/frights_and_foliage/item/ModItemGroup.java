@@ -43,6 +43,8 @@ public class ModItemGroup {
                         entries.add(ModItems.ACER_BOAT);
                         entries.add(ModItems.ACER_CHEST_BOAT);
 
+                        entries.add(ModBlocks.ACER_SYRUP_LOG);
+
                         entries.add(ModBlocks.MARNOR_LOG);
                         entries.add(ModBlocks.MARNOR_WOOD);
                         entries.add(ModBlocks.STRIPPED_MARNOR_LOG);

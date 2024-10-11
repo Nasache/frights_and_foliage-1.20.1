@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.item.ModItems;
@@ -39,8 +40,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_ACER_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORANGE_ACER_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_ACER_LEAVES);
-
-
 
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ACER_SAPLING, ModBlocks.POTTED_RED_ACER_SAPLING, NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_ACER_SAPLING, ModBlocks.POTTED_ORANGE_ACER_SAPLING, NOT_TINTED);
@@ -86,6 +85,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.WARPED_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ACER_SYRUP_BOTTLE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

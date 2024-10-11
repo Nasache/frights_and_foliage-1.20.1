@@ -21,6 +21,7 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.world.tree.custom.AcerFoliagePlacer;
+import net.nathan.frights_and_foliage.world.tree.custom.AcerTrunkPlacer;
 
 import java.util.Iterator;
 import java.util.List;
@@ -45,19 +46,19 @@ public class ModConfiguredFeatures {
 
         register(context, RED_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(6, 2, 3),
+                new AcerTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.RED_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, ORANGE_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(6, 2, 3),
+                new AcerTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.ORANGE_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, YELLOW_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new StraightTrunkPlacer(6, 2, 3),
+                new AcerTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.YELLOW_ACER_LEAVES),
                 new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());

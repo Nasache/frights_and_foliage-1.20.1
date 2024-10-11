@@ -13,6 +13,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
 
 public class ModItems {
     public static final Item ACER_SIGN = registerItem("acer_sign",
@@ -33,6 +34,9 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.WARPED_PUMPKIN_PIE)));
     public static final Item CRIMSON_PUMPKIN_PIE = registerItem("crimson_pumpkin_pie",
             new Item(new FabricItemSettings().food(ModFoodComponents.CRIMSON_PUMPKIN_PIE)));
+
+    public static final Item ACER_SYRUP_BOTTLE = registerItem("acer_syrup_bottle",
+            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ACER_SYRUP_BOTTLE).maxCount(16)));
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x745a36, 0xc29d62, new Item.Settings()));

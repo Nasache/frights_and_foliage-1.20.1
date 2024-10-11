@@ -14,6 +14,7 @@ import net.nathan.frights_and_foliage.util.ModRegistries;
 import net.nathan.frights_and_foliage.world.biome.ModBiomes;
 import net.nathan.frights_and_foliage.world.gen.ModWorldGeneration;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
+import net.nathan.frights_and_foliage.world.tree.ModTrunkPlacerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +35,7 @@ public class FrightsAndFoliage implements ModInitializer {
 
 		ModWorldGeneration.generateModWorldGeneration();
 		ModFoliagePlacerTypes.register();
+		ModTrunkPlacerTypes.register();
 
 		//ModSounds.registerSounds();
 

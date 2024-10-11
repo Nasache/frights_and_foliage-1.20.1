@@ -18,14 +18,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
+                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_SYRUP_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
                         ModBlocks.STRIPPED_ACER_LOG.asItem(), ModBlocks.STRIPPED_ACER_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.ACER_PLANKS.asItem());
 
         getOrCreateTagBuilder(ModTags.Items.ACER_LOGS)
-                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
+                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_SYRUP_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
                         ModBlocks.STRIPPED_ACER_LOG.asItem(), ModBlocks.STRIPPED_ACER_WOOD.asItem());
     }
 }

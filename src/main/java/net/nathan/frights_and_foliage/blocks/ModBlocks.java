@@ -83,6 +83,9 @@ public class ModBlocks {
     public static final Block ACER_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("acer_wall_hanging_sign",
             new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ACER));
 
+    public static final Block ACER_SYRUP_LOG = registerBlock("acer_syrup_log",
+            new SyrupLogBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+
     public static final Block MARNOR_PLANKS = registerBlock("marnor_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block MARNOR_STAIRS = registerBlock("marnor_stairs",

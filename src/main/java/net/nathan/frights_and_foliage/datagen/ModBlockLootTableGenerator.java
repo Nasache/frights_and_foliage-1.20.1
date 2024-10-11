@@ -42,6 +42,9 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.ACER_LEAVES, flowerbedDrops(ModBlocks.ACER_LEAVES));
 
+        addDrop(ModBlocks.ACER_SYRUP_LOG, drops(ModBlocks.ACER_SYRUP_LOG, ModBlocks.ACER_LOG));
+
+
         addDrop(ModBlocks.WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.WARPED_PUMPKIN_STEM,
                 ModItems.WARPED_PUMPKIN_SEEDS));
         addDrop(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM,
