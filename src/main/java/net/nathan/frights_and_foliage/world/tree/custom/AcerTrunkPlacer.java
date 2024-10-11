@@ -35,7 +35,6 @@ public class AcerTrunkPlacer extends TrunkPlacer {
 
         for (int i = 0; i < height; ++i) {
             BlockPos currentPos = startPos.up(i);
-            // Use a 1 in 10 chance to replace the log block with dirt
             if (random.nextInt(10) == 0) {
                 replacer.accept(currentPos, ModBlocks.ACER_SYRUP_LOG.getDefaultState());
             } else {
