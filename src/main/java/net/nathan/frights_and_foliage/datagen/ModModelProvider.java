@@ -5,8 +5,11 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.item.ModItems;
+
+import java.util.Optional;
 
 import static net.minecraft.data.client.BlockStateModelGenerator.TintType.NOT_TINTED;
 
@@ -43,6 +46,19 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ORANGE_ACER_SAPLING, ModBlocks.POTTED_ORANGE_ACER_SAPLING, NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.YELLOW_ACER_SAPLING, ModBlocks.POTTED_YELLOW_ACER_SAPLING, NOT_TINTED);
 
+        BlockStateModelGenerator.BlockTexturePool marnorPlanksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MARNOR_PLANKS);
+        marnorPlanksTexturePool.stairs(ModBlocks.MARNOR_STAIRS);
+        marnorPlanksTexturePool.slab(ModBlocks.MARNOR_SLAB);
+        marnorPlanksTexturePool.button(ModBlocks.MARNOR_BUTTON);
+        marnorPlanksTexturePool.pressurePlate(ModBlocks.MARNOR_PRESSURE_PLATE);
+        marnorPlanksTexturePool.fence(ModBlocks.MARNOR_FENCE);
+        marnorPlanksTexturePool.fenceGate(ModBlocks.MARNOR_FENCE_GATE);
+        //blockStateModelGenerator.registerDoor(ModBlocks.ACER_DOOR);
+        //blockStateModelGenerator.registerTrapdoor(ModBlocks.ACER_TRAPDOOR);
+
+        blockStateModelGenerator.registerLog(ModBlocks.MARNOR_LOG).log(ModBlocks.MARNOR_LOG).wood(ModBlocks.MARNOR_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MARNOR_LOG).log(ModBlocks.STRIPPED_MARNOR_LOG).wood(ModBlocks.STRIPPED_MARNOR_WOOD);
+
 
         blockStateModelGenerator.registerSingleton(ModBlocks.WARPED_PUMPKIN, TexturedModel.CUBE_COLUMN);
         blockStateModelGenerator.registerGourd(ModBlocks.WARPED_PUMPKIN_STEM, ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM);
@@ -66,5 +82,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.WARPED_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

@@ -34,6 +34,11 @@ public class ModItems {
     public static final Item CRIMSON_PUMPKIN_PIE = registerItem("crimson_pumpkin_pie",
             new Item(new FabricItemSettings().food(ModFoodComponents.CRIMSON_PUMPKIN_PIE)));
 
+    public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
+            new SpawnEggItem(ModEntities.STALK, 0x745a36, 0xc29d62, new Item.Settings()));
+
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FrightsAndFoliage.MOD_ID, name), item);
     }

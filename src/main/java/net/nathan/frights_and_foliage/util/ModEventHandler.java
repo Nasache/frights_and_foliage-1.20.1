@@ -3,6 +3,7 @@ package net.nathan.frights_and_foliage.util;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
@@ -23,7 +24,7 @@ public class ModEventHandler {
         });
 
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (!player.isCreative() && world instanceof ServerWorld && entity instanceof LivingEntity) {
+            if (!player.isCreative() && world instanceof ServerWorld && entity instanceof MobEntity) {
                 recentMobDamage.put(player, world.getTime());
             }
             return ActionResult.PASS;

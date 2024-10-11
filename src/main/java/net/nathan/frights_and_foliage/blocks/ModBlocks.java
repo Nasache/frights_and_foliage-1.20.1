@@ -83,6 +83,36 @@ public class ModBlocks {
     public static final Block ACER_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("acer_wall_hanging_sign",
             new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ACER));
 
+    public static final Block MARNOR_PLANKS = registerBlock("marnor_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block MARNOR_STAIRS = registerBlock("marnor_stairs",
+            new StairsBlock(ModBlocks.ACER_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)));
+    public static final Block MARNOR_SLAB = registerBlock("marnor_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)));
+    public static final Block MARNOR_BUTTON = registerBlock("marnor_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
+    public static final Block MARNOR_PRESSURE_PLATE = registerBlock("marnor_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+    public static final Block MARNOR_FENCE = registerBlock("marnor_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
+    public static final Block MARNOR_FENCE_GATE = registerBlock("marnor_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WoodType.OAK));
+    //public static final Block MARNOR_DOOR = registerBlock("marnor_door",
+    //        new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    //public static final Block MARNOR_TRAPDOOR = registerBlock("marnor_trapdoor",
+    //        new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block MARNOR_LOG = registerBlock("marnor_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block MARNOR_WOOD = registerBlock("marnor_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+    public static final Block STRIPPED_MARNOR_LOG = registerBlock("stripped_marnor_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_MARNOR_WOOD = registerBlock("stripped_marnor_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
+
+
+
+
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
             new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));

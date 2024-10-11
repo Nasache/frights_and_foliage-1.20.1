@@ -43,6 +43,19 @@ public class ModItemGroup {
                         entries.add(ModItems.ACER_BOAT);
                         entries.add(ModItems.ACER_CHEST_BOAT);
 
+                        entries.add(ModBlocks.MARNOR_LOG);
+                        entries.add(ModBlocks.MARNOR_WOOD);
+                        entries.add(ModBlocks.STRIPPED_MARNOR_LOG);
+                        entries.add(ModBlocks.STRIPPED_MARNOR_WOOD);
+                        entries.add(ModBlocks.MARNOR_PLANKS);
+                        entries.add(ModBlocks.MARNOR_STAIRS);
+                        entries.add(ModBlocks.MARNOR_SLAB);
+                        entries.add(ModBlocks.MARNOR_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MARNOR_BUTTON);
+                        entries.add(ModBlocks.MARNOR_FENCE);
+                        entries.add(ModBlocks.MARNOR_FENCE_GATE);
+
+
                         entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
                         entries.add(ModBlocks.WARPED_PUMPKIN);
                         entries.add(ModBlocks.CARVED_WARPED_PUMPKIN);
@@ -54,6 +67,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.CARVED_CRIMSON_PUMPKIN);
                         entries.add(ModBlocks.CRIMSON_JACK_O_LANTERN);
                         entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
+
+                        entries.add(ModItems.STALK_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

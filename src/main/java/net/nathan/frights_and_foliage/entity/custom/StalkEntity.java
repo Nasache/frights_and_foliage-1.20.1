@@ -112,13 +112,16 @@ public class StalkEntity extends HostileEntity {
         if (source.getAttacker() instanceof PlayerEntity && !isHostile) {
             PlayerEntity attacker = (PlayerEntity) source.getAttacker();
             if (!attacker.isCreative()) {
-                this.playHostileSound();
+                if (!this.isHostile) {
+                    this.playHostileSound();
+                }
                 this.isHostile = true;
                 this.setTarget(attacker);
             }
         }
         return super.damage(source, amount);
     }
+
 
     @Override
     public void onDeath(DamageSource source) {
