@@ -32,9 +32,9 @@ public class StalkEntity extends HostileEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.5));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.5));
+        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(4, new LookAroundGoal(this));
     }
 
     @Override

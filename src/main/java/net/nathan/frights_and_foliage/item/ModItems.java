@@ -36,7 +36,8 @@ public class ModItems {
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x745a36, 0xc29d62, new Item.Settings()));
-
+    public static final Item LEAFBUG_SPAWN_EGG = registerItem("leafbug_spawn_egg",
+            new SpawnEggItem(ModEntities.LEAFBUG, 0x745a36, 0xc29d62, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {

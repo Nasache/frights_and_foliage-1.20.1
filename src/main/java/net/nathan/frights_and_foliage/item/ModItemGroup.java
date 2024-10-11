@@ -55,6 +55,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_FENCE);
                         entries.add(ModBlocks.MARNOR_FENCE_GATE);
 
+                        entries.add(ModBlocks.LEAFBUG_BLOCK);
+
 
                         entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
                         entries.add(ModBlocks.WARPED_PUMPKIN);
@@ -69,6 +71,7 @@ public class ModItemGroup {
                         entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
 
                         entries.add(ModItems.STALK_SPAWN_EGG);
+                        entries.add(ModItems.LEAFBUG_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

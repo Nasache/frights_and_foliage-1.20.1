@@ -60,6 +60,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MARNOR_LOG).log(ModBlocks.STRIPPED_MARNOR_LOG).wood(ModBlocks.STRIPPED_MARNOR_WOOD);
 
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAFBUG_BLOCK);
+
+
+
         blockStateModelGenerator.registerSingleton(ModBlocks.WARPED_PUMPKIN, TexturedModel.CUBE_COLUMN);
         blockStateModelGenerator.registerGourd(ModBlocks.WARPED_PUMPKIN_STEM, ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM);
 
@@ -84,6 +88,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.LEAFBUG_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

@@ -111,6 +111,9 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
 
 
+    public static final Block LEAFBUG_BLOCK = registerBlock("leaf_bug_block",
+            new LeafBugBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
+
 
 
 
