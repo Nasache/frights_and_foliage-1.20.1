@@ -13,37 +13,57 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.ACER_PLANKS);
-        addDrop(ModBlocks.ACER_LOG);
-        addDrop(ModBlocks.ACER_WOOD);
-        addDrop(ModBlocks.STRIPPED_ACER_LOG);
-        addDrop(ModBlocks.STRIPPED_ACER_WOOD);
-        addDrop(ModBlocks.RED_ACER_LEAVES, leavesDrops(ModBlocks.RED_ACER_LEAVES, ModBlocks.RED_ACER_SAPLING, .05f));
-        addDrop(ModBlocks.ORANGE_ACER_LEAVES, leavesDrops(ModBlocks.ORANGE_ACER_LEAVES, ModBlocks.ORANGE_ACER_SAPLING, .05f));
-        addDrop(ModBlocks.YELLOW_ACER_LEAVES, leavesDrops(ModBlocks.YELLOW_ACER_LEAVES, ModBlocks.YELLOW_ACER_SAPLING, .05f));
-        addDrop(ModBlocks.ACER_STAIRS);
-        addDrop(ModBlocks.ACER_SLAB, slabDrops(ModBlocks.ACER_SLAB));
-        addDrop(ModBlocks.ACER_BUTTON);
-        addDrop(ModBlocks.ACER_PRESSURE_PLATE);
-        addDrop(ModBlocks.ACER_FENCE);
-        addDrop(ModBlocks.ACER_FENCE_GATE);
-        addDrop(ModBlocks.ACER_DOOR, doorDrops(ModBlocks.ACER_DOOR));
-        addDrop(ModBlocks.ACER_TRAPDOOR);
-        addDrop(ModBlocks.ACER_SIGN);
-        addDrop(ModBlocks.ACER_WALL_SIGN);
-        addDrop(ModBlocks.ACER_HANGING_SIGN);
-        addDrop(ModBlocks.ACER_WALL_HANGING_SIGN);
-        addDrop(ModBlocks.RED_ACER_SAPLING);
-        addDrop(ModBlocks.POTTED_RED_ACER_SAPLING, pottedPlantDrops(ModBlocks.RED_ACER_SAPLING));
-        addDrop(ModBlocks.ORANGE_ACER_SAPLING);
-        addDrop(ModBlocks.POTTED_ORANGE_ACER_SAPLING, pottedPlantDrops(ModBlocks.ORANGE_ACER_SAPLING));
-        addDrop(ModBlocks.YELLOW_ACER_SAPLING);
-        addDrop(ModBlocks.POTTED_YELLOW_ACER_SAPLING, pottedPlantDrops(ModBlocks.YELLOW_ACER_SAPLING));
+        addDrop(ModBlocks.ASERIA_PLANKS);
+        addDrop(ModBlocks.ASERIA_LOG);
+        addDrop(ModBlocks.ASERIA_WOOD);
+        addDrop(ModBlocks.STRIPPED_ASERIA_LOG);
+        addDrop(ModBlocks.STRIPPED_ASERIA_WOOD);
+        addDrop(ModBlocks.RED_ASERIA_LEAVES, leavesDrops(ModBlocks.RED_ASERIA_LEAVES, ModBlocks.RED_ASERIA_SAPLING, .05f));
+        addDrop(ModBlocks.ORANGE_ASERIA_LEAVES, leavesDrops(ModBlocks.ORANGE_ASERIA_LEAVES, ModBlocks.ORANGE_ASERIA_SAPLING, .05f));
+        addDrop(ModBlocks.YELLOW_ASERIA_LEAVES, leavesDrops(ModBlocks.YELLOW_ASERIA_LEAVES, ModBlocks.YELLOW_ASERIA_SAPLING, .05f));
+        addDrop(ModBlocks.ASERIA_STAIRS);
+        addDrop(ModBlocks.ASERIA_SLAB, slabDrops(ModBlocks.ASERIA_SLAB));
+        addDrop(ModBlocks.ASERIA_BUTTON);
+        addDrop(ModBlocks.ASERIA_PRESSURE_PLATE);
+        addDrop(ModBlocks.ASERIA_FENCE);
+        addDrop(ModBlocks.ASERIA_FENCE_GATE);
+        addDrop(ModBlocks.ASERIA_DOOR, doorDrops(ModBlocks.ASERIA_DOOR));
+        addDrop(ModBlocks.ASERIA_TRAPDOOR);
+        addDrop(ModBlocks.ASERIA_SIGN);
+        addDrop(ModBlocks.ASERIA_WALL_SIGN);
+        addDrop(ModBlocks.ASERIA_HANGING_SIGN);
+        addDrop(ModBlocks.ASERIA_WALL_HANGING_SIGN);
+        addDrop(ModBlocks.RED_ASERIA_SAPLING);
+        addDrop(ModBlocks.POTTED_RED_ASERIA_SAPLING, pottedPlantDrops(ModBlocks.RED_ASERIA_SAPLING));
+        addDrop(ModBlocks.ORANGE_ASERIA_SAPLING);
+        addDrop(ModBlocks.POTTED_ORANGE_ASERIA_SAPLING, pottedPlantDrops(ModBlocks.ORANGE_ASERIA_SAPLING));
+        addDrop(ModBlocks.YELLOW_ASERIA_SAPLING);
+        addDrop(ModBlocks.POTTED_YELLOW_ASERIA_SAPLING, pottedPlantDrops(ModBlocks.YELLOW_ASERIA_SAPLING));
 
-        addDrop(ModBlocks.ACER_LEAVES, flowerbedDrops(ModBlocks.ACER_LEAVES));
+        addDrop(ModBlocks.FALLEN_LEAVES, flowerbedDrops(ModBlocks.FALLEN_LEAVES));
 
-        addDrop(ModBlocks.ACER_SYRUP_LOG, drops(ModBlocks.ACER_SYRUP_LOG, ModBlocks.ACER_LOG));
+        addDrop(ModBlocks.ASERIA_SYRUP_LOG, drops(ModBlocks.ASERIA_SYRUP_LOG, ModBlocks.ASERIA_LOG));
 
+        addDrop(ModBlocks.MARNOR_PLANKS);
+        addDrop(ModBlocks.MARNOR_LOG);
+        addDrop(ModBlocks.MARNOR_WOOD);
+        addDrop(ModBlocks.STRIPPED_MARNOR_LOG);
+        addDrop(ModBlocks.STRIPPED_MARNOR_WOOD);
+        //addDrop(ModBlocks.MARNOR_LEAVES, leavesDrops(ModBlocks.MARNOR_LEAVES, ModBlocks.MARNOR_SAPLING, .05f));
+        addDrop(ModBlocks.MARNOR_STAIRS);
+        addDrop(ModBlocks.MARNOR_SLAB, slabDrops(ModBlocks.MARNOR_SLAB));
+        addDrop(ModBlocks.MARNOR_BUTTON);
+        addDrop(ModBlocks.MARNOR_PRESSURE_PLATE);
+        addDrop(ModBlocks.MARNOR_FENCE);
+        addDrop(ModBlocks.MARNOR_FENCE_GATE);
+        //addDrop(ModBlocks.MARNOR_DOOR, doorDrops(ModBlocks.MARNOR_DOOR));
+        //addDrop(ModBlocks.MARNOR_TRAPDOOR);
+        addDrop(ModBlocks.MARNOR_SIGN);
+        addDrop(ModBlocks.MARNOR_WALL_SIGN);
+        addDrop(ModBlocks.MARNOR_HANGING_SIGN);
+        addDrop(ModBlocks.MARNOR_WALL_HANGING_SIGN);
+        //addDrop(ModBlocks.MARNOR_SAPLING);
+        //addDrop(ModBlocks.POTTED_MARNOR_SAPLING, pottedPlantDrops(ModBlocks.MARNOR_SAPLING));
 
         addDrop(ModBlocks.WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.WARPED_PUMPKIN_STEM,
                 ModItems.WARPED_PUMPKIN_SEEDS));

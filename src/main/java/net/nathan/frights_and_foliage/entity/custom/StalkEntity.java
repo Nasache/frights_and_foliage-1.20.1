@@ -21,20 +21,23 @@ public class StalkEntity extends HostileEntity {
     private boolean isAlerted = false;
     private boolean isHostile = false;
     private int followPlayerTicks = 0;
-    private long lastWarningTime = 0; // To store the last time the warning scream was played
-    private static final long WARNING_COOLDOWN_TICKS = 100; // Cooldown duration in ticks (5 seconds, as 20 ticks = 1 second)
+    private long lastWarningTime = 0;
+    private static final long WARNING_COOLDOWN_TICKS = 100;
+
+    private FollowPlayerGoal followPlayerGoal;
 
     public StalkEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+        this.followPlayerGoal = new FollowPlayerGoal(this, 1.0);
     }
 
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.5));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.add(4, new LookAroundGoal(this));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.5));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(5, new LookAroundGoal(this));
     }
 
     @Override
@@ -59,6 +62,9 @@ public class StalkEntity extends HostileEntity {
                         this.playAlertSound();
                         this.isAlerted = true;
                         this.followPlayerTicks = 200;
+                        if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
+                            this.goalSelector.add(2, this.followPlayerGoal);
+                        }
                     }
                 } else if (ModEventHandler.recentMobDamage.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentMobDamage.get(closestPlayer) < 2) {
@@ -66,18 +72,17 @@ public class StalkEntity extends HostileEntity {
                         this.playAlertSound();
                         this.isAlerted = true;
                         this.followPlayerTicks = 200;
+                        if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
+                            this.goalSelector.add(2, this.followPlayerGoal);
+                        }
                     }
                 }
 
                 if (this.isAlerted && this.followPlayerTicks > 0) {
-                    if (this.squaredDistanceTo(closestPlayer) < 6.25) {
-                        this.getNavigation().stop();
-                    } else {
-                        this.getNavigation().startMovingTo(closestPlayer, 1.0);
-                    }
                     this.followPlayerTicks--;
                 } else {
                     this.isAlerted = false;
+                    this.goalSelector.remove(this.followPlayerGoal);
                 }
             }
 
@@ -108,22 +113,6 @@ public class StalkEntity extends HostileEntity {
     }
 
     @Override
-    public boolean damage(DamageSource source, float amount) {
-        if (source.getAttacker() instanceof PlayerEntity && !isHostile) {
-            PlayerEntity attacker = (PlayerEntity) source.getAttacker();
-            if (!attacker.isCreative()) {
-                if (!this.isHostile) {
-                    this.playHostileSound();
-                }
-                this.isHostile = true;
-                this.setTarget(attacker);
-            }
-        }
-        return super.damage(source, amount);
-    }
-
-
-    @Override
     public void onDeath(DamageSource source) {
         this.resetHostility();
         super.onDeath(source);
@@ -134,12 +123,14 @@ public class StalkEntity extends HostileEntity {
         this.isAlerted = false;
         this.followPlayerTicks = 0;
         this.setTarget(null);
+        // Remove the FollowPlayerGoal when hostility is reset
+        this.goalSelector.remove(this.followPlayerGoal);
     }
 
     public static DefaultAttributeContainer.Builder createStalkAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 20)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20);
     }
 
@@ -172,12 +163,16 @@ public class StalkEntity extends HostileEntity {
     }
 
     public void playAlertSound() {
-        this.playSound(this.getAlertSound(), 2.0F, 1.0F);
-        this.lastWarningTime = this.getWorld().getTime(); // Update last warning time
+        if (!this.isHostile) {
+            this.playSound(this.getAlertSound(), 2.0F, 1.0F);
+            this.lastWarningTime = this.getWorld().getTime();
+        }
     }
 
     public void playHostileSound() {
-        this.playSound(this.getHostileSound(), 1.0F, 1.0F);
+        if (!this.isHostile) {
+            this.playSound(this.getHostileSound(), 1.0F, 1.0F);
+        }
     }
 
     private boolean canPlayWarningScream(long currentTime) {

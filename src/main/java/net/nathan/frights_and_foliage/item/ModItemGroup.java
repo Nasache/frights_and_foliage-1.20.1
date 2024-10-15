@@ -15,35 +15,35 @@ public class ModItemGroup {
     public static final ItemGroup FRIGHTSANDFOLIAGE = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FrightsAndFoliage.MOD_ID, "frights_and_foliage"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.frights_and_foliage"))
-                    .icon(() -> new ItemStack(ModItems.ACER_BOAT)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.ASERIA_BOAT)).entries((displayContext, entries) -> {
 
-                        entries.add(ModBlocks.ACER_LOG);
-                        entries.add(ModBlocks.ACER_WOOD);
-                        entries.add(ModBlocks.STRIPPED_ACER_LOG);
-                        entries.add(ModBlocks.STRIPPED_ACER_WOOD);
-                        entries.add(ModBlocks.ACER_PLANKS);
-                        entries.add(ModBlocks.ACER_STAIRS);
-                        entries.add(ModBlocks.ACER_SLAB);
-                        entries.add(ModBlocks.ACER_PRESSURE_PLATE);
-                        entries.add(ModBlocks.ACER_BUTTON);
-                        entries.add(ModBlocks.ACER_FENCE);
-                        entries.add(ModBlocks.ACER_FENCE_GATE);
-                        entries.add(ModBlocks.ACER_DOOR);
-                        entries.add(ModBlocks.ACER_TRAPDOOR);
-                        entries.add(ModItems.ACER_SIGN);
-                        entries.add(ModItems.ACER_HANGING_SIGN);
-                        entries.add(ModBlocks.RED_ACER_SAPLING);
-                        entries.add(ModBlocks.ORANGE_ACER_SAPLING);
-                        entries.add(ModBlocks.YELLOW_ACER_SAPLING);
-                        entries.add(ModBlocks.RED_ACER_LEAVES);
-                        entries.add(ModBlocks.ORANGE_ACER_LEAVES);
-                        entries.add(ModBlocks.YELLOW_ACER_LEAVES);
-                        entries.add(ModBlocks.ACER_LEAVES);
+                        entries.add(ModBlocks.ASERIA_LOG);
+                        entries.add(ModBlocks.ASERIA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ASERIA_LOG);
+                        entries.add(ModBlocks.STRIPPED_ASERIA_WOOD);
+                        entries.add(ModBlocks.ASERIA_PLANKS);
+                        entries.add(ModBlocks.ASERIA_STAIRS);
+                        entries.add(ModBlocks.ASERIA_SLAB);
+                        entries.add(ModBlocks.ASERIA_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ASERIA_BUTTON);
+                        entries.add(ModBlocks.ASERIA_FENCE);
+                        entries.add(ModBlocks.ASERIA_FENCE_GATE);
+                        entries.add(ModBlocks.ASERIA_DOOR);
+                        entries.add(ModBlocks.ASERIA_TRAPDOOR);
+                        entries.add(ModItems.ASERIA_SIGN);
+                        entries.add(ModItems.ASERIA_HANGING_SIGN);
+                        entries.add(ModBlocks.RED_ASERIA_SAPLING);
+                        entries.add(ModBlocks.ORANGE_ASERIA_SAPLING);
+                        entries.add(ModBlocks.YELLOW_ASERIA_SAPLING);
+                        entries.add(ModBlocks.RED_ASERIA_LEAVES);
+                        entries.add(ModBlocks.ORANGE_ASERIA_LEAVES);
+                        entries.add(ModBlocks.YELLOW_ASERIA_LEAVES);
+                        entries.add(ModBlocks.FALLEN_LEAVES);
 
-                        entries.add(ModItems.ACER_BOAT);
-                        entries.add(ModItems.ACER_CHEST_BOAT);
+                        entries.add(ModItems.ASERIA_BOAT);
+                        entries.add(ModItems.ASERIA_CHEST_BOAT);
 
-                        entries.add(ModBlocks.ACER_SYRUP_LOG);
+                        entries.add(ModBlocks.ASERIA_SYRUP_LOG);
 
                         entries.add(ModBlocks.MARNOR_LOG);
                         entries.add(ModBlocks.MARNOR_WOOD);
@@ -56,6 +56,15 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_BUTTON);
                         entries.add(ModBlocks.MARNOR_FENCE);
                         entries.add(ModBlocks.MARNOR_FENCE_GATE);
+                        //entries.add(ModBlocks.MARNOR_DOOR);
+                        //entries.add(ModBlocks.MARNOR_TRAPDOOR);
+                        entries.add(ModItems.MARNOR_SIGN);
+                        entries.add(ModItems.MARNOR_HANGING_SIGN);
+                        //entries.add(ModBlocks.MARNOR_SAPLING);
+                        //entries.add(ModBlocks.MARNOR_LEAVES);
+
+                        entries.add(ModItems.MARNOR_BOAT);
+                        entries.add(ModItems.MARNOR_CHEST_BOAT);
 
                         entries.add(ModBlocks.LEAFBUG_BLOCK);
 

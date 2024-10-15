@@ -2,12 +2,9 @@ package net.nathan.frights_and_foliage.item;
 
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.EntityType;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
@@ -16,13 +13,21 @@ import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
 
 public class ModItems {
-    public static final Item ACER_SIGN = registerItem("acer_sign",
-            new SignItem(new Item.Settings().maxCount(16), ModBlocks.ACER_SIGN, ModBlocks.ACER_WALL_SIGN));
-    public static final Item ACER_HANGING_SIGN = registerItem("acer_hanging_sign",
-            new HangingSignItem(ModBlocks.ACER_HANGING_SIGN, ModBlocks.ACER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+    public static final Item ASERIA_SIGN = registerItem("aseria_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.ASERIA_SIGN, ModBlocks.ASERIA_WALL_SIGN));
+    public static final Item ASERIA_HANGING_SIGN = registerItem("aseria_hanging_sign",
+            new HangingSignItem(ModBlocks.ASERIA_HANGING_SIGN, ModBlocks.ASERIA_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
-    public static final Item ACER_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ACER_BOAT_ID, ModBoats.ACER_BOAT_KEY, false);
-    public static final Item ACER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ACER_CHEST_BOAT_ID, ModBoats.ACER_BOAT_KEY, true);
+    public static final Item ASERIA_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ASERIA_BOAT_ID, ModBoats.ASERIA_BOAT_KEY, false);
+    public static final Item ASERIA_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ASERIA_CHEST_BOAT_ID, ModBoats.ASERIA_BOAT_KEY, true);
+
+    public static final Item MARNOR_SIGN = registerItem("marnor_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.MARNOR_SIGN, ModBlocks.MARNOR_WALL_SIGN));
+    public static final Item MARNOR_HANGING_SIGN = registerItem("marnor_hanging_sign",
+            new HangingSignItem(ModBlocks.MARNOR_HANGING_SIGN, ModBlocks.MARNOR_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+
+    public static final Item MARNOR_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MARNOR_BOAT_ID, ModBoats.MARNOR_BOAT_KEY, false);
+    public static final Item MARNOR_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MARNOR_CHEST_BOAT_ID, ModBoats.MARNOR_BOAT_KEY, true);
 
 
     public static final Item WARPED_PUMPKIN_SEEDS = registerItem("warped_pumpkin_seeds",
@@ -35,8 +40,8 @@ public class ModItems {
     public static final Item CRIMSON_PUMPKIN_PIE = registerItem("crimson_pumpkin_pie",
             new Item(new FabricItemSettings().food(ModFoodComponents.CRIMSON_PUMPKIN_PIE)));
 
-    public static final Item ACER_SYRUP_BOTTLE = registerItem("acer_syrup_bottle",
-            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ACER_SYRUP_BOTTLE).maxCount(16)));
+    public static final Item ASERIA_SYRUP_BOTTLE = registerItem("aseria_syrup_bottle",
+            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ASERIA_SYRUP_BOTTLE).maxCount(16)));
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x745a36, 0xc29d62, new Item.Settings()));

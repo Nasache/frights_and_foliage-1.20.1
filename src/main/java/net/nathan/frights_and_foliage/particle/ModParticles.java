@@ -8,12 +8,12 @@ import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 
 public class ModParticles {
-    public static final DefaultParticleType RED_ACER_PARTICLE =
-            registerParticle("red_acer_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType ORANGE_ACER_PARTICLE =
-            registerParticle("orange_acer_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType YELLOW_ACER_PARTICLE =
-            registerParticle("yellow_acer_leaves", FabricParticleTypes.simple());
+    public static final DefaultParticleType RED_ASERIA_PARTICLE =
+            registerParticle("red_aseria_leaves", FabricParticleTypes.simple());
+    public static final DefaultParticleType ORANGE_ASERIA_PARTICLE =
+            registerParticle("orange_aseria_leaves", FabricParticleTypes.simple());
+    public static final DefaultParticleType YELLOW_ASERIA_PARTICLE =
+            registerParticle("yellow_aseria_leaves", FabricParticleTypes.simple());
 
 
     private static DefaultParticleType registerParticle(String name, DefaultParticleType particleType) {

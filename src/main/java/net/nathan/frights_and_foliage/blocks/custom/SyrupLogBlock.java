@@ -62,7 +62,7 @@ public class SyrupLogBlock extends PillarBlock {
             itemStack.decrement(1);
             world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
-            ItemStack syrupBottle = new ItemStack(ModItems.ACER_SYRUP_BOTTLE);
+            ItemStack syrupBottle = new ItemStack(ModItems.ASERIA_SYRUP_BOTTLE);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, syrupBottle);
             } else if (!player.getInventory().insertStack(syrupBottle)) {

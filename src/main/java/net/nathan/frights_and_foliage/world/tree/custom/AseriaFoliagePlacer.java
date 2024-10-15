@@ -10,19 +10,19 @@ import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
 
-public class AcerFoliagePlacer extends FoliagePlacer {
-    public static final Codec<AcerFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) -> fillFoliagePlacerFields(instance)
-            .and(Codec.intRange(0, 12).fieldOf("height").forGetter((placer) -> placer.height)).apply(instance, AcerFoliagePlacer::new));
+public class AseriaFoliagePlacer extends FoliagePlacer {
+    public static final Codec<AseriaFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) -> fillFoliagePlacerFields(instance)
+            .and(Codec.intRange(0, 12).fieldOf("height").forGetter((placer) -> placer.height)).apply(instance, AseriaFoliagePlacer::new));
     private final int height;
 
-    public AcerFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public AseriaFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset);
         this.height = height;
     }
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return ModFoliagePlacerTypes.ACER_FOLIAGE_PLACER;
+        return ModFoliagePlacerTypes.ASERIA_FOLIAGE_PLACER;
     }
 
     @Override

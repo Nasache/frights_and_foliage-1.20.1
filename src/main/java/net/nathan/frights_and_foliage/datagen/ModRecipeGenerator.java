@@ -9,13 +9,11 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.util.ModTags;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
@@ -25,46 +23,46 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerPlanksRecipe(exporter, ModBlocks.ACER_PLANKS, ModTags.Items.ACER_LOGS, 4);
+        offerPlanksRecipe(exporter, ModBlocks.ASERIA_PLANKS, ModTags.Items.ASERIA_LOGS, 4);
 
-        offerBarkBlockRecipe(exporter, ModBlocks.ACER_WOOD, ModBlocks.ACER_LOG);
-        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_ACER_WOOD, ModBlocks.STRIPPED_ACER_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.ASERIA_WOOD, ModBlocks.ASERIA_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_ASERIA_WOOD, ModBlocks.STRIPPED_ASERIA_LOG);
 
-        createStairsRecipe(ModBlocks.ACER_STAIRS, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_STAIRS)));
-        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ACER_SLAB, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_SLAB)));
+        createStairsRecipe(ModBlocks.ASERIA_STAIRS, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_STAIRS)));
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASERIA_SLAB, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_SLAB)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ACER_BUTTON)
-                .input(ModBlocks.ACER_PLANKS)
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_BUTTON)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ASERIA_BUTTON)
+                .input(ModBlocks.ASERIA_PLANKS)
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_BUTTON)));
 
-        createFenceRecipe(ModBlocks.ACER_FENCE, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_FENCE)));
-        createFenceGateRecipe(ModBlocks.ACER_FENCE_GATE, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_FENCE_GATE)));
+        createFenceRecipe(ModBlocks.ASERIA_FENCE, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_FENCE)));
+        createFenceGateRecipe(ModBlocks.ASERIA_FENCE_GATE, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_FENCE_GATE)));
 
-        createDoorRecipe(ModBlocks.ACER_DOOR, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_DOOR)));
-        createTrapdoorRecipe(ModBlocks.ACER_TRAPDOOR, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_TRAPDOOR)));
+        createDoorRecipe(ModBlocks.ASERIA_DOOR, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_DOOR)));
+        createTrapdoorRecipe(ModBlocks.ASERIA_TRAPDOOR, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_TRAPDOOR)));
 
-        offerPressurePlateRecipe(exporter, ModBlocks.ACER_PRESSURE_PLATE, ModBlocks.ACER_PLANKS);
+        offerPressurePlateRecipe(exporter, ModBlocks.ASERIA_PRESSURE_PLATE, ModBlocks.ASERIA_PLANKS);
 
-        offerHangingSignRecipe(exporter, ModItems.ACER_HANGING_SIGN, ModBlocks.STRIPPED_ACER_LOG);
-        createSignRecipe(ModItems.ACER_SIGN, Ingredient.ofItems(ModBlocks.ACER_PLANKS))
-                .criterion(hasItem(ModBlocks.ACER_PLANKS), conditionsFromItem(ModBlocks.ACER_PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ACER_SIGN)));
+        offerHangingSignRecipe(exporter, ModItems.ASERIA_HANGING_SIGN, ModBlocks.STRIPPED_ASERIA_LOG);
+        createSignRecipe(ModItems.ASERIA_SIGN, Ingredient.ofItems(ModBlocks.ASERIA_PLANKS))
+                .criterion(hasItem(ModBlocks.ASERIA_PLANKS), conditionsFromItem(ModBlocks.ASERIA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ASERIA_SIGN)));
 
-        offerBoatRecipe(exporter, ModItems.ACER_BOAT, ModBlocks.ACER_PLANKS);
-        offerChestBoatRecipe(exporter, ModItems.ACER_CHEST_BOAT, ModItems.ACER_BOAT);
+        offerBoatRecipe(exporter, ModItems.ASERIA_BOAT, ModBlocks.ASERIA_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.ASERIA_CHEST_BOAT, ModItems.ASERIA_BOAT);
 
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_SEEDS, 4)

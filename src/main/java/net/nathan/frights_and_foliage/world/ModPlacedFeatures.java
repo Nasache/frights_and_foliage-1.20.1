@@ -16,9 +16,9 @@ import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> RED_ACER_PLACED_KEY = registerKey("red_acer_placed");
-    public static final RegistryKey<PlacedFeature> ORANGE_ACER_PLACED_KEY = registerKey("orange_acer_placed");
-    public static final RegistryKey<PlacedFeature> YELLOW_ACER_PLACED_KEY = registerKey("yellow_acer_placed");
+    public static final RegistryKey<PlacedFeature> RED_ASERIA_PLACED_KEY = registerKey("red_aseria_placed");
+    public static final RegistryKey<PlacedFeature> ORANGE_ASERIA_PLACED_KEY = registerKey("orange_aseria_placed");
+    public static final RegistryKey<PlacedFeature> YELLOW_ASERIA_PLACED_KEY = registerKey("yellow_aseria_placed");
     public static final RegistryKey<PlacedFeature> FALLEN_LEAVES_PLACED_KEY = registerKey("fallen_leaves_placed");
     public static final RegistryKey<PlacedFeature> AUTUMN_ROCK_PLACED_KEY = registerKey("autumn_rock_placed");
     public static final RegistryKey<PlacedFeature> AUTUMN_PUMPKIN_PLACED_KEY = registerKey("autumn_pumpkin_placed");
@@ -30,15 +30,15 @@ public class ModPlacedFeatures {
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, RED_ACER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RED_ACER_KEY),
+        register(context, RED_ASERIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RED_ASERIA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.RED_ACER_SAPLING));
-        register(context, ORANGE_ACER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORANGE_ACER_KEY),
+                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.RED_ASERIA_SAPLING));
+        register(context, ORANGE_ASERIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORANGE_ASERIA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.ORANGE_ACER_SAPLING));
-        register(context, YELLOW_ACER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.YELLOW_ACER_KEY),
+                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.ORANGE_ASERIA_SAPLING));
+        register(context, YELLOW_ASERIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.YELLOW_ASERIA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.YELLOW_ACER_SAPLING));
+                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.YELLOW_ASERIA_SAPLING));
 
         PlacedFeatures.register(context, FALLEN_LEAVES_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_LEAVES_KEY),
                 new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10),

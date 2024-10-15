@@ -17,17 +17,17 @@ import net.nathan.frights_and_foliage.world.tree.ModTrunkPlacerTypes;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class AcerTrunkPlacer extends TrunkPlacer {
-    public static final Codec<AcerTrunkPlacer> CODEC = RecordCodecBuilder.create((AcerTrunkPlacerInstance) -> {
-        return fillTrunkPlacerFields(AcerTrunkPlacerInstance).apply(AcerTrunkPlacerInstance, AcerTrunkPlacer::new);
+public class AseriaTrunkPlacer extends TrunkPlacer {
+    public static final Codec<AseriaTrunkPlacer> CODEC = RecordCodecBuilder.create((AcerTrunkPlacerInstance) -> {
+        return fillTrunkPlacerFields(AcerTrunkPlacerInstance).apply(AcerTrunkPlacerInstance, AseriaTrunkPlacer::new);
     });
 
-    public AcerTrunkPlacer(int i, int j, int k) {
+    public AseriaTrunkPlacer(int i, int j, int k) {
         super(i, j, k);
     }
 
     protected TrunkPlacerType<?> getType() {
-        return ModTrunkPlacerTypes.ACER_TRUNK_PLACER;
+        return ModTrunkPlacerTypes.ASERIA_TRUNK_PLACER;
     }
 
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
@@ -36,7 +36,7 @@ public class AcerTrunkPlacer extends TrunkPlacer {
         for (int i = 0; i < height; ++i) {
             BlockPos currentPos = startPos.up(i);
             if (random.nextInt(10) == 0) {
-                replacer.accept(currentPos, ModBlocks.ACER_SYRUP_LOG.getDefaultState());
+                replacer.accept(currentPos, ModBlocks.ASERIA_SYRUP_LOG.getDefaultState());
             } else {
                 this.getAndSetState(world, replacer, random, currentPos, config);
             }

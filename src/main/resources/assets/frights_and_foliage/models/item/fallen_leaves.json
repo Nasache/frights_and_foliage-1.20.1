@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "frights_and_foliage:item/acer_leaves"
+    "layer0": "frights_and_foliage:item/fallen_leaves"
   }
 }

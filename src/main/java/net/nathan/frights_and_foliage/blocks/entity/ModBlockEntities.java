@@ -12,12 +12,14 @@ public class ModBlockEntities {
     public static final BlockEntityType<ModSignBlockEntity> MOD_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "mod_sign_entity"),
             FabricBlockEntityTypeBuilder.create(ModSignBlockEntity::new,
-                    ModBlocks.ACER_SIGN, ModBlocks.ACER_WALL_SIGN).build());
+                    ModBlocks.ASERIA_SIGN, ModBlocks.ASERIA_WALL_SIGN,
+                    ModBlocks.MARNOR_SIGN, ModBlocks.MARNOR_WALL_SIGN).build());
 
     public static final BlockEntityType<ModHangingSignBlockEntity> MOD_HANGING_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "mod_hanging_sign_entity"),
             FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new,
-                    ModBlocks.ACER_HANGING_SIGN, ModBlocks.ACER_WALL_HANGING_SIGN).build());
+                    ModBlocks.ASERIA_HANGING_SIGN, ModBlocks.ASERIA_WALL_HANGING_SIGN,
+                    ModBlocks.MARNOR_HANGING_SIGN, ModBlocks.MARNOR_WALL_HANGING_SIGN).build());
 
 
     public static void registerBlockEntities() {

@@ -18,14 +18,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_SYRUP_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
-                        ModBlocks.STRIPPED_ACER_LOG.asItem(), ModBlocks.STRIPPED_ACER_WOOD.asItem());
+                .add(ModBlocks.ASERIA_LOG.asItem(), ModBlocks.ASERIA_SYRUP_LOG.asItem(), ModBlocks.ASERIA_WOOD.asItem(),
+                        ModBlocks.STRIPPED_ASERIA_LOG.asItem(), ModBlocks.STRIPPED_ASERIA_WOOD.asItem(),
+                        ModBlocks.MARNOR_LOG.asItem(), ModBlocks.MARNOR_WOOD.asItem(),
+                        ModBlocks.STRIPPED_MARNOR_LOG.asItem(), ModBlocks.STRIPPED_MARNOR_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.ACER_PLANKS.asItem());
+                .add(ModBlocks.ASERIA_PLANKS.asItem(), ModBlocks.MARNOR_PLANKS.asItem());
 
-        getOrCreateTagBuilder(ModTags.Items.ACER_LOGS)
-                .add(ModBlocks.ACER_LOG.asItem(), ModBlocks.ACER_SYRUP_LOG.asItem(), ModBlocks.ACER_WOOD.asItem(),
-                        ModBlocks.STRIPPED_ACER_LOG.asItem(), ModBlocks.STRIPPED_ACER_WOOD.asItem());
+        getOrCreateTagBuilder(ModTags.Items.ASERIA_LOGS)
+                .add(ModBlocks.ASERIA_LOG.asItem(), ModBlocks.ASERIA_SYRUP_LOG.asItem(), ModBlocks.ASERIA_WOOD.asItem(),
+                        ModBlocks.STRIPPED_ASERIA_LOG.asItem(), ModBlocks.STRIPPED_ASERIA_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.MARNOR_LOGS)
+                .add(ModBlocks.MARNOR_LOG.asItem(), ModBlocks.MARNOR_WOOD.asItem(),
+                        ModBlocks.STRIPPED_MARNOR_LOG.asItem(), ModBlocks.STRIPPED_MARNOR_WOOD.asItem());
     }
 }

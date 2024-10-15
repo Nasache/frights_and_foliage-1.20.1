@@ -11,7 +11,8 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 public class ModTags {
     public static class Blocks {
 
-        public static final TagKey<Block> ACER_LOGS = TagKey.of(RegistryKeys.BLOCK, new Identifier("frights_and_foliage", "acer_logs"));
+        public static final TagKey<Block> ASERIA_LOGS = TagKey.of(RegistryKeys.BLOCK, new Identifier("frights_and_foliage", "aseria_logs"));
+        public static final TagKey<Block> MARNOR_LOGS = TagKey.of(RegistryKeys.BLOCK, new Identifier("frights_and_foliage", "marnor_logs"));
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(FrightsAndFoliage.MOD_ID, name));
@@ -24,7 +25,8 @@ public class ModTags {
 
     public static class Items {
 
-        public static final TagKey<Item> ACER_LOGS = TagKey.of(RegistryKeys.ITEM, new Identifier("frights_and_foliage", "maple_logs"));
+        public static final TagKey<Item> ASERIA_LOGS = TagKey.of(RegistryKeys.ITEM, new Identifier("frights_and_foliage", "aseria_logs"));
+        public static final TagKey<Item> MARNOR_LOGS = TagKey.of(RegistryKeys.ITEM, new Identifier("frights_and_foliage", "marnor_logs"));
 
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(FrightsAndFoliage.MOD_ID, name));

@@ -1,5 +1,6 @@
 package net.nathan.frights_and_foliage.blocks.custom;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.client.util.ParticleUtil;
@@ -9,8 +10,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.nathan.frights_and_foliage.particle.ModParticles;
 
-public class OrangeAcerLeavesBlock extends LeavesBlock {
-    public OrangeAcerLeavesBlock(Settings settings) {
+public class RedAseriaLeavesBlock extends LeavesBlock {
+    public RedAseriaLeavesBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 
@@ -21,7 +22,7 @@ public class OrangeAcerLeavesBlock extends LeavesBlock {
             BlockPos blockPos = pos.down();
             BlockState blockState = world.getBlockState(blockPos);
             if (!isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
-                ParticleUtil.spawnParticle(world, pos, random, ModParticles.ORANGE_ACER_PARTICLE);
+                ParticleUtil.spawnParticle(world, pos, random, ModParticles.RED_ASERIA_PARTICLE);
             }
         }
     }

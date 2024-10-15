@@ -9,8 +9,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.nathan.frights_and_foliage.particle.ModParticles;
 
-public class YellowAcerLeavesBlock extends LeavesBlock {
-    public YellowAcerLeavesBlock(Settings settings) {
+public class OrangeAseriaLeavesBlock extends LeavesBlock {
+    public OrangeAseriaLeavesBlock(Settings settings) {
         super(settings);
     }
 
@@ -21,7 +21,7 @@ public class YellowAcerLeavesBlock extends LeavesBlock {
             BlockPos blockPos = pos.down();
             BlockState blockState = world.getBlockState(blockPos);
             if (!isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
-                ParticleUtil.spawnParticle(world, pos, random, ModParticles.YELLOW_ACER_PARTICLE);
+                ParticleUtil.spawnParticle(world, pos, random, ModParticles.ORANGE_ASERIA_PARTICLE);
             }
         }
     }

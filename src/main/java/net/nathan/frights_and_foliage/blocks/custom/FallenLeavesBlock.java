@@ -18,13 +18,13 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class AcerLeavesBlock extends PlantBlock implements Fertilizable {
+public class FallenLeavesBlock extends PlantBlock implements Fertilizable {
     public static final int field_42762 = 1;
     public static final int field_42763 = 4;
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final IntProperty FLOWER_AMOUNT = Properties.FLOWER_AMOUNT;
 
-    public AcerLeavesBlock(AbstractBlock.Settings settings) {
+    public FallenLeavesBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(FLOWER_AMOUNT, 1));
     }

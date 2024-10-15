@@ -17,11 +17,10 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.NoiseBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
-import net.nathan.frights_and_foliage.world.tree.custom.AcerFoliagePlacer;
-import net.nathan.frights_and_foliage.world.tree.custom.AcerTrunkPlacer;
+import net.nathan.frights_and_foliage.world.tree.custom.AseriaFoliagePlacer;
+import net.nathan.frights_and_foliage.world.tree.custom.AseriaTrunkPlacer;
 
 import java.util.Iterator;
 import java.util.List;
@@ -30,9 +29,9 @@ import static net.minecraft.world.gen.feature.ConfiguredFeatures.createRandomPat
 
 
 public class ModConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_ACER_KEY = registerKey("red_acer");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_ACER_KEY = registerKey("orange_acer");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_ACER_KEY = registerKey("yellow_acer");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_ASERIA_KEY = registerKey("red_aseria");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_ASERIA_KEY = registerKey("orange_aseria");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_ASERIA_KEY = registerKey("yellow_aseria");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_LEAVES_KEY = registerKey("fallen_leaves");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_ROCK_KEY = registerKey("autumn_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_PUMPKIN_KEY = registerKey("autumn_pumpkin");
@@ -44,23 +43,23 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
-        register(context, RED_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new AcerTrunkPlacer(6, 2, 3),
-                BlockStateProvider.of(ModBlocks.RED_ACER_LEAVES),
-                new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+        register(context, RED_ASERIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.ASERIA_LOG),
+                new AseriaTrunkPlacer(6, 2, 3),
+                BlockStateProvider.of(ModBlocks.RED_ASERIA_LEAVES),
+                new AseriaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
-        register(context, ORANGE_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new AcerTrunkPlacer(6, 2, 3),
-                BlockStateProvider.of(ModBlocks.ORANGE_ACER_LEAVES),
-                new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+        register(context, ORANGE_ASERIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.ASERIA_LOG),
+                new AseriaTrunkPlacer(6, 2, 3),
+                BlockStateProvider.of(ModBlocks.ORANGE_ASERIA_LEAVES),
+                new AseriaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
-        register(context, YELLOW_ACER_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.ACER_LOG),
-                new AcerTrunkPlacer(6, 2, 3),
-                BlockStateProvider.of(ModBlocks.YELLOW_ACER_LEAVES),
-                new AcerFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+        register(context, YELLOW_ASERIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.ASERIA_LOG),
+                new AseriaTrunkPlacer(6, 2, 3),
+                BlockStateProvider.of(ModBlocks.YELLOW_ASERIA_LEAVES),
+                new AseriaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
 
@@ -70,7 +69,7 @@ public class ModConfiguredFeatures {
 
             while(var35.hasNext()) {
                 Direction direction = (Direction)var35.next();
-                builder.add((BlockState)((BlockState) ModBlocks.ACER_LEAVES.getDefaultState().with(FlowerbedBlock.FLOWER_AMOUNT, i))
+                builder.add((BlockState)((BlockState) ModBlocks.FALLEN_LEAVES.getDefaultState().with(FlowerbedBlock.FLOWER_AMOUNT, i))
                         .with(FlowerbedBlock.FACING, direction), 1);
             }
         }

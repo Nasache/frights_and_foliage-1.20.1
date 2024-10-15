@@ -7,10 +7,10 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.nathan.frights_and_foliage.world.ModConfiguredFeatures;
 import org.jetbrains.annotations.Nullable;
 
-public class YellowAcerSaplingGenerator extends SaplingGenerator {
+public class OrangeAseriaSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return ModConfiguredFeatures.YELLOW_ACER_KEY;
+        return ModConfiguredFeatures.ORANGE_ASERIA_KEY;
     }
 }

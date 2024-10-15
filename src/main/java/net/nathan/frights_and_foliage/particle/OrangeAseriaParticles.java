@@ -4,7 +4,7 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
-public class OrangeAcerParticles extends SpriteBillboardParticle {
+public class OrangeAseriaParticles extends SpriteBillboardParticle {
     private static final float field_43372 = 0.0025F;
     private static final int field_43373 = 300;
     private static final int field_43366 = 300;
@@ -14,7 +14,7 @@ public class OrangeAcerParticles extends SpriteBillboardParticle {
     private final float field_43370;
     private final float field_43371;
 
-    protected OrangeAcerParticles(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider, double xd, double yd, double zd) {
+    protected OrangeAseriaParticles(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider, double xd, double yd, double zd) {
         super(world, x, y, z);
         this.setSprite(spriteProvider.getSprite(this.random.nextInt(12), 12));
         this.field_43369 = (float)Math.toRadians(this.random.nextBoolean() ? -30.0 : 30.0);
@@ -74,7 +74,7 @@ public class OrangeAcerParticles extends SpriteBillboardParticle {
         }
 
         public Particle createParticle(DefaultParticleType particleType, ClientWorld clientWorld, double x, double y, double z, double xd, double yd, double zd) {
-            return new OrangeAcerParticles(clientWorld, x, y, z, this.sprites, xd, yd, zd);
+            return new OrangeAseriaParticles(clientWorld, x, y, z, this.sprites, xd, yd, zd);
         }
     }
 }

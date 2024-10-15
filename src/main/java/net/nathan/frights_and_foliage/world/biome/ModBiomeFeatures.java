@@ -10,9 +10,9 @@ public class ModBiomeFeatures {
     public static void addAutumnalVegetation(GenerationSettings.LookupBackedBuilder builder) {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_GRASS_PLAIN);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_TALL_GRASS);
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RED_ACER_PLACED_KEY);
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ORANGE_ACER_PLACED_KEY);
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_ACER_PLACED_KEY);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RED_ASERIA_PLACED_KEY);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ORANGE_ASERIA_PLACED_KEY);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_ASERIA_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.FALLEN_LEAVES_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_ROCK_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_PUMPKIN_PLACED_KEY);
