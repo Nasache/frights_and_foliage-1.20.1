@@ -18,6 +18,7 @@ public class ModItemGroup {
                     .icon(() -> new ItemStack(ModItems.ASERIA_BOAT)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.ASERIA_LOG);
+                        entries.add(ModBlocks.ASERIA_SYRUP_LOG);
                         entries.add(ModBlocks.ASERIA_WOOD);
                         entries.add(ModBlocks.STRIPPED_ASERIA_LOG);
                         entries.add(ModBlocks.STRIPPED_ASERIA_WOOD);
@@ -43,8 +44,6 @@ public class ModItemGroup {
                         entries.add(ModItems.ASERIA_BOAT);
                         entries.add(ModItems.ASERIA_CHEST_BOAT);
 
-                        entries.add(ModBlocks.ASERIA_SYRUP_LOG);
-
                         entries.add(ModBlocks.MARNOR_LOG);
                         entries.add(ModBlocks.MARNOR_WOOD);
                         entries.add(ModBlocks.STRIPPED_MARNOR_LOG);
@@ -67,6 +66,8 @@ public class ModItemGroup {
                         entries.add(ModItems.MARNOR_CHEST_BOAT);
 
                         entries.add(ModBlocks.LEAFBUG_BLOCK);
+
+                        entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
 
 
                         entries.add(ModItems.WARPED_PUMPKIN_SEEDS);

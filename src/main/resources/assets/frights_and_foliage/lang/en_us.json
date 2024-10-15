@@ -28,6 +28,8 @@
   "block.frights_and_foliage.orange_aseria_leaves": "Orange Aseria Leaves",
   "block.frights_and_foliage.yellow_aseria_leaves": "Yellow Aseria Leaves",
 
+  "item.frights_and_foliage.aseria_syrup_bottle": "Aseria Syrup Bottle",
+
   "block.frights_and_foliage.fallen_leaves": "Fallen Leaves",
 
 
@@ -65,9 +67,11 @@
   "block.frights_and_foliage.crimson_pumpkin": "Crimson Pumpkin",
   "block.frights_and_foliage.carved_crimson_pumpkin": "Carved Crimson Pumpkin",
   "block.frights_and_foliage.crimson_jack_o_lantern": "Crimson Jack o'Lantern",
-  
-  
+
+
+  "item.frights_and_foliage.stalk_spawn_egg": "Stalk Spawn Egg",
+  "entity.frights_and_foliage.stalk": "Stalk",
+
 
   "itemgroup.frights_and_foliage": "Frights And Foliage"
-
 }

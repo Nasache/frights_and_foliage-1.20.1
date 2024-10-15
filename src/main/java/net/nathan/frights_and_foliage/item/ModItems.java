@@ -44,7 +44,7 @@ public class ModItems {
             new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ASERIA_SYRUP_BOTTLE).maxCount(16)));
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
-            new SpawnEggItem(ModEntities.STALK, 0x745a36, 0xc29d62, new Item.Settings()));
+            new SpawnEggItem(ModEntities.STALK, 0x362141, 0x100d12, new Item.Settings()));
     public static final Item LEAFBUG_SPAWN_EGG = registerItem("leafbug_spawn_egg",
             new SpawnEggItem(ModEntities.LEAFBUG, 0x745a36, 0xc29d62, new Item.Settings()));
 
