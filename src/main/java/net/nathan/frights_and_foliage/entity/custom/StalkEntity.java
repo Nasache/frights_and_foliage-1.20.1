@@ -123,7 +123,6 @@ public class StalkEntity extends HostileEntity {
         this.isAlerted = false;
         this.followPlayerTicks = 0;
         this.setTarget(null);
-        // Remove the FollowPlayerGoal when hostility is reset
         this.goalSelector.remove(this.followPlayerGoal);
     }
 

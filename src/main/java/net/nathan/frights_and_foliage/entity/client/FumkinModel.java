@@ -12,6 +12,8 @@ import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
 public class FumkinModel<T extends FumkinEntity> extends SinglePartEntityModel<T> {
     private final ModelPart fumkin;
     private final ModelPart head;
+    private boolean isEatingAnimationPlaying = false;
+
 
     public FumkinModel(ModelPart root) {
         this.fumkin = root.getChild("fumkin");
@@ -77,7 +79,6 @@ public class FumkinModel<T extends FumkinEntity> extends SinglePartEntityModel<T
 
         this.animateMovement(FumkinAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
     }
-
 
     private void setHeadAngles(FumkinEntity entity, float headYaw, float headPitch, float animationProgress) {
         headYaw = MathHelper.clamp(headYaw, -10.0F, 30.0F);

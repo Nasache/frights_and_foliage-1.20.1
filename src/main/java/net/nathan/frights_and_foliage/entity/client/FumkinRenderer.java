@@ -9,7 +9,8 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
 
 public class FumkinRenderer extends MobEntityRenderer<FumkinEntity, FumkinModel<FumkinEntity>> {
-    private static final Identifier TEXTURE = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/fumkin/fumkin.png");
+    private static final Identifier TEXTURE_FULL = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/fumkin/fumkin.png");
+    private static final Identifier TEXTURE_HALF = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/fumkin/fumkin_half.png");
     private static final Identifier TEXTURE_BALD = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/fumkin/fumkin_bald.png");
 
     public FumkinRenderer(EntityRendererFactory.Context ctx) {
@@ -18,10 +19,14 @@ public class FumkinRenderer extends MobEntityRenderer<FumkinEntity, FumkinModel<
 
     @Override
     public Identifier getTexture(FumkinEntity entity) {
-        if (entity.hasAntlers()) {
-            return TEXTURE;
-        } else {
-            return TEXTURE_BALD;
+        switch (entity.getAntlerStage()) {
+            case 0:
+                return TEXTURE_BALD;
+            case 1:
+                return TEXTURE_HALF;
+            case 2:
+            default:
+                return TEXTURE_FULL;
         }
     }
 
