@@ -12,6 +12,7 @@ import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 public class StalkModel<T extends StalkEntity> extends SinglePartEntityModel<T> {
     private final ModelPart stalk;
     private final ModelPart head;
+
     public StalkModel(ModelPart root) {
         this.stalk = root.getChild("stalk");
         this.head = stalk.getChild("body").getChild("head");

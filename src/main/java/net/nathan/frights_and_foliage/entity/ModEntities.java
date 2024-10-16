@@ -8,6 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
+import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
 import net.nathan.frights_and_foliage.entity.custom.LeafBugEntity;
 import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 
@@ -20,6 +21,10 @@ public class ModEntities {
     public static final EntityType<LeafBugEntity> LEAFBUG = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "leaf_bug"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LeafBugEntity::new).dimensions(EntityDimensions.fixed(0.5f, 0.6f)).build());
+
+    public static final EntityType<FumkinEntity> FUMKIN = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(FrightsAndFoliage.MOD_ID, "fumkin"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, FumkinEntity::new).dimensions(EntityDimensions.fixed(1.2f, 1.5f)).build());
 
 
     public static void registerModEntities() {

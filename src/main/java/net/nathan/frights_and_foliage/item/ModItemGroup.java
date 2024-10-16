@@ -84,6 +84,7 @@ public class ModItemGroup {
 
                         entries.add(ModItems.STALK_SPAWN_EGG);
                         entries.add(ModItems.LEAFBUG_SPAWN_EGG);
+                        entries.add(ModItems.FUMKIN_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

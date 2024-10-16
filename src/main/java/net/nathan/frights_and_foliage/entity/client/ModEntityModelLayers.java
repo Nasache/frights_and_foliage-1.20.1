@@ -11,4 +11,6 @@ public class ModEntityModelLayers {
     public static final EntityModelLayer LEAFBUG =
             new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "leaf_bug"), "main");
 
+    public static final EntityModelLayer FUMKIN =
+            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "fumkin"), "main");
 }
