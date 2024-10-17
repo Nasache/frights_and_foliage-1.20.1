@@ -8,8 +8,8 @@ public class ModEntityModelLayers {
     public static final EntityModelLayer STALK =
             new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "stalk"), "main");
 
-    public static final EntityModelLayer LEAFBUG =
-            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "leaf_bug"), "main");
+    public static final EntityModelLayer LEPHID =
+            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "lephid"), "main");
 
     public static final EntityModelLayer FUMKIN =
             new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "fumkin"), "main");

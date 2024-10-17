@@ -45,8 +45,8 @@ public class ModItems {
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x362141, 0x100d12, new Item.Settings()));
-    public static final Item LEAFBUG_SPAWN_EGG = registerItem("leafbug_spawn_egg",
-            new SpawnEggItem(ModEntities.LEAFBUG, 0x745a36, 0xc29d62, new Item.Settings()));
+    public static final Item LEPHID_SPAWN_EGG = registerItem("lephid_spawn_egg",
+            new SpawnEggItem(ModEntities.LEPHID, 0x745a36, 0xc29d62, new Item.Settings()));
     public static final Item FUMKIN_SPAWN_EGG = registerItem("fumkin_spawn_egg",
             new SpawnEggItem(ModEntities.FUMKIN, 0x745a36, 0xc29d62, new Item.Settings()));
 

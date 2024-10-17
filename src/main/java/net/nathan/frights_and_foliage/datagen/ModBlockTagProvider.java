@@ -65,8 +65,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.RED_ASERIA_LEAVES,
                         ModBlocks.ORANGE_ASERIA_LEAVES,
-                        ModBlocks.YELLOW_ASERIA_LEAVES);
-                        //ModBlocks.MARNOR_LEAVES);
+                        ModBlocks.YELLOW_ASERIA_LEAVES,
+                        ModBlocks.MARNOR_LEAVES,
+                        ModBlocks.INFESTED_MARNOR_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.ASERIA_FENCE, ModBlocks.MARNOR_FENCE);

@@ -14,6 +14,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.custom.*;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.util.ModWoodTypes;
+import net.nathan.frights_and_foliage.world.tree.MarnorSaplingGenerator;
 import net.nathan.frights_and_foliage.world.tree.OrangeAseriaSaplingGenerator;
 import net.nathan.frights_and_foliage.world.tree.RedAseriaSaplingGenerator;
 import net.nathan.frights_and_foliage.world.tree.YellowAseriaSaplingGenerator;
@@ -122,17 +123,17 @@ public class ModBlocks {
     public static final Block MARNOR_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("marnor_wall_hanging_sign",
             new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_PURPLE), ModWoodTypes.MARNOR));
 
-    //public static final Block MARNOR_LEAVES = registerBlock("marnor_leaves",
-    //        new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
-//
-    //public static final Block MARNOR_SAPLING = registerBlock("marnor_sapling",
-    //        new SaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block MARNOR_LEAVES = registerBlock("marnor_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block MARNOR_SAPLING = registerBlock("marnor_sapling",
+            new SaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
     //public static final Block POTTED_MARNOR_SAPLING = registerBlockWithoutBlockItem("potted_marnor_sapling",
     //        new FlowerPotBlock(MARNOR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
 
-    public static final Block LEAFBUG_BLOCK = registerBlock("leaf_bug_block",
-            new LeafBugBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
+    public static final Block INFESTED_MARNOR_LEAVES = registerBlock("infested_marnor_leaves",
+            new InfestedLeafBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
 
 
 

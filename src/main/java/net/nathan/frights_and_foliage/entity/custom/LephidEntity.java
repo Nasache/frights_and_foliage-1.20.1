@@ -11,12 +11,12 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class LeafBugEntity extends HostileEntity {
+public class LephidEntity extends HostileEntity {
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public LeafBugEntity(EntityType<? extends HostileEntity> entityType, World world) {
+    public LephidEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -25,6 +25,8 @@ public class LeafBugEntity extends HostileEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
         this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.5));
+        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(4, new LookAroundGoal(this));
 
         this.targetSelector.add(1, new RevengeGoal(this));
         this.targetSelector.add(2, new ActiveTargetGoal(this, PlayerEntity.class, true));
@@ -48,10 +50,10 @@ public class LeafBugEntity extends HostileEntity {
         }
     }
 
-    public static DefaultAttributeContainer.Builder createLeafBugAttributes() {
+    public static DefaultAttributeContainer.Builder createLephidAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3);
     }
 

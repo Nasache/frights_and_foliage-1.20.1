@@ -59,13 +59,14 @@ public class ModItemGroup {
                         //entries.add(ModBlocks.MARNOR_TRAPDOOR);
                         entries.add(ModItems.MARNOR_SIGN);
                         entries.add(ModItems.MARNOR_HANGING_SIGN);
-                        //entries.add(ModBlocks.MARNOR_SAPLING);
-                        //entries.add(ModBlocks.MARNOR_LEAVES);
+                        entries.add(ModBlocks.MARNOR_SAPLING);
+                        entries.add(ModBlocks.MARNOR_LEAVES);
+                        entries.add(ModBlocks.INFESTED_MARNOR_LEAVES);
+
 
                         entries.add(ModItems.MARNOR_BOAT);
                         entries.add(ModItems.MARNOR_CHEST_BOAT);
 
-                        entries.add(ModBlocks.LEAFBUG_BLOCK);
 
                         entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
 
@@ -83,7 +84,7 @@ public class ModItemGroup {
                         entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
 
                         entries.add(ModItems.STALK_SPAWN_EGG);
-                        entries.add(ModItems.LEAFBUG_SPAWN_EGG);
+                        entries.add(ModItems.LEPHID_SPAWN_EGG);
                         entries.add(ModItems.FUMKIN_SPAWN_EGG);
                     }).build());
 

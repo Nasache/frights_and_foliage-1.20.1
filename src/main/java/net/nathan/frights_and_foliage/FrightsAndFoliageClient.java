@@ -51,7 +51,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_SAPLING, RenderLayer.getCutout());
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_MARNOR_SAPLING, RenderLayer.getCutout());
 
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INFESTED_MARNOR_LEAVES, RenderLayer.getCutout());
 
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_DOOR, RenderLayer.getCutout());
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_TRAPDOOR, RenderLayer.getCutout());
@@ -73,8 +74,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.STALK, StalkModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.STALK, StalkRenderer::new);
 
-        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.LEAFBUG, LeafBugModel::getTexturedModelData);
-        EntityRendererRegistry.register(ModEntities.LEAFBUG, LeafBugRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.LEPHID, LephidModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.LEPHID, LephidRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.FUMKIN, FumkinModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.FUMKIN, FumkinRenderer::new);

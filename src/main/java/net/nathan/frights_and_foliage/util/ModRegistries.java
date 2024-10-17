@@ -9,7 +9,7 @@ import net.minecraft.block.ComposterBlock;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
-import net.nathan.frights_and_foliage.entity.custom.LeafBugEntity;
+import net.nathan.frights_and_foliage.entity.custom.LephidEntity;
 import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
 import net.nathan.frights_and_foliage.item.ModItems;
 
@@ -24,7 +24,7 @@ public class ModRegistries {
 
     private static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ModEntities.STALK, StalkEntity.createStalkAttributes());
-        FabricDefaultAttributeRegistry.register(ModEntities.LEAFBUG, LeafBugEntity.createLeafBugAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.LEPHID, LephidEntity.createLephidAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.FUMKIN, FumkinEntity.createFumkinAttributes());
     }
 

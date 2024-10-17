@@ -64,7 +64,7 @@ public class StalkModel<T extends StalkEntity> extends SinglePartEntityModel<T> 
 
     private void setHeadAngles(StalkEntity entity, float headYaw, float headPitch, float animationProgress) {
             headYaw = MathHelper.clamp(headYaw, -10.0F, 30.0F);
-            headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
+            headPitch = MathHelper.clamp(headPitch, -45.0F, 45.0F);
 
             this.head.yaw = headYaw * 0.017453292F;
             this.head.pitch = headPitch * 0.017453292F;

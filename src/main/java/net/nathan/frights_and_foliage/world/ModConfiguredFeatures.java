@@ -10,13 +10,16 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.NoiseBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.world.tree.custom.AseriaFoliagePlacer;
@@ -32,6 +35,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_ASERIA_KEY = registerKey("red_aseria");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_ASERIA_KEY = registerKey("orange_aseria");
     public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_ASERIA_KEY = registerKey("yellow_aseria");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MARNOR_KEY = registerKey("marnor");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_LEAVES_KEY = registerKey("fallen_leaves");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_ROCK_KEY = registerKey("autumn_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_PUMPKIN_KEY = registerKey("autumn_pumpkin");
@@ -60,6 +64,17 @@ public class ModConfiguredFeatures {
                 new AseriaTrunkPlacer(6, 2, 3),
                 BlockStateProvider.of(ModBlocks.YELLOW_ASERIA_LEAVES),
                 new AseriaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, MARNOR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MARNOR_LOG),
+                new CherryTrunkPlacer(4, 1, 2,
+                        ConstantIntProvider.create(2), ConstantIntProvider.create(3), UniformIntProvider.create(-3, 0), ConstantIntProvider.create(2)),
+                new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                        .add(ModBlocks.MARNOR_LEAVES.getDefaultState(), 20)
+                        .add(ModBlocks.INFESTED_MARNOR_LEAVES.getDefaultState(), 1)),
+                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
+                        0.25F, 0.5F, 0.4F, 0.5F),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
 

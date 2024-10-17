@@ -61,8 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.MARNOR_LOG).log(ModBlocks.MARNOR_LOG).wood(ModBlocks.MARNOR_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MARNOR_LOG).log(ModBlocks.STRIPPED_MARNOR_LOG).wood(ModBlocks.STRIPPED_MARNOR_WOOD);
 
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAFBUG_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MARNOR_LEAVES);
 
 
 
@@ -95,7 +94,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
-        itemModelGenerator.register(ModItems.LEAFBUG_SPAWN_EGG,
+        itemModelGenerator.register(ModItems.LEPHID_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.FUMKIN_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
