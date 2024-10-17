@@ -12,7 +12,6 @@ import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
 public class FumkinModel<T extends FumkinEntity> extends SinglePartEntityModel<T> {
     private final ModelPart fumkin;
     private final ModelPart head;
-    private boolean isEatingAnimationPlaying = false;
 
 
     public FumkinModel(ModelPart root) {

@@ -1,6 +1,8 @@
 package net.nathan.frights_and_foliage.entity.custom;
 
+import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -11,6 +13,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -20,15 +23,22 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import net.nathan.frights_and_foliage.entity.ModEntities;
 import org.jetbrains.annotations.Nullable;
+
+import net.minecraft.nbt.NbtCompound;
 
 import java.util.Random;
 
 public class FumkinEntity extends AnimalEntity {
     private static final TrackedData<Integer> ANTLER_STAGE;
     private int ticksUntilNextStage;
+    private boolean initializedAntlerGrowth = false;
 
     public FumkinEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -39,9 +49,9 @@ public class FumkinEntity extends AnimalEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.0));
-        this.goalSelector.add(3, new TemptGoal(this, 1.1, Ingredient.ofItems(Items.WHEAT), false));
-        this.goalSelector.add(4, new FollowParentGoal(this, 1.1));
-        this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(3, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.APPLE}), false));
+        this.goalSelector.add(4, new FollowParentGoal(this, 1.0));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.1));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(7, new LookAroundGoal(this));
     }
@@ -52,20 +62,36 @@ public class FumkinEntity extends AnimalEntity {
         this.dataTracker.startTracking(ANTLER_STAGE, 2);
     }
 
+    @Override
+    public boolean isBreedingItem(ItemStack stack) {
+        return stack.isOf(Items.APPLE);
+    }
+
     public static DefaultAttributeContainer.Builder createFumkinAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 15.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23000000417232513);
     }
 
     @Override
     public void tickMovement() {
         super.tickMovement();
 
-        if (this.ticksUntilNextStage > 0) {
-            this.ticksUntilNextStage--;
-            if (this.ticksUntilNextStage == 0) {
-                progressAntlerGrowth();
+        if (this.isBaby()) {
+            initializedAntlerGrowth = false;
+        }
+
+        if (!this.isBaby() && !initializedAntlerGrowth) {
+            this.scheduleNextStage();
+            initializedAntlerGrowth = true;
+        }
+
+        if (!this.isBaby()) {
+            if (this.ticksUntilNextStage > 0) {
+                this.ticksUntilNextStage--;
+                if (this.ticksUntilNextStage == 0) {
+                    progressAntlerGrowth();
+                }
             }
         }
     }
@@ -108,7 +134,7 @@ public class FumkinEntity extends AnimalEntity {
     }
 
     private void dropAntlers(SoundCategory soundCategory) {
-        this.getWorld().playSoundFromEntity((PlayerEntity)null, this, SoundEvents.ITEM_AXE_STRIP, soundCategory, 1.0F, 1.0F);
+        this.getWorld().playSoundFromEntity(null, this, SoundEvents.ITEM_AXE_STRIP, soundCategory, 1.0F, 1.0F);
         this.setAntlerStage(0);
         this.dropItem(Items.BONE);
         this.scheduleNextStage();
@@ -117,7 +143,41 @@ public class FumkinEntity extends AnimalEntity {
     @Nullable
     @Override
     public FumkinEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
+        FumkinEntity child = ModEntities.FUMKIN.create(world);
+        if (child != null) {
+            child.setAntlerStage(0);
+        }
+        return child;
+    }
+
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        nbt.putInt("AntlerStage", this.getAntlerStage());
+        nbt.putInt("TicksUntilNextStage", this.ticksUntilNextStage);
+        nbt.putBoolean("InitializedAntlerGrowth", this.initializedAntlerGrowth);
+    }
+
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        this.setAntlerStage(nbt.getInt("AntlerStage"));
+        this.ticksUntilNextStage = nbt.getInt("TicksUntilNextStage");
+        this.initializedAntlerGrowth = nbt.getBoolean("InitializedAntlerGrowth");
+    }
+
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
+                                 @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
+        EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
+
+        if (this.isBaby()) {
+            this.setAntlerStage(0);
+        } else {
+            this.scheduleNextStage();
+        }
+
+        return data;
     }
 
     static {

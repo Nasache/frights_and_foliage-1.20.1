@@ -16,15 +16,18 @@ public class ModEntities {
 
     public static final EntityType<StalkEntity> STALK = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "stalk"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, StalkEntity::new).dimensions(EntityDimensions.fixed(0.8f, 2.0f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, StalkEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.8f, 2.0f)).build());
 
     public static final EntityType<LeafBugEntity> LEAFBUG = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "leaf_bug"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LeafBugEntity::new).dimensions(EntityDimensions.fixed(0.5f, 0.6f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LeafBugEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.6f)).build());
 
     public static final EntityType<FumkinEntity> FUMKIN = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "fumkin"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, FumkinEntity::new).dimensions(EntityDimensions.fixed(1.2f, 1.5f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, FumkinEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.9f, 1.5f)).build());
 
 
     public static void registerModEntities() {
