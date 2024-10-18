@@ -48,11 +48,15 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
 
         TerraformBoatClientHelper.registerModelLayers(ModBoats.ASERIA_BOAT_ID, false);
 
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_SAPLING, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_MARNOR_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_MARNOR_SAPLING, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INFESTED_MARNOR_LEAVES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_VINES_PLANT, RenderLayer.getCutout());
+
 
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_DOOR, RenderLayer.getCutout());
         //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_TRAPDOOR, RenderLayer.getCutout());

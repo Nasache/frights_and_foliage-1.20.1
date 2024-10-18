@@ -18,4 +18,10 @@ public class ModBiomeFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_PUMPKIN_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_FLOWER_PLACED_KEY);
     }
+
+    public static void addMarnorVegetation(GenerationSettings.LookupBackedBuilder builder) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MARNOR_PLACED_KEY);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_GRASS_PLAIN);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_TALL_GRASS);
+    }
 }

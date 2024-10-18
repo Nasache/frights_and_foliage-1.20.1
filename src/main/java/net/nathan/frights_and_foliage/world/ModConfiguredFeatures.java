@@ -24,6 +24,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.world.tree.custom.AseriaFoliagePlacer;
 import net.nathan.frights_and_foliage.world.tree.custom.AseriaTrunkPlacer;
+import net.nathan.frights_and_foliage.world.tree.custom.MarnorFoliagePlacer;
 
 import java.util.Iterator;
 import java.util.List;
@@ -43,7 +44,6 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CRIMSON_PUMPKIN_KEY = registerKey("crimson_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WARPED_PUMPKIN_KEY = registerKey("warped_pumpkin");
-
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
@@ -71,12 +71,11 @@ public class ModConfiguredFeatures {
                 new CherryTrunkPlacer(4, 1, 2,
                         ConstantIntProvider.create(2), ConstantIntProvider.create(3), UniformIntProvider.create(-3, 0), ConstantIntProvider.create(2)),
                 new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                        .add(ModBlocks.MARNOR_LEAVES.getDefaultState(), 20)
+                        .add(ModBlocks.MARNOR_LEAVES.getDefaultState(), 60)
                         .add(ModBlocks.INFESTED_MARNOR_LEAVES.getDefaultState(), 1)),
-                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
+                new MarnorFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
                         0.25F, 0.5F, 0.4F, 0.5F),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
-
 
         DataPool.Builder<BlockState> builder = DataPool.builder();
         for(int i = 1; i <= 4; ++i) {

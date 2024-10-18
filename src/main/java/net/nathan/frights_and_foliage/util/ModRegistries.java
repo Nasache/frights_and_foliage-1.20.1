@@ -41,23 +41,39 @@ public class ModRegistries {
         registry.add(ModBlocks.ASERIA_WOOD, 300);
         registry.add(ModBlocks.STRIPPED_ASERIA_WOOD, 300);
         registry.add(ModBlocks.ASERIA_STAIRS, 300);
-        registry.add(ModBlocks.ASERIA_SLAB, 300);
-        registry.add(ModBlocks.ASERIA_BUTTON, 300);
+        registry.add(ModBlocks.ASERIA_SLAB, 150);
+        registry.add(ModBlocks.ASERIA_BUTTON, 100);
         registry.add(ModBlocks.ASERIA_PRESSURE_PLATE, 300);
         registry.add(ModBlocks.ASERIA_FENCE, 300);
         registry.add(ModBlocks.ASERIA_FENCE_GATE, 300);
-        registry.add(ModBlocks.ASERIA_DOOR, 300);
+        registry.add(ModBlocks.ASERIA_DOOR, 200);
         registry.add(ModBlocks.ASERIA_TRAPDOOR, 300);
-        registry.add(ModItems.ASERIA_BOAT, 300);
-        registry.add(ModItems.ASERIA_CHEST_BOAT, 300);
-        registry.add(ModItems.ASERIA_SIGN, 300);
-        registry.add(ModItems.ASERIA_HANGING_SIGN, 300);
-        registry.add(ModBlocks.RED_ASERIA_SAPLING, 300);
-        registry.add(ModBlocks.ORANGE_ASERIA_SAPLING, 300);
-        registry.add(ModBlocks.YELLOW_ASERIA_SAPLING, 300);
-        registry.add(ModBlocks.RED_ASERIA_LEAVES, 300);
-        registry.add(ModBlocks.ORANGE_ASERIA_LEAVES, 300);
-        registry.add(ModBlocks.YELLOW_ASERIA_LEAVES, 300);
+        registry.add(ModItems.ASERIA_BOAT, 1200);
+        registry.add(ModItems.ASERIA_CHEST_BOAT, 1200);
+        registry.add(ModItems.ASERIA_SIGN, 200);
+        registry.add(ModItems.ASERIA_HANGING_SIGN, 800);
+        registry.add(ModBlocks.RED_ASERIA_SAPLING, 100);
+        registry.add(ModBlocks.ORANGE_ASERIA_SAPLING, 100);
+        registry.add(ModBlocks.YELLOW_ASERIA_SAPLING, 100);
+
+        registry.add(ModBlocks.MARNOR_PLANKS, 300);
+        registry.add(ModBlocks.MARNOR_LOG, 300);
+        registry.add(ModBlocks.STRIPPED_MARNOR_LOG, 300);
+        registry.add(ModBlocks.MARNOR_WOOD, 300);
+        registry.add(ModBlocks.STRIPPED_MARNOR_WOOD, 300);
+        registry.add(ModBlocks.MARNOR_STAIRS, 300);
+        registry.add(ModBlocks.MARNOR_SLAB, 150);
+        registry.add(ModBlocks.MARNOR_BUTTON, 100);
+        registry.add(ModBlocks.MARNOR_PRESSURE_PLATE, 300);
+        registry.add(ModBlocks.MARNOR_FENCE, 300);
+        registry.add(ModBlocks.MARNOR_FENCE_GATE, 300);
+        //registry.add(ModBlocks.MARNOR_DOOR, 200);
+        //registry.add(ModBlocks.MARNOR_TRAPDOOR, 300);
+        registry.add(ModItems.MARNOR_BOAT, 1200);
+        registry.add(ModItems.MARNOR_CHEST_BOAT, 1200);
+        registry.add(ModItems.MARNOR_SIGN, 200);
+        registry.add(ModItems.MARNOR_HANGING_SIGN, 800);
+        registry.add(ModBlocks.MARNOR_SAPLING, 100);
     }
 
     private static void registerModCompostables () {
@@ -67,6 +83,9 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.RED_ASERIA_LEAVES, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.ORANGE_ASERIA_LEAVES, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.YELLOW_ASERIA_LEAVES, 0.3f);
+
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_LEAVES, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.INFESTED_MARNOR_LEAVES, 0.5f);
 
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.CRIMSON_PUMPKIN_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.CRIMSON_PUMPKIN.asItem(), 0.65f);
@@ -100,7 +119,8 @@ public class ModRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MARNOR_SLAB, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MARNOR_STAIRS, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MARNOR_PLANKS, 5, 20);
-        //FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MARNOR_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MARNOR_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.INFESTED_MARNOR_LEAVES, 30, 60);
     }
 
     private static void registerStrippables() {

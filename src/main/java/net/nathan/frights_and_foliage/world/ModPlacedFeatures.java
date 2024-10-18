@@ -19,6 +19,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RED_ASERIA_PLACED_KEY = registerKey("red_aseria_placed");
     public static final RegistryKey<PlacedFeature> ORANGE_ASERIA_PLACED_KEY = registerKey("orange_aseria_placed");
     public static final RegistryKey<PlacedFeature> YELLOW_ASERIA_PLACED_KEY = registerKey("yellow_aseria_placed");
+    public static final RegistryKey<PlacedFeature> MARNOR_PLACED_KEY = registerKey("marnor_placed");
     public static final RegistryKey<PlacedFeature> FALLEN_LEAVES_PLACED_KEY = registerKey("fallen_leaves_placed");
     public static final RegistryKey<PlacedFeature> AUTUMN_ROCK_PLACED_KEY = registerKey("autumn_rock_placed");
     public static final RegistryKey<PlacedFeature> AUTUMN_PUMPKIN_PLACED_KEY = registerKey("autumn_pumpkin_placed");
@@ -39,6 +40,10 @@ public class ModPlacedFeatures {
         register(context, YELLOW_ASERIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.YELLOW_ASERIA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.YELLOW_ASERIA_SAPLING));
+
+        register(context, MARNOR_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MARNOR_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(12, 0.5f, 4), ModBlocks.MARNOR_SAPLING));
 
         PlacedFeatures.register(context, FALLEN_LEAVES_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_LEAVES_KEY),
                 new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10),

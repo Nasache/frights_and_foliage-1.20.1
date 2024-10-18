@@ -11,7 +11,6 @@ import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.particle.ModParticles;
 import net.nathan.frights_and_foliage.util.ModEventHandler;
 import net.nathan.frights_and_foliage.util.ModRegistries;
-import net.nathan.frights_and_foliage.world.biome.ModBiomes;
 import net.nathan.frights_and_foliage.world.gen.ModWorldGeneration;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
 import net.nathan.frights_and_foliage.world.tree.ModTrunkPlacerTypes;

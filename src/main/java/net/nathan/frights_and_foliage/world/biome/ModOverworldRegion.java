@@ -30,6 +30,16 @@ public class ModOverworldRegion extends Region {
                 .weirdness(ParameterUtils.Weirdness.MID_SLICE_NORMAL_ASCENDING, ParameterUtils.Weirdness.MID_SLICE_NORMAL_DESCENDING)
                 .build().forEach(point -> builder.add(point, ModBiomes.AUTUMNAL_FOREST));
 
+        new ParameterUtils.ParameterPointListBuilder()
+                .temperature(ParameterUtils.Temperature.COOL)
+                .humidity(ParameterUtils.Humidity.span(ParameterUtils.Humidity.DRY, ParameterUtils.Humidity.NEUTRAL))
+                .continentalness(ParameterUtils.Continentalness.INLAND)
+                .erosion(ParameterUtils.Erosion.EROSION_5)
+                .depth(ParameterUtils.Depth.SURFACE)
+                .weirdness(ParameterUtils.Weirdness.MID_SLICE_NORMAL_ASCENDING, ParameterUtils.Weirdness.MID_SLICE_NORMAL_DESCENDING)
+                .build().forEach(point -> builder.add(point, ModBiomes.VIOLET_BRAMBLE));
+
+
         builder.build().forEach(mapper::accept);
     }
 }

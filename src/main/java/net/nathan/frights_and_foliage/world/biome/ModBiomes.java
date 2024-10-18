@@ -14,6 +14,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> AUTUMNAL_FOREST = register("autumnal_forest");
+    public static final RegistryKey<Biome> VIOLET_BRAMBLE = register("violet_bramble");
 
     public static RegistryKey<Biome> register(String name) {
         return RegistryKey.of(RegistryKeys.BIOME, new Identifier(FrightsAndFoliage.MOD_ID, name));
@@ -21,6 +22,7 @@ public class ModBiomes {
 
     public static void bootstrap(Registerable<Biome> context) {
         context.register(AUTUMNAL_FOREST, autumnalForest(context));
+        context.register(VIOLET_BRAMBLE, violetBramble(context));
 
     }
 
@@ -66,4 +68,38 @@ public class ModBiomes {
                         .skyColor(0x97c8f5).build())
                 .build();
     }
+
+    public static Biome violetBramble(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+
+        ModBiomeFeatures.addMarnorVegetation(biomeBuilder);
+
+        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.2f)
+                .temperature(0.5f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .grassColor(0x3f3b4e)
+                        .fogColor(0x27272a)
+                        .waterColor(0x203955)
+                        .waterFogColor(0x241f35)
+                        .foliageColor(0x19191f)
+                        .skyColor(0x494651).build())
+                .build();
+    }
+
 }

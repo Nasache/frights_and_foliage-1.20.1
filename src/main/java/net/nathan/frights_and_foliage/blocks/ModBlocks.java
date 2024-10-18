@@ -127,16 +127,18 @@ public class ModBlocks {
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block MARNOR_SAPLING = registerBlock("marnor_sapling",
-            new SaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
-    //public static final Block POTTED_MARNOR_SAPLING = registerBlockWithoutBlockItem("potted_marnor_sapling",
-    //        new FlowerPotBlock(MARNOR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new MarnorSaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POTTED_MARNOR_SAPLING = registerBlockWithoutBlockItem("potted_marnor_sapling",
+            new FlowerPotBlock(MARNOR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
 
     public static final Block INFESTED_MARNOR_LEAVES = registerBlock("infested_marnor_leaves",
-            new InfestedLeafBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
+            new InfestedLeafBlock(FabricBlockSettings.copyOf(OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
-
-
+    public static final Block MARNOR_VINES_PLANT = registerBlockWithoutBlockItem("marnor_vines_plant",
+            new MarnorVinesPlantBlock(FabricBlockSettings.copyOf(WEEPING_VINES_PLANT).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block MARNOR_VINES = registerBlock("marnor_vines",
+            new MarnorVinesBlock(FabricBlockSettings.copyOf(WEEPING_VINES).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
             new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
