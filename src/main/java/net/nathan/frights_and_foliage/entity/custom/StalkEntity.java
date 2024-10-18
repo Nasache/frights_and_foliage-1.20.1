@@ -112,12 +112,6 @@ public class StalkEntity extends HostileEntity {
         }
     }
 
-    @Override
-    public void onDeath(DamageSource source) {
-        this.resetHostility();
-        super.onDeath(source);
-    }
-
     private void resetHostility() {
         this.isHostile = false;
         this.isAlerted = false;

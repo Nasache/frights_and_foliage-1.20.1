@@ -85,6 +85,10 @@ public class ModItemGroup {
                         entries.add(ModBlocks.CRIMSON_JACK_O_LANTERN);
                         entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
 
+                        entries.add(ModItems.RAW_VENISON);
+                        entries.add(ModItems.COOKED_VENISON);
+                        entries.add(ModItems.FUMKIN_ANTLER);
+
                         entries.add(ModItems.STALK_SPAWN_EGG);
                         entries.add(ModItems.LEPHID_SPAWN_EGG);
                         entries.add(ModItems.FUMKIN_SPAWN_EGG);

@@ -71,9 +71,19 @@
   "block.frights_and_foliage.carved_crimson_pumpkin": "Carved Crimson Pumpkin",
   "block.frights_and_foliage.crimson_jack_o_lantern": "Crimson Jack o'Lantern",
 
+  "item.frights_and_foliage.raw_venison": "Raw Venison",
+  "item.frights_and_foliage.cooked_venison": "Cooked Venison",
+  "item.frights_and_foliage.fumkin_antler": "Fumkin Antler",
+
 
   "item.frights_and_foliage.stalk_spawn_egg": "Stalk Spawn Egg",
   "entity.frights_and_foliage.stalk": "Stalk",
+
+  "item.frights_and_foliage.fumkin_spawn_egg": "Fumkin Spawn Egg",
+  "entity.frights_and_foliage.fumkin": "Fumkin",
+
+  "biome.frights_and_foliage.autumnal_forest": "Autumnal Forest",
+  "biome.frights_and_foliage.violet_bramble": "Violet Bramble",
 
 
   "itemgroup.frights_and_foliage": "Frights And Foliage"

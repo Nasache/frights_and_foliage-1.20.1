@@ -43,6 +43,14 @@ public class ModItems {
     public static final Item ASERIA_SYRUP_BOTTLE = registerItem("aseria_syrup_bottle",
             new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ASERIA_SYRUP_BOTTLE).maxCount(16)));
 
+    public static final Item RAW_VENISON = registerItem("raw_venison",
+            new Item(new FabricItemSettings().food(ModFoodComponents.RAW_VENISON)));
+    public static final Item COOKED_VENISON = registerItem("cooked_venison",
+            new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_VENISON)));
+    public static final Item FUMKIN_ANTLER = registerItem("fumkin_antler",
+            new Item(new FabricItemSettings()));
+
+
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x362141, 0x100d12, new Item.Settings()));
     public static final Item LEPHID_SPAWN_EGG = registerItem("lephid_spawn_egg",

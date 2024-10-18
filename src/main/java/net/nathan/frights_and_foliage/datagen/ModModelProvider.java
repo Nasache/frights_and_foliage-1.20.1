@@ -92,6 +92,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASERIA_SYRUP_BOTTLE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.RAW_VENISON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_VENISON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FUMKIN_ANTLER, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.LEPHID_SPAWN_EGG,

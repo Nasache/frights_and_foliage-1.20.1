@@ -6,6 +6,7 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -16,6 +17,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.loot.LootTables;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
@@ -23,12 +25,14 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.nbt.NbtCompound;
@@ -136,7 +140,8 @@ public class FumkinEntity extends AnimalEntity {
     private void dropAntlers(SoundCategory soundCategory) {
         this.getWorld().playSoundFromEntity(null, this, SoundEvents.ITEM_AXE_STRIP, soundCategory, 1.0F, 1.0F);
         this.setAntlerStage(0);
-        this.dropItem(Items.BONE);
+        this.dropItem(ModItems.FUMKIN_ANTLER);
+        this.dropItem(ModItems.FUMKIN_ANTLER);
         this.scheduleNextStage();
     }
 
@@ -178,6 +183,16 @@ public class FumkinEntity extends AnimalEntity {
         }
 
         return data;
+    }
+
+    @Override
+    protected void dropLoot(DamageSource source, boolean causedByPlayer) {
+        super.dropLoot(source, causedByPlayer);
+
+        if (this.getAntlerStage() == 2) {
+            this.dropItem(ModItems.FUMKIN_ANTLER);
+            this.dropItem(ModItems.FUMKIN_ANTLER);
+        }
     }
 
     static {

@@ -7,4 +7,7 @@ public class ModFoodComponents {
     public static final FoodComponent CRIMSON_PUMPKIN_PIE = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
 
     public static final FoodComponent ASERIA_SYRUP_BOTTLE = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
+
+    public static final FoodComponent RAW_VENISON = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
+    public static final FoodComponent COOKED_VENISON = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
 }
