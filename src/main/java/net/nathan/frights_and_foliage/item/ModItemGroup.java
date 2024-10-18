@@ -89,6 +89,12 @@ public class ModItemGroup {
                         entries.add(ModItems.COOKED_VENISON);
                         entries.add(ModItems.FUMKIN_ANTLER);
 
+                        entries.add(ModItems.STUFFED_PUMPKIN);
+                        entries.add(ModItems.SAFFROOT);
+                        entries.add(ModItems.GAIZE);
+
+                        entries.add(ModItems.STALK_EYE);
+
                         entries.add(ModItems.STALK_SPAWN_EGG);
                         entries.add(ModItems.LEPHID_SPAWN_EGG);
                         entries.add(ModItems.FUMKIN_SPAWN_EGG);

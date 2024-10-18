@@ -81,7 +81,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('B', Blocks.SOUL_TORCH)
                 .criterion(hasItem(ModBlocks.CARVED_WARPED_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_WARPED_PUMPKIN))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_PIE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.WARPED_PUMPKIN_PIE)
                 .group("pumpkin_pies")
                 .input(ModBlocks.WARPED_PUMPKIN)
                 .input(Items.SUGAR)
@@ -102,12 +102,20 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('B', Blocks.SOUL_TORCH)
                 .criterion(hasItem(ModBlocks.CARVED_CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CARVED_CRIMSON_PUMPKIN))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRIMSON_PUMPKIN_PIE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CRIMSON_PUMPKIN_PIE)
                 .group("pumpkin_pies")
                 .input(ModBlocks.CRIMSON_PUMPKIN)
                 .input(Items.SUGAR)
                 .input(Items.EGG)
                 .criterion(hasItem(ModBlocks.CRIMSON_PUMPKIN), conditionsFromItem(ModBlocks.CRIMSON_PUMPKIN))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.STUFFED_PUMPKIN)
+                .input(Blocks.PUMPKIN)
+                .input(Items.CARROT)
+                .input(Items.COOKED_RABBIT)
+                .input(ModItems.SAFFROOT)
+                .criterion(hasItem(Blocks.PUMPKIN), conditionsFromItem(Blocks.PUMPKIN))
                 .offerTo(exporter);
 
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35F, 200).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter);

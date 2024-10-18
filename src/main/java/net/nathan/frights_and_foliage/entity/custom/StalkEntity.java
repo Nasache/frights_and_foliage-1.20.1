@@ -55,13 +55,13 @@ public class StalkEntity extends HostileEntity {
                 return;
             }
 
-            if (distanceToPlayer >= 25 && distanceToPlayer <= 900) {
+            if (distanceToPlayer >= 25 && distanceToPlayer <= 400) {
                 if (ModEventHandler.recentBlockBreaks.containsKey(closestPlayer) &&
                         currentTime - ModEventHandler.recentBlockBreaks.get(closestPlayer) < 2) {
                     if (canPlayWarningScream(currentTime)) {
                         this.playAlertSound();
                         this.isAlerted = true;
-                        this.followPlayerTicks = 200;
+                        this.followPlayerTicks = 100;
                         if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
                             this.goalSelector.add(2, this.followPlayerGoal);
                         }
@@ -71,7 +71,7 @@ public class StalkEntity extends HostileEntity {
                     if (canPlayWarningScream(currentTime)) {
                         this.playAlertSound();
                         this.isAlerted = true;
-                        this.followPlayerTicks = 200;
+                        this.followPlayerTicks = 100;
                         if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
                             this.goalSelector.add(2, this.followPlayerGoal);
                         }
@@ -104,7 +104,7 @@ public class StalkEntity extends HostileEntity {
                 }
             }
 
-            if (distanceToPlayer > 900) {
+            if (distanceToPlayer > 400) {
                 this.resetHostility();
             }
         } else {

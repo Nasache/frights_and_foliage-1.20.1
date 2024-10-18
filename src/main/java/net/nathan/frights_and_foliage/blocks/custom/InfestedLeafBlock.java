@@ -11,6 +11,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
@@ -48,12 +49,12 @@ public class InfestedLeafBlock extends LeavesBlock {
     }
 
     @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, net.minecraft.util.math.random.Random random) {
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         world.setBlockState(pos, updateDistanceFromLogs(state, world, pos), 3);
         if (!world.isClient) {
             Box detectionBox = new Box(pos).expand(0, -1, 0).stretch(0, -5, 0);
 
-            List<PlayerEntity> players = world.getEntitiesByClass(PlayerEntity.class, detectionBox, player -> true);
+            List<PlayerEntity> players = world.getEntitiesByClass(PlayerEntity.class, detectionBox, player -> !player.isCreative() && !player.isSpectator());
 
             if (!players.isEmpty() && world.getBlockState(pos.down()).isAir()) {
                 this.spawnLephid(world, pos);
@@ -62,6 +63,7 @@ public class InfestedLeafBlock extends LeavesBlock {
 
         world.scheduleBlockTick(pos, this, 5);
     }
+
 
     private static BlockState updateDistanceFromLogs(BlockState state, WorldAccess world, BlockPos pos) {
         int i = 7;

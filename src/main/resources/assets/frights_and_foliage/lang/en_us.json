@@ -65,15 +65,25 @@
   "block.frights_and_foliage.warped_pumpkin": "Warped Pumpkin",
   "block.frights_and_foliage.carved_warped_pumpkin": "Carved Warped Pumpkin",
   "block.frights_and_foliage.warped_jack_o_lantern": "Warped Jack o'Lantern",
+  "item.frights_and_foliage.warped_pumpkin_pie": "Warped Pumpkin Pie",
+
 
   "item.frights_and_foliage.crimson_pumpkin_seeds": "Crimson Pumpkin Seeds",
   "block.frights_and_foliage.crimson_pumpkin": "Crimson Pumpkin",
   "block.frights_and_foliage.carved_crimson_pumpkin": "Carved Crimson Pumpkin",
   "block.frights_and_foliage.crimson_jack_o_lantern": "Crimson Jack o'Lantern",
+  "item.frights_and_foliage.crimson_pumpkin_pie": "Crimson Pumpkin Pie",
+
 
   "item.frights_and_foliage.raw_venison": "Raw Venison",
   "item.frights_and_foliage.cooked_venison": "Cooked Venison",
   "item.frights_and_foliage.fumkin_antler": "Fumkin Antler",
+
+  "item.frights_and_foliage.stuffed_pumpkin": "Stuffed Pumpkin",
+  "item.frights_and_foliage.saffroot": "Saffroot",
+  "item.frights_and_foliage.gaize": "Gaize",
+
+  "item.frights_and_foliage.stalk_eye": "Stalk Eye",
 
 
   "item.frights_and_foliage.stalk_spawn_egg": "Stalk Spawn Egg",
