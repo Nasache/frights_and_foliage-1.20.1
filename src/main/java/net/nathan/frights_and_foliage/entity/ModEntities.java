@@ -11,6 +11,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
 import net.nathan.frights_and_foliage.entity.custom.LephidEntity;
 import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
+import net.nathan.frights_and_foliage.entity.custom.VireEntity;
 
 public class ModEntities {
 
@@ -28,6 +29,11 @@ public class ModEntities {
             new Identifier(FrightsAndFoliage.MOD_ID, "fumkin"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, FumkinEntity::new)
                     .dimensions(EntityDimensions.fixed(0.9f, 1.5f)).build());
+
+    public static final EntityType<VireEntity> VIRE = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(FrightsAndFoliage.MOD_ID, "vire"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, VireEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.4f, 0.6f)).build());
 
 
     public static void registerModEntities() {

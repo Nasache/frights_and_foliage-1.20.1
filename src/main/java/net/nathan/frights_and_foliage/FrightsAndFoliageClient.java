@@ -83,5 +83,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.FUMKIN, FumkinModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.FUMKIN, FumkinRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.VIRE, VireModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.VIRE, VireRenderer::new);
     }
 }

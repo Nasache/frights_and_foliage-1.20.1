@@ -13,4 +13,7 @@ public class ModEntityModelLayers {
 
     public static final EntityModelLayer FUMKIN =
             new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "fumkin"), "main");
+
+    public static final EntityModelLayer VIRE =
+            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "vire"), "main");
 }

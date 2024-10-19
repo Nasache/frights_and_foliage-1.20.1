@@ -65,9 +65,11 @@ public class ModItems {
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x362141, 0x100d12, new Item.Settings()));
     public static final Item LEPHID_SPAWN_EGG = registerItem("lephid_spawn_egg",
-            new SpawnEggItem(ModEntities.LEPHID, 0x745a36, 0xc29d62, new Item.Settings()));
+            new SpawnEggItem(ModEntities.LEPHID, 0x382b3e, 0x694679, new Item.Settings()));
     public static final Item FUMKIN_SPAWN_EGG = registerItem("fumkin_spawn_egg",
             new SpawnEggItem(ModEntities.FUMKIN, 0xff6b2d, 0xfff8e1, new Item.Settings()));
+    public static final Item VIRE_SPAWN_EGG = registerItem("vire_spawn_egg",
+            new SpawnEggItem(ModEntities.VIRE, 0x060506, 0xfbb20a, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {

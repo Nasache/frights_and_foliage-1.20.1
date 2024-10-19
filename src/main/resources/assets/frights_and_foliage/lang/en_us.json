@@ -92,6 +92,13 @@
   "item.frights_and_foliage.fumkin_spawn_egg": "Fumkin Spawn Egg",
   "entity.frights_and_foliage.fumkin": "Fumkin",
 
+  "item.frights_and_foliage.lephid_spawn_egg": "Lephid Spawn Egg",
+  "entity.frights_and_foliage.lephid": "Lephid",
+
+  "item.frights_and_foliage.vire_spawn_egg": "Vire Spawn Egg",
+  "entity.frights_and_foliage.vire": "Vire",
+
+
   "biome.frights_and_foliage.autumnal_forest": "Autumnal Forest",
   "biome.frights_and_foliage.violet_bramble": "Violet Bramble",
 
