@@ -12,7 +12,7 @@ import net.nathan.frights_and_foliage.entity.custom.VireArrowEntity;
 
 @Environment(EnvType.CLIENT)
 public class VireArrowEntityRenderer extends ProjectileEntityRenderer<VireArrowEntity> {
-    public static final Identifier TEXTURE = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/arrow/vire_feather_arrow.png");
+    public static final Identifier TEXTURE = new Identifier(FrightsAndFoliage.MOD_ID, "textures/entity/projectile/vire_feather_arrow.png");
 
     public VireArrowEntityRenderer(EntityRendererFactory.Context context) {
         super(context);

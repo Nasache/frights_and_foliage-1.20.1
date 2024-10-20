@@ -85,6 +85,11 @@
 
   "item.frights_and_foliage.stalk_eye": "Stalk Eye",
 
+  "item.frights_and_foliage.vire_feather": "Vire Feather",
+  "item.frights_and_foliage.vire_feather_arrow": "Vire Feather Arrow",
+
+  "entity.frights_and_foliage.vire_arrow": "Vire Feather Arrow",
+
 
   "item.frights_and_foliage.stalk_spawn_egg": "Stalk Spawn Egg",
   "entity.frights_and_foliage.stalk": "Stalk",
@@ -98,6 +103,16 @@
   "item.frights_and_foliage.vire_spawn_egg": "Vire Spawn Egg",
   "entity.frights_and_foliage.vire": "Vire",
 
+
+
+  "sounds.frights_and_foliage.stalk_hurt": "Stalk Hurt",
+  "sounds.frights_and_foliage.stalk_alert": "Stalk Alert Scream",
+  "sounds.frights_and_foliage.stalk_angry": "Stalk Angry Scream",
+
+  "sounds.frights_and_foliage.fumkin_hurt": "Fumkin Hurt",
+
+  "sounds.frights_and_foliage.vire_caw": "Vire Hurt",
+  "sounds.frights_and_foliage.vire_ambient": "Vire Caws",
 
   "biome.frights_and_foliage.autumnal_forest": "Autumnal Forest",
   "biome.frights_and_foliage.violet_bramble": "Violet Bramble",

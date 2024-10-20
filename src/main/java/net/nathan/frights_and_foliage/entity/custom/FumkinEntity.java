@@ -1,5 +1,6 @@
 package net.nathan.frights_and_foliage.entity.custom;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
@@ -22,10 +23,12 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -33,6 +36,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.ModItems;
+import net.nathan.frights_and_foliage.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.nbt.NbtCompound;
@@ -198,4 +202,29 @@ public class FumkinEntity extends AnimalEntity {
     static {
         ANTLER_STAGE = DataTracker.registerData(FumkinEntity.class, TrackedDataHandlerRegistry.INTEGER);
     }
+
+    protected SoundEvent getStepSound() {
+        return SoundEvents.ENTITY_HORSE_STEP;
+    }
+
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(this.getStepSound(), 0.10F, 2.0F);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSounds.FUMKIN_HURT;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.FUMKIN_HURT;
+    }
+
+    //@Nullable
+    //public SoundEvent getAmbientSound() {
+    //    return ModSounds.VIRE_CAW;
+    //}
 }

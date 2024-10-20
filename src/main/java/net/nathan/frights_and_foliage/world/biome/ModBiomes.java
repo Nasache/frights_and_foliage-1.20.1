@@ -38,7 +38,7 @@ public class ModBiomes {
     public static Biome autumnalForest(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        ModBiomeFeatures.addAutumnalAnimals(spawnBuilder);
         DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =

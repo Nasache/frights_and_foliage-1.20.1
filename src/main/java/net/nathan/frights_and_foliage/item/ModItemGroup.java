@@ -95,6 +95,7 @@ public class ModItemGroup {
 
                         entries.add(ModItems.STALK_EYE);
 
+                        entries.add(ModItems.VIRE_FEATHER);
                         entries.add(ModItems.VIRE_FEATHER_ARROW);
 
                         entries.add(ModItems.STALK_SPAWN_EGG);

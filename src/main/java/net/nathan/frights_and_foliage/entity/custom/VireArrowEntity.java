@@ -2,6 +2,7 @@ package net.nathan.frights_and_foliage.entity.custom;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -13,14 +14,21 @@ public class VireArrowEntity extends PersistentProjectileEntity {
 
     public VireArrowEntity(EntityType<? extends VireArrowEntity> entityType, World world) {
         super(entityType, world);
+        this.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
     }
 
     public VireArrowEntity(World world, LivingEntity owner) {
         super(ModEntities.VIRE_FEATHER_ARROW, owner, world);
+        if (owner instanceof PlayerEntity player) {
+            this.pickupType = player.getAbilities().creativeMode ? PickupPermission.CREATIVE_ONLY : PickupPermission.ALLOWED;
+        } else {
+            this.pickupType = PickupPermission.DISALLOWED;
+        }
     }
 
     public VireArrowEntity(World world, double x, double y, double z) {
         super(ModEntities.VIRE_FEATHER_ARROW, x, y, z, world);
+        this.pickupType = PickupPermission.ALLOWED;
     }
 
     @Override
@@ -28,7 +36,7 @@ public class VireArrowEntity extends PersistentProjectileEntity {
         super.tick();
 
         if (!this.velocityIncreased && !this.inGround) {
-            this.setVelocity(this.getVelocity().multiply(2.0));
+            this.setVelocity(this.getVelocity().multiply(1.75f));
             this.velocityIncreased = true;
         }
     }
@@ -37,4 +45,13 @@ public class VireArrowEntity extends PersistentProjectileEntity {
     protected ItemStack asItemStack() {
         return new ItemStack(ModItems.VIRE_FEATHER_ARROW);
     }
+
+    @Override
+    protected boolean tryPickup(PlayerEntity player) {
+        if (this.pickupType == PickupPermission.CREATIVE_ONLY && !player.getAbilities().creativeMode) {
+            return false;
+        }
+        return super.tryPickup(player);
+    }
 }
+

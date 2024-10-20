@@ -32,6 +32,7 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class VireEntity extends AnimalEntity {
@@ -102,15 +103,15 @@ public class VireEntity extends AnimalEntity {
 
     @Nullable
     public SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_PARROT_AMBIENT;
+        return ModSounds.VIRE_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_PARROT_HURT;
+        return ModSounds.VIRE_CAW;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_PARROT_DEATH;
+        return ModSounds.VIRE_CAW;
     }
 
     protected void playStepSound(BlockPos pos, BlockState state) {

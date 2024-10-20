@@ -104,6 +104,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STALK_EYE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VIRE_FEATHER_ARROW, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIRE_FEATHER, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

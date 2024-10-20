@@ -10,6 +10,6 @@ public class ModWorldGeneration {
 
         ModFlowerGeneration.generateFlowers();
 
-        //ModEntitySpawns.addSpawns();
+        ModEntitySpawns.addSpawns();
     }
 }

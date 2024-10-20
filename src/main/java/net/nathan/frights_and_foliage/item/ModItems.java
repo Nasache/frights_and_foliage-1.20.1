@@ -51,6 +51,8 @@ public class ModItems {
     public static final Item FUMKIN_ANTLER = registerItem("fumkin_antler",
             new Item(new FabricItemSettings()));
 
+    public static final Item VIRE_FEATHER = registerItem("vire_feather",
+            new Item(new FabricItemSettings()));
     public static final Item VIRE_FEATHER_ARROW = registerItem("vire_feather_arrow",
             new VireArrowItem(new FabricItemSettings()));
 

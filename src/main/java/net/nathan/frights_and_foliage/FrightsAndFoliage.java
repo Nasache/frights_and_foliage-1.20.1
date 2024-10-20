@@ -9,6 +9,7 @@ import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.ModItemGroup;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.particle.ModParticles;
+import net.nathan.frights_and_foliage.sound.ModSounds;
 import net.nathan.frights_and_foliage.util.ModDispenserBehavior;
 import net.nathan.frights_and_foliage.util.ModEventHandler;
 import net.nathan.frights_and_foliage.util.ModRegistries;
@@ -37,7 +38,7 @@ public class FrightsAndFoliage implements ModInitializer {
 		ModFoliagePlacerTypes.register();
 		ModTrunkPlacerTypes.register();
 
-		//ModSounds.registerSounds();
+		ModSounds.registerSounds();
 
 		ModBlockEntities.registerBlockEntities();
 		ModBoats.registerBoats();
