@@ -8,10 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
-import net.nathan.frights_and_foliage.entity.custom.FumkinEntity;
-import net.nathan.frights_and_foliage.entity.custom.LephidEntity;
-import net.nathan.frights_and_foliage.entity.custom.StalkEntity;
-import net.nathan.frights_and_foliage.entity.custom.VireEntity;
+import net.nathan.frights_and_foliage.entity.custom.*;
 
 public class ModEntities {
 
@@ -34,6 +31,11 @@ public class ModEntities {
             new Identifier(FrightsAndFoliage.MOD_ID, "vire"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, VireEntity::new)
                     .dimensions(EntityDimensions.fixed(0.4f, 0.6f)).build());
+
+    public static final EntityType<VireArrowEntity> VIRE_FEATHER_ARROW = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(FrightsAndFoliage.MOD_ID, "vire_arrow"),
+            FabricEntityTypeBuilder.<VireArrowEntity>create(SpawnGroup.MISC, VireArrowEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
 
     public static void registerModEntities() {

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,5 +34,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.MARNOR_LOGS)
                 .add(ModBlocks.MARNOR_LOG.asItem(), ModBlocks.MARNOR_WOOD.asItem(),
                         ModBlocks.STRIPPED_MARNOR_LOG.asItem(), ModBlocks.STRIPPED_MARNOR_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.ARROWS)
+                .add(ModItems.VIRE_FEATHER_ARROW);
     }
 }

@@ -16,4 +16,7 @@ public class ModEntityModelLayers {
 
     public static final EntityModelLayer VIRE =
             new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "vire"), "main");
+
+    public static final EntityModelLayer VIRE_FEATHER_ARROW =
+            new EntityModelLayer(Identifier.of(FrightsAndFoliage.MOD_ID, "vire_feather_arrow"), "main");
 }

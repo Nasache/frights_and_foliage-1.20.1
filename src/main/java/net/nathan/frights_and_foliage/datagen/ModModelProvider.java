@@ -63,6 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MARNOR_LEAVES);
 
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MARNOR_SAPLING, ModBlocks.POTTED_MARNOR_SAPLING, NOT_TINTED);
 
 
         blockStateModelGenerator.registerSingleton(ModBlocks.WARPED_PUMPKIN, TexturedModel.CUBE_COLUMN);
@@ -101,6 +102,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GAIZE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_EYE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.VIRE_FEATHER_ARROW, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

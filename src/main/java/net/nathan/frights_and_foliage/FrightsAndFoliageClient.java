@@ -86,5 +86,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.VIRE, VireModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VIRE, VireRenderer::new);
+
+        //EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.VIRE_FEATHER_ARROW, VireModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.VIRE_FEATHER_ARROW, VireArrowEntityRenderer::new);
     }
 }

@@ -11,6 +11,7 @@ import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
+import net.nathan.frights_and_foliage.item.custom.VireArrowItem;
 
 public class ModItems {
     public static final Item ASERIA_SIGN = registerItem("aseria_sign",
@@ -50,6 +51,9 @@ public class ModItems {
     public static final Item FUMKIN_ANTLER = registerItem("fumkin_antler",
             new Item(new FabricItemSettings()));
 
+    public static final Item VIRE_FEATHER_ARROW = registerItem("vire_feather_arrow",
+            new VireArrowItem(new FabricItemSettings()));
+
     public static final Item STUFFED_PUMPKIN = registerItem("stuffed_pumpkin",
             new Item(new FabricItemSettings().food(ModFoodComponents.STUFFED_PUMPKIN).maxCount(1)));
 
@@ -69,7 +73,7 @@ public class ModItems {
     public static final Item FUMKIN_SPAWN_EGG = registerItem("fumkin_spawn_egg",
             new SpawnEggItem(ModEntities.FUMKIN, 0xff6b2d, 0xfff8e1, new Item.Settings()));
     public static final Item VIRE_SPAWN_EGG = registerItem("vire_spawn_egg",
-            new SpawnEggItem(ModEntities.VIRE, 0x060506, 0xfbb20a, new Item.Settings()));
+            new SpawnEggItem(ModEntities.VIRE, 0x1b1b1f, 0x1b1b1f, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
