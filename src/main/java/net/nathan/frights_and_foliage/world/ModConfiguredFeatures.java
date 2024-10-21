@@ -45,6 +45,10 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> NOX_BERRY_BUSH_KEY = registerKey("nox_berry_bush_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DARKROSE_BUSH_KEY = registerKey("darkrose_bush_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AMBERCUP_BUSH_KEY = registerKey("ambercup_bush_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROTBUD_KEY = registerKey("rotbud_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TWINFIRE_BLOOM_KEY = registerKey("twinfire_bloom_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TALL_GRASS_KEY = registerKey("tall_grass_key");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CRIMSON_PUMPKIN_KEY = registerKey("crimson_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WARPED_PUMPKIN_KEY = registerKey("warped_pumpkin");
@@ -118,6 +122,18 @@ public class ModConfiguredFeatures {
         ConfiguredFeatures.register(context, DARKROSE_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
                         (BlockStateProvider.of((BlockState) ModBlocks.DARKROSE_BUSH.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
+        ConfiguredFeatures.register(context, AMBERCUP_BUSH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.AMBERCUP_BUSH.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
+        ConfiguredFeatures.register(context, ROTBUD_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.ROTBUD.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
+        ConfiguredFeatures.register(context, TWINFIRE_BLOOM_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.TWINFIRE_BLOOM.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
+
+        register(context, TALL_GRASS_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(32, 10, 5, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.TALL_GRASS)))));
 
         ConfiguredFeatures.register(context, PATCH_CRIMSON_PUMPKIN_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchFeatureConfig(48, 6, 3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,

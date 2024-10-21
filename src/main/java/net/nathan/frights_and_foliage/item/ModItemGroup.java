@@ -65,14 +65,14 @@ public class ModItemGroup {
 
                         entries.add(ModBlocks.MARNOR_VINES);
                         entries.add(ModBlocks.DARKROSE_BUSH);
-
+                        entries.add(ModBlocks.AMBERCUP_BUSH);
+                        entries.add(ModBlocks.TWINFIRE_BLOOM);
+                        entries.add(ModBlocks.ROTBUD);
 
                         entries.add(ModItems.MARNOR_BOAT);
                         entries.add(ModItems.MARNOR_CHEST_BOAT);
 
-
                         entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
-
 
                         entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
                         entries.add(ModBlocks.WARPED_PUMPKIN);

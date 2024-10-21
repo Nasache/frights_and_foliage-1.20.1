@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -191,6 +192,19 @@ public class ModBlocks {
 
     public static final Block DARKROSE_BUSH = registerBlock("darkrose_bush",
             new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.BLACK)));
+    public static final Block AMBERCUP_BUSH = registerBlock("ambercup_bush",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.ORANGE)));
+
+    public static final Block ROTBUD = registerBlock("rotbud",
+            new FlowerBlock(StatusEffects.POISON, 15, FabricBlockSettings.copyOf(PEONY).mapColor(MapColor.LIME)));
+    public static final Block POTTED_ROTBUD = registerBlock("potted_rotbud",
+            new FlowerPotBlock(ModBlocks.ROTBUD, FabricBlockSettings.copyOf(POTTED_ORANGE_TULIP).mapColor(MapColor.LIME)));
+
+    public static final Block TWINFIRE_BLOOM = registerBlock("twinfire_bloom",
+            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 15, FabricBlockSettings.copyOf(PEONY).mapColor(MapColor.ORANGE)));
+    public static final Block POTTED_TWINFIRE_BLOOM = registerBlock("potted_twinfire_bloom",
+            new FlowerPotBlock(ModBlocks.TWINFIRE_BLOOM, FabricBlockSettings.copyOf(POTTED_ORANGE_TULIP).mapColor(MapColor.ORANGE)));
+
 
 
     private static Block registerBlock(String name, Block block) {

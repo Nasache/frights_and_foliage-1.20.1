@@ -72,6 +72,10 @@ public class ModBiomes {
     public static Biome violetBramble(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
+        ModBiomeFeatures.addVioletAnimals(spawnBuilder);
+        ModBiomeFeatures.addVioletHostiles(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
@@ -79,13 +83,9 @@ public class ModBiomes {
         globalOverworldGeneration(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
 
-        ModBiomeFeatures.addVioletAnimals(spawnBuilder);
-        ModBiomeFeatures.addVioletHostiles(spawnBuilder);
-
-        ModBiomeFeatures.addMarnorVegetation(biomeBuilder);
+        ModBiomeFeatures.addVioletVegetation(biomeBuilder);
 
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         return new Biome.Builder()
                 .precipitation(true)

@@ -4,10 +4,13 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.world.biome.ModBiomes;
 
 public class ModEntitySpawns {
     public static void addSpawns() {
@@ -24,5 +27,11 @@ public class ModEntitySpawns {
 
         SpawnRestriction.register(ModEntities.FUMKIN, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(ModBiomes.VIOLET_BRAMBLE),
+                SpawnGroup.MONSTER, ModEntities.STALK, 150, 1, 1);
+
+        SpawnRestriction.register(ModEntities.STALK, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING, MobEntity::canMobSpawn);
     }
 }

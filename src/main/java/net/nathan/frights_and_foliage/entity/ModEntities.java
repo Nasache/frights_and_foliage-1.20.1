@@ -14,7 +14,7 @@ public class ModEntities {
 
     public static final EntityType<StalkEntity> STALK = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FrightsAndFoliage.MOD_ID, "stalk"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, StalkEntity::new)
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, StalkEntity::new)
                     .dimensions(EntityDimensions.fixed(0.8f, 2.0f)).build());
 
     public static final EntityType<LephidEntity> LEPHID = Registry.register(Registries.ENTITY_TYPE,
