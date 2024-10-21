@@ -57,9 +57,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_VINES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_VINES_PLANT, RenderLayer.getCutout());
 
-
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_DOOR, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MARNOR_TRAPDOOR, RenderLayer.getCutout());
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.MARNOR, TexturedRenderLayers.getSignTextureId(ModWoodTypes.MARNOR));
 
@@ -75,6 +74,11 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM, RenderLayer.getCutout());
 
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NOX_BERRY_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAFFROOT_CROP, RenderLayer.getCutout());
+
+
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.STALK, StalkModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.STALK, StalkRenderer::new);
 
@@ -87,7 +91,6 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.VIRE, VireModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VIRE, VireRenderer::new);
 
-        //EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.VIRE_FEATHER_ARROW, VireModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VIRE_FEATHER_ARROW, VireArrowEntityRenderer::new);
     }
 }

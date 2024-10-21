@@ -68,6 +68,48 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerChestBoatRecipe(exporter, ModItems.ASERIA_CHEST_BOAT, ModItems.ASERIA_BOAT);
 
 
+        offerPlanksRecipe(exporter, ModBlocks.MARNOR_PLANKS, ModTags.Items.MARNOR_LOGS, 4);
+
+        offerBarkBlockRecipe(exporter, ModBlocks.MARNOR_WOOD, ModBlocks.MARNOR_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_MARNOR_WOOD, ModBlocks.STRIPPED_MARNOR_LOG);
+
+        createStairsRecipe(ModBlocks.MARNOR_STAIRS, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_STAIRS)));
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARNOR_SLAB, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_SLAB)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MARNOR_BUTTON)
+                .input(ModBlocks.MARNOR_PLANKS)
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_BUTTON)));
+
+        createFenceRecipe(ModBlocks.MARNOR_FENCE, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_FENCE)));
+        createFenceGateRecipe(ModBlocks.MARNOR_FENCE_GATE, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_FENCE_GATE)));
+
+        createDoorRecipe(ModBlocks.MARNOR_DOOR, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_DOOR)));
+        createTrapdoorRecipe(ModBlocks.MARNOR_TRAPDOOR, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_TRAPDOOR)));
+
+        offerPressurePlateRecipe(exporter, ModBlocks.MARNOR_PRESSURE_PLATE, ModBlocks.MARNOR_PLANKS);
+
+        offerHangingSignRecipe(exporter, ModItems.MARNOR_HANGING_SIGN, ModBlocks.STRIPPED_MARNOR_LOG);
+        createSignRecipe(ModItems.MARNOR_SIGN, Ingredient.ofItems(ModBlocks.MARNOR_PLANKS))
+                .criterion(hasItem(ModBlocks.MARNOR_PLANKS), conditionsFromItem(ModBlocks.MARNOR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MARNOR_SIGN)));
+
+        offerBoatRecipe(exporter, ModItems.MARNOR_BOAT, ModBlocks.MARNOR_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.MARNOR_CHEST_BOAT, ModItems.MARNOR_BOAT);
+
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_SEEDS, 4)
                 .group("pumpkin_seeds")
                 .input(ModBlocks.WARPED_PUMPKIN)

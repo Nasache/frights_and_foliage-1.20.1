@@ -10,6 +10,7 @@ import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.item.custom.AntlerMealItem;
 import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
 import net.nathan.frights_and_foliage.item.custom.VireArrowItem;
 
@@ -50,6 +51,8 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_VENISON)));
     public static final Item FUMKIN_ANTLER = registerItem("fumkin_antler",
             new Item(new FabricItemSettings()));
+    public static final Item ANTLERMEAL = registerItem("antlermeal",
+            new AntlerMealItem(new FabricItemSettings()));
 
     public static final Item VIRE_FEATHER = registerItem("vire_feather",
             new Item(new FabricItemSettings()));
@@ -60,9 +63,13 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.STUFFED_PUMPKIN).maxCount(1)));
 
     public static final Item SAFFROOT = registerItem("saffroot",
-            new Item(new FabricItemSettings().food(ModFoodComponents.SAFFROOT)));
+            new AliasedBlockItem(ModBlocks.SAFFROOT_CROP, new FabricItemSettings().food(ModFoodComponents.SAFFROOT)));
     public static final Item GAIZE = registerItem("gaize",
             new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE)));
+
+    public static final Item NOX_BERRIES = registerItem("nox_berries",
+            new AliasedBlockItem(ModBlocks.NOX_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.NOX_BERRIES)));
+
 
     public static final Item STALK_EYE = registerItem("stalk_eye",
             new Item(new FabricItemSettings()));

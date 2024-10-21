@@ -2,7 +2,13 @@ package net.nathan.frights_and_foliage.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.item.Items;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.predicate.StatePredicate;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.custom.NoxBerryBushBlock;
+import net.nathan.frights_and_foliage.blocks.custom.SaffrootCropBlock;
 import net.nathan.frights_and_foliage.item.ModItems;
 
 
@@ -49,21 +55,32 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MARNOR_WOOD);
         addDrop(ModBlocks.STRIPPED_MARNOR_LOG);
         addDrop(ModBlocks.STRIPPED_MARNOR_WOOD);
-        //addDrop(ModBlocks.MARNOR_LEAVES, leavesDrops(ModBlocks.MARNOR_LEAVES, ModBlocks.MARNOR_SAPLING, .05f));
+        addDrop(ModBlocks.MARNOR_LEAVES, leavesDrops(ModBlocks.MARNOR_LEAVES, ModBlocks.MARNOR_SAPLING, .05f));
         addDrop(ModBlocks.MARNOR_STAIRS);
         addDrop(ModBlocks.MARNOR_SLAB, slabDrops(ModBlocks.MARNOR_SLAB));
         addDrop(ModBlocks.MARNOR_BUTTON);
         addDrop(ModBlocks.MARNOR_PRESSURE_PLATE);
         addDrop(ModBlocks.MARNOR_FENCE);
         addDrop(ModBlocks.MARNOR_FENCE_GATE);
-        //addDrop(ModBlocks.MARNOR_DOOR, doorDrops(ModBlocks.MARNOR_DOOR));
-        //addDrop(ModBlocks.MARNOR_TRAPDOOR);
+        addDrop(ModBlocks.MARNOR_DOOR, doorDrops(ModBlocks.MARNOR_DOOR));
+        addDrop(ModBlocks.MARNOR_TRAPDOOR);
         addDrop(ModBlocks.MARNOR_SIGN);
         addDrop(ModBlocks.MARNOR_WALL_SIGN);
         addDrop(ModBlocks.MARNOR_HANGING_SIGN);
         addDrop(ModBlocks.MARNOR_WALL_HANGING_SIGN);
-        //addDrop(ModBlocks.MARNOR_SAPLING);
-        //addDrop(ModBlocks.POTTED_MARNOR_SAPLING, pottedPlantDrops(ModBlocks.MARNOR_SAPLING));
+        addDrop(ModBlocks.MARNOR_SAPLING);
+        addDrop(ModBlocks.POTTED_MARNOR_SAPLING, pottedPlantDrops(ModBlocks.MARNOR_SAPLING));
+
+        addDrop(ModBlocks.MARNOR_VINES);
+        addDrop(ModBlocks.MARNOR_VINES_PLANT, drops(ModBlocks.MARNOR_VINES));
+
+        LootCondition.Builder builder1 = BlockStatePropertyLootCondition.builder(ModBlocks.NOX_BERRY_BUSH)
+                .properties(StatePredicate.Builder.create().exactMatch(NoxBerryBushBlock.AGE, 3));
+        this.addDrop(ModBlocks.NOX_BERRY_BUSH, this.cropDrops(ModBlocks.NOX_BERRY_BUSH, ModItems.NOX_BERRIES, Items.AIR, builder1));
+
+        LootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.SAFFROOT_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(SaffrootCropBlock.AGE, 3));
+        this.addDrop(ModBlocks.SAFFROOT_CROP, this.cropDrops(ModBlocks.SAFFROOT_CROP, ModItems.SAFFROOT, ModItems.SAFFROOT, builder2));
 
         addDrop(ModBlocks.WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.WARPED_PUMPKIN_STEM,
                 ModItems.WARPED_PUMPKIN_SEEDS));
@@ -79,6 +96,5 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CARVED_CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CRIMSON_JACK_O_LANTERN);
-
     }
 }

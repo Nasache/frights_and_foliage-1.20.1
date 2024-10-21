@@ -88,57 +88,62 @@ public class ModBlocks {
             new SyrupLogBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
 
     public static final Block MARNOR_PLANKS = registerBlock("marnor_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_STAIRS = registerBlock("marnor_stairs",
-            new StairsBlock(ModBlocks.ASERIA_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new StairsBlock(ModBlocks.ASERIA_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_SLAB = registerBlock("marnor_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_BUTTON = registerBlock("marnor_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).mapColor(MapColor.TERRACOTTA_PURPLE), BlockSetType.OAK, 30, true));
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).mapColor(MapColor.PURPLE), BlockSetType.OAK, 30, true));
     public static final Block MARNOR_PRESSURE_PLATE = registerBlock("marnor_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.TERRACOTTA_PURPLE), BlockSetType.OAK));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.PURPLE), BlockSetType.OAK));
     public static final Block MARNOR_FENCE = registerBlock("marnor_fence",
-            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_FENCE_GATE = registerBlock("marnor_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).mapColor(MapColor.TERRACOTTA_PURPLE), WoodType.OAK));
-    //public static final Block MARNOR_DOOR = registerBlock("marnor_door",
-    //        new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).mapColor(MapColor.TERRACOTTA_PURPLE), BlockSetType.OAK));
-    //public static final Block MARNOR_TRAPDOOR = registerBlock("marnor_trapdoor",
-    //        new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).mapColor(MapColor.TERRACOTTA_PURPLE), BlockSetType.OAK));
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).mapColor(MapColor.PURPLE), WoodType.OAK));
+    public static final Block MARNOR_DOOR = registerBlock("marnor_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).mapColor(MapColor.PURPLE), BlockSetType.OAK));
+    public static final Block MARNOR_TRAPDOOR = registerBlock("marnor_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).mapColor(MapColor.PURPLE), BlockSetType.OAK));
     public static final Block MARNOR_LOG = registerBlock("marnor_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_WOOD = registerBlock("marnor_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).mapColor(MapColor.PURPLE)));
     public static final Block STRIPPED_MARNOR_LOG = registerBlock("stripped_marnor_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.PURPLE)));
     public static final Block STRIPPED_MARNOR_WOOD = registerBlock("stripped_marnor_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.PURPLE)));
 
     public static final Block MARNOR_SIGN = registerBlockWithoutBlockItem("marnor_sign",
-            new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).mapColor(MapColor.TERRACOTTA_PURPLE), ModWoodTypes.MARNOR));
+            new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_WALL_SIGN = registerBlockWithoutBlockItem("marnor_wall_sign",
-            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).mapColor(MapColor.TERRACOTTA_PURPLE), ModWoodTypes.MARNOR));
+            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_HANGING_SIGN = registerBlockWithoutBlockItem("marnor_hanging_sign",
-            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_PURPLE), ModWoodTypes.MARNOR));
+            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("marnor_wall_hanging_sign",
-            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_PURPLE), ModWoodTypes.MARNOR));
+            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
 
     public static final Block MARNOR_LEAVES = registerBlock("marnor_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.PURPLE)));
 
     public static final Block MARNOR_SAPLING = registerBlock("marnor_sapling",
-            new MarnorSaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new MarnorSaplingBlock(new MarnorSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(MapColor.PURPLE)));
     public static final Block POTTED_MARNOR_SAPLING = registerBlockWithoutBlockItem("potted_marnor_sapling",
-            new FlowerPotBlock(MARNOR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new FlowerPotBlock(MARNOR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.PURPLE)));
 
 
     public static final Block INFESTED_MARNOR_LEAVES = registerBlock("infested_marnor_leaves",
-            new InfestedLeafBlock(FabricBlockSettings.copyOf(OAK_LEAVES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new InfestedLeafBlock(FabricBlockSettings.copyOf(OAK_LEAVES).mapColor(MapColor.PURPLE)));
 
     public static final Block MARNOR_VINES_PLANT = registerBlockWithoutBlockItem("marnor_vines_plant",
-            new MarnorVinesPlantBlock(FabricBlockSettings.copyOf(WEEPING_VINES_PLANT).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new MarnorVinesPlantBlock(FabricBlockSettings.copyOf(WEEPING_VINES_PLANT).mapColor(MapColor.PURPLE)));
     public static final Block MARNOR_VINES = registerBlock("marnor_vines",
-            new MarnorVinesBlock(FabricBlockSettings.copyOf(WEEPING_VINES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            new MarnorVinesBlock(FabricBlockSettings.copyOf(WEEPING_VINES).mapColor(MapColor.PURPLE)));
+
+    public static final Block NOX_BERRY_BUSH = registerBlockWithoutBlockItem("nox_berry_bush",
+            new NoxBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().noCollision()
+                    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
             new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
@@ -181,7 +186,8 @@ public class ModBlocks {
                             .noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
 
-
+    public static final Block SAFFROOT_CROP = registerBlockWithoutBlockItem("saffroot_crop",
+            new SaffrootCropBlock(FabricBlockSettings.copyOf(CARROTS)));
 
 
     private static Block registerBlock(String name, Block block) {

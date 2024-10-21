@@ -58,7 +58,8 @@
   "block.frights_and_foliage.marnor_leaves": "Marnor Leaves",
   "block.frights_and_foliage.infested_marnor_leaves": "Infested Marnor Leaves",
 
-  "block.frights_and_foliage.marnor_vine": "Marnor Vine",
+  "block.frights_and_foliage.marnor_vines": "Marnor Vines",
+  "block.frights_and_foliage.marnor_vines_plant": "Marnor Vines",
 
   
   "item.frights_and_foliage.warped_pumpkin_seeds": "Warped Pumpkin Seeds",
@@ -78,10 +79,16 @@
   "item.frights_and_foliage.raw_venison": "Raw Venison",
   "item.frights_and_foliage.cooked_venison": "Cooked Venison",
   "item.frights_and_foliage.fumkin_antler": "Fumkin Antler",
+  "item.frights_and_foliage.antlermeal": "Antlermeal",
 
   "item.frights_and_foliage.stuffed_pumpkin": "Stuffed Pumpkin",
   "item.frights_and_foliage.saffroot": "Saffroot",
+  "block.frights_and_foliage.saffroot_crop": "Saffroot Crop",
+
   "item.frights_and_foliage.gaize": "Gaize",
+
+  "item.frights_and_foliage.nox_berries": "Nox Berries",
+  "block.frights_and_foliage.nox_berry_bush": "Nox Berry Bush",
 
   "item.frights_and_foliage.stalk_eye": "Stalk Eye",
 

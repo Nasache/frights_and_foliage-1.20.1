@@ -55,8 +55,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_BUTTON);
                         entries.add(ModBlocks.MARNOR_FENCE);
                         entries.add(ModBlocks.MARNOR_FENCE_GATE);
-                        //entries.add(ModBlocks.MARNOR_DOOR);
-                        //entries.add(ModBlocks.MARNOR_TRAPDOOR);
+                        entries.add(ModBlocks.MARNOR_DOOR);
+                        entries.add(ModBlocks.MARNOR_TRAPDOOR);
                         entries.add(ModItems.MARNOR_SIGN);
                         entries.add(ModItems.MARNOR_HANGING_SIGN);
                         entries.add(ModBlocks.MARNOR_SAPLING);
@@ -88,10 +88,12 @@ public class ModItemGroup {
                         entries.add(ModItems.RAW_VENISON);
                         entries.add(ModItems.COOKED_VENISON);
                         entries.add(ModItems.FUMKIN_ANTLER);
+                        entries.add(ModItems.ANTLERMEAL);
 
                         entries.add(ModItems.STUFFED_PUMPKIN);
                         entries.add(ModItems.SAFFROOT);
                         entries.add(ModItems.GAIZE);
+                        entries.add(ModItems.NOX_BERRIES);
 
                         entries.add(ModItems.STALK_EYE);
 

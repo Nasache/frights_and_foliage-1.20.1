@@ -5,8 +5,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.custom.SaffrootCropBlock;
 import net.nathan.frights_and_foliage.item.ModItems;
 
 import java.util.Optional;
@@ -51,8 +53,8 @@ public class ModModelProvider extends FabricModelProvider {
         marnorPlanksTexturePool.pressurePlate(ModBlocks.MARNOR_PRESSURE_PLATE);
         marnorPlanksTexturePool.fence(ModBlocks.MARNOR_FENCE);
         marnorPlanksTexturePool.fenceGate(ModBlocks.MARNOR_FENCE_GATE);
-        //blockStateModelGenerator.registerDoor(ModBlocks.ACER_DOOR);
-        //blockStateModelGenerator.registerTrapdoor(ModBlocks.ACER_TRAPDOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.MARNOR_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.MARNOR_TRAPDOOR);
 
         marnorPlanksTexturePool.family(BlockFamilies.register(ModBlocks.MARNOR_PLANKS).sign(ModBlocks.MARNOR_SIGN, ModBlocks.MARNOR_WALL_SIGN).build());
 
@@ -78,6 +80,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CARVED_CRIMSON_PUMPKIN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CRIMSON_JACK_O_LANTERN);
 
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.NOX_BERRY_BUSH).coordinate(BlockStateVariantMap.create(Properties.AGE_3).register((stage) -> {
+            return BlockStateVariant.create().put(VariantSettings.MODEL, blockStateModelGenerator.createSubModel(ModBlocks.NOX_BERRY_BUSH, "_stage" + stage, Models.CROSS, TextureMap::cross));
+        })));
+
+        blockStateModelGenerator.registerCrop(ModBlocks.SAFFROOT_CROP, SaffrootCropBlock.AGE, 0, 1, 2, 3);
+
     }
 
     @Override
@@ -96,10 +104,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_VENISON, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_VENISON, Models.GENERATED);
         itemModelGenerator.register(ModItems.FUMKIN_ANTLER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANTLERMEAL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STUFFED_PUMPKIN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SAFFROOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NOX_BERRIES, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_EYE, Models.GENERATED);
 
