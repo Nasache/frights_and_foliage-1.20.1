@@ -39,6 +39,7 @@ public class ModRegistries {
 
         registry.add(ModBlocks.ASERIA_PLANKS, 300);
         registry.add(ModBlocks.ASERIA_LOG, 300);
+        registry.add(ModBlocks.ASERIA_SYRUP_LOG, 300);
         registry.add(ModBlocks.STRIPPED_ASERIA_LOG, 300);
         registry.add(ModBlocks.ASERIA_WOOD, 300);
         registry.add(ModBlocks.STRIPPED_ASERIA_WOOD, 300);

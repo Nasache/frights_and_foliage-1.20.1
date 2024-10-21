@@ -97,6 +97,13 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CARVED_CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CRIMSON_JACK_O_LANTERN);
 
-        addDrop(ModBlocks.DARKROSE_BUSH);
+        addDrop(ModBlocks.TWINFIRE_BLOOM);
+        addDrop(ModBlocks.POTTED_TWINFIRE_BLOOM, pottedPlantDrops(ModBlocks.TWINFIRE_BLOOM));
+        addDrop(ModBlocks.ROTBUD);
+        addDrop(ModBlocks.POTTED_ROTBUD, pottedPlantDrops(ModBlocks.ROTBUD));
+
+        addDrop(ModBlocks.DARKROSE_BUSH, doorDrops(ModBlocks.DARKROSE_BUSH));
+        addDrop(ModBlocks.AMBERCUP_BUSH, doorDrops(ModBlocks.AMBERCUP_BUSH));
+
     }
 }

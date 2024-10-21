@@ -70,6 +70,13 @@ public class ModItems {
     public static final Item NOX_BERRIES = registerItem("nox_berries",
             new AliasedBlockItem(ModBlocks.NOX_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.NOX_BERRIES)));
 
+    public static final Item ASERIA_CANDY = registerItem("aseria_candy",
+            new Item(new FabricItemSettings().food(ModFoodComponents.ASERIA_CANDY)));
+    public static final Item ASERIA_WAFFLE = registerItem("aseria_waffle",
+            new Item(new FabricItemSettings().food(ModFoodComponents.ASERIA_WAFFLE)));
+    public static final Item ASERIA_SUGAR_COOKIE = registerItem("aseria_sugar_cookie",
+            new Item(new FabricItemSettings().food(ModFoodComponents.ASERIA_SUGAR_COOKIE)));
+
 
     public static final Item STALK_EYE = registerItem("stalk_eye",
             new Item(new FabricItemSettings()));

@@ -42,8 +42,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.MARNOR_PRESSURE_PLATE,
                         ModBlocks.MARNOR_FENCE,
                         ModBlocks.MARNOR_FENCE_GATE,
-                        //ModBlocks.MARNOR_DOOR,
-                        //ModBlocks.MARNOR_TRAPDOOR,
+                        ModBlocks.MARNOR_DOOR,
+                        ModBlocks.MARNOR_TRAPDOOR,
                         ModBlocks.MARNOR_LOG,
                         ModBlocks.MARNOR_WOOD,
                         ModBlocks.STRIPPED_MARNOR_LOG,
@@ -85,6 +85,34 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.MARNOR_LOG,
                         ModBlocks.STRIPPED_MARNOR_LOG,
                         ModBlocks.STRIPPED_MARNOR_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.FLOWERS)
+                .add(ModBlocks.TWINFIRE_BLOOM,
+                        ModBlocks.ROTBUD,
+                        ModBlocks.DARKROSE_BUSH,
+                        ModBlocks.AMBERCUP_BUSH);
+
+        getOrCreateTagBuilder(BlockTags.TALL_FLOWERS)
+                .add(ModBlocks.DARKROSE_BUSH,
+                        ModBlocks.AMBERCUP_BUSH);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.TWINFIRE_BLOOM,
+                        ModBlocks.ROTBUD);
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_TWINFIRE_BLOOM,
+                        ModBlocks.POTTED_ROTBUD,
+                        ModBlocks.POTTED_MARNOR_SAPLING,
+                        ModBlocks.POTTED_ORANGE_ASERIA_SAPLING,
+                        ModBlocks.POTTED_RED_ASERIA_SAPLING,
+                        ModBlocks.POTTED_YELLOW_ASERIA_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(ModBlocks.POTTED_MARNOR_SAPLING,
+                        ModBlocks.POTTED_ORANGE_ASERIA_SAPLING,
+                        ModBlocks.POTTED_RED_ASERIA_SAPLING,
+                        ModBlocks.POTTED_YELLOW_ASERIA_SAPLING);
 
         getOrCreateTagBuilder(ModTags.Blocks.ASERIA_LOGS)
                 .add(ModBlocks.ASERIA_LOG, ModBlocks.ASERIA_SYRUP_LOG, ModBlocks.ASERIA_WOOD,

@@ -107,6 +107,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.WARPED_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASERIA_SYRUP_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ASERIA_CANDY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ASERIA_SUGAR_COOKIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ASERIA_WAFFLE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.RAW_VENISON, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_VENISON, Models.GENERATED);

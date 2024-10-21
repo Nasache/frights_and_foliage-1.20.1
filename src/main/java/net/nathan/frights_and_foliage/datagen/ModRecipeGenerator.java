@@ -160,6 +160,58 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.PUMPKIN), conditionsFromItem(Blocks.PUMPKIN))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ASERIA_SUGAR_COOKIE)
+                .input(Items.SUGAR)
+                .input(Items.WHEAT)
+                .input(ModItems.ASERIA_SYRUP_BOTTLE)
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ASERIA_CANDY)
+                .input(Items.SUGAR)
+                .input(ModItems.ASERIA_SYRUP_BOTTLE)
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ASERIA_WAFFLE)
+                .group("jack_o_lanterns")
+                .pattern(" A ")
+                .pattern("WEW")
+                .pattern(" S ")
+                .input('A', ModItems.ASERIA_SYRUP_BOTTLE)
+                .input('W', Items.WHEAT)
+                .input('E', Items.EGG)
+                .input('S', Items.SUGAR)
+                .criterion(hasItem(ModItems.ASERIA_SYRUP_BOTTLE), conditionsFromItem(ModItems.ASERIA_SYRUP_BOTTLE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ANTLERMEAL)
+                .input(ModItems.FUMKIN_ANTLER)
+                .input(Items.BONE_MEAL)
+                .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIRE_FEATHER_ARROW)
+                .input(ModItems.VIRE_FEATHER)
+                .input(Items.ARROW)
+                .criterion(hasItem(Items.ARROW), conditionsFromItem(Items.ARROW))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.MAGENTA_DYE)
+                .input(ModBlocks.DARKROSE_BUSH)
+                .criterion(hasItem(ModBlocks.DARKROSE_BUSH), conditionsFromItem(ModBlocks.DARKROSE_BUSH))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.LIME_DYE)
+                .input(ModBlocks.ROTBUD)
+                .criterion(hasItem(ModBlocks.ROTBUD), conditionsFromItem(ModBlocks.ROTBUD))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.YELLOW_DYE)
+                .input(ModBlocks.TWINFIRE_BLOOM)
+                .criterion(hasItem(ModBlocks.TWINFIRE_BLOOM), conditionsFromItem(ModBlocks.TWINFIRE_BLOOM))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.ORANGE_DYE)
+                .input(ModBlocks.AMBERCUP_BUSH)
+                .criterion(hasItem(ModBlocks.AMBERCUP_BUSH), conditionsFromItem(ModBlocks.AMBERCUP_BUSH))
+                .offerTo(exporter);
+
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35F, 200).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter);
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);

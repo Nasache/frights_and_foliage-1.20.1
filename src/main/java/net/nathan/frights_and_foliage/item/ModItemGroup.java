@@ -73,6 +73,9 @@ public class ModItemGroup {
                         entries.add(ModItems.MARNOR_CHEST_BOAT);
 
                         entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
+                        entries.add(ModItems.ASERIA_CANDY);
+                        entries.add(ModItems.ASERIA_SUGAR_COOKIE);
+                        entries.add(ModItems.ASERIA_WAFFLE);
 
                         entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
                         entries.add(ModBlocks.WARPED_PUMPKIN);
