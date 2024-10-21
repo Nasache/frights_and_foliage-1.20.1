@@ -64,6 +64,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.INFESTED_MARNOR_LEAVES);
 
                         entries.add(ModBlocks.MARNOR_VINES);
+                        entries.add(ModBlocks.DARKROSE_BUSH);
 
 
                         entries.add(ModItems.MARNOR_BOAT);

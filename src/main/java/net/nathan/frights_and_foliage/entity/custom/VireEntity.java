@@ -32,6 +32,7 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.nathan.frights_and_foliage.entity.ModEntities;
+import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -60,6 +61,7 @@ public class VireEntity extends AnimalEntity {
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.0));
         this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.SWEET_BERRIES}), false));
         this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.GLOW_BERRIES}), false));
+        this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), false));
         this.goalSelector.add(3, new FollowParentGoal(this, 1.0));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(5, new FlyOntoTreeGoal(this, 1.0));
@@ -67,8 +69,8 @@ public class VireEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createVireAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 6.0)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.4)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0)
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.5)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2);
     }
 
@@ -86,7 +88,7 @@ public class VireEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(Items.SWEET_BERRIES) || stack.isOf(Items.GLOW_BERRIES);
+        return stack.isOf(Items.SWEET_BERRIES) || stack.isOf(Items.GLOW_BERRIES) || stack.isOf(ModItems.NOX_BERRIES);
     }
 
 

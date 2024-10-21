@@ -5,7 +5,8 @@
 	"mixins": [
 		"FoliagePlacerTypeInvoker",
 		"TrunkPlacerTypeInvoker",
-		"MixinEndermanEntity",
+		"EndermanEntityMixin",
+		"SpiderEntityMixin",
 		"InGameHudMixin"
 	],
 	"injectors": {

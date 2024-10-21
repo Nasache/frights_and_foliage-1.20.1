@@ -142,7 +142,7 @@ public class ModBlocks {
 
     public static final Block NOX_BERRY_BUSH = registerBlockWithoutBlockItem("nox_berry_bush",
             new NoxBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().noCollision()
-                    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+                    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.PURPLE)));
 
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
@@ -188,6 +188,9 @@ public class ModBlocks {
 
     public static final Block SAFFROOT_CROP = registerBlockWithoutBlockItem("saffroot_crop",
             new SaffrootCropBlock(FabricBlockSettings.copyOf(CARROTS)));
+
+    public static final Block DARKROSE_BUSH = registerBlock("darkrose_bush",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.BLACK)));
 
 
     private static Block registerBlock(String name, Block block) {

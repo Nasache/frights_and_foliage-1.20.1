@@ -3,6 +3,7 @@ package net.nathan.frights_and_foliage.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.state.property.Properties;
@@ -85,6 +86,9 @@ public class ModModelProvider extends FabricModelProvider {
         })));
 
         blockStateModelGenerator.registerCrop(ModBlocks.SAFFROOT_CROP, SaffrootCropBlock.AGE, 0, 1, 2, 3);
+
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.DARKROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
+
 
     }
 

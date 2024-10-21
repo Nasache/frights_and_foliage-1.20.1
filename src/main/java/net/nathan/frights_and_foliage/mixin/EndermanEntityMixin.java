@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EndermanEntity.class)
-public class MixinEndermanEntity {
+public class EndermanEntityMixin {
 
     @Inject(method = "isPlayerStaring(Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At("HEAD"), cancellable = true)
     private void injectModPumpkinInfo(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {

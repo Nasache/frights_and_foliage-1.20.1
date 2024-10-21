@@ -69,8 +69,8 @@ public class ModRegistries {
         registry.add(ModBlocks.MARNOR_PRESSURE_PLATE, 300);
         registry.add(ModBlocks.MARNOR_FENCE, 300);
         registry.add(ModBlocks.MARNOR_FENCE_GATE, 300);
-        //registry.add(ModBlocks.MARNOR_DOOR, 200);
-        //registry.add(ModBlocks.MARNOR_TRAPDOOR, 300);
+        registry.add(ModBlocks.MARNOR_DOOR, 200);
+        registry.add(ModBlocks.MARNOR_TRAPDOOR, 300);
         registry.add(ModItems.MARNOR_BOAT, 1200);
         registry.add(ModItems.MARNOR_CHEST_BOAT, 1200);
         registry.add(ModItems.MARNOR_SIGN, 200);
@@ -88,6 +88,10 @@ public class ModRegistries {
 
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_LEAVES, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.INFESTED_MARNOR_LEAVES, 0.5f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_SAPLING, 0.3f);
+
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_VINES, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_VINES_PLANT, 0.3f);
 
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.CRIMSON_PUMPKIN_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.CRIMSON_PUMPKIN.asItem(), 0.65f);
@@ -98,6 +102,12 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.WARPED_PUMPKIN.asItem(), 0.65f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.CARVED_WARPED_PUMPKIN.asItem(), 0.65f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.WARPED_PUMPKIN_PIE, 1f);
+
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.FUMKIN_ANTLER, 0.8f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.SAFFROOT, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STUFFED_PUMPKIN, 1f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GAIZE, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.NOX_BERRIES, 0.3f);
     }
 
     private static void registerFlammables() {

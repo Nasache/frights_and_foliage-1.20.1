@@ -96,5 +96,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CARVED_CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CRIMSON_JACK_O_LANTERN);
+
+        addDrop(ModBlocks.DARKROSE_BUSH);
     }
 }

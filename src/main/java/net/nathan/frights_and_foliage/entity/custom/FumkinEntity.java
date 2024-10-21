@@ -222,9 +222,4 @@ public class FumkinEntity extends AnimalEntity {
     protected SoundEvent getDeathSound() {
         return ModSounds.FUMKIN_HURT;
     }
-
-    //@Nullable
-    //public SoundEvent getAmbientSound() {
-    //    return ModSounds.VIRE_CAW;
-    //}
 }

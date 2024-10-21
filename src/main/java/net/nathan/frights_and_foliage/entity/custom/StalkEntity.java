@@ -13,6 +13,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.nathan.frights_and_foliage.sound.ModSounds;
 import net.nathan.frights_and_foliage.util.ModEventHandler;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,7 +35,7 @@ public class StalkEntity extends HostileEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
+        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.2, true));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.5));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(5, new LookAroundGoal(this));
@@ -122,9 +123,9 @@ public class StalkEntity extends HostileEntity {
 
     public static DefaultAttributeContainer.Builder createStalkAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 20)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15);
     }
 
     protected SoundEvent getStepSound() {
@@ -138,33 +139,33 @@ public class StalkEntity extends HostileEntity {
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.BLOCK_WOOD_HIT;
+        return ModSounds.STALK_HURT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.BLOCK_BAMBOO_WOOD_BREAK;
+        return ModSounds.STALK_HURT;
     }
 
     protected SoundEvent getAlertSound() {
-        return SoundEvents.ENTITY_GHAST_WARN;
+        return ModSounds.STALK_ALERT;
     }
 
     protected SoundEvent getHostileSound() {
-        return SoundEvents.ENTITY_PHANTOM_BITE;
+        return ModSounds.STALK_ANGRY;
     }
 
     public void playAlertSound() {
         if (!this.isHostile) {
-            this.playSound(this.getAlertSound(), 2.0F, 1.0F);
+            this.playSound(this.getAlertSound(), 3.0F, 1.0F);
             this.lastWarningTime = this.getWorld().getTime();
         }
     }
 
     public void playHostileSound() {
         if (!this.isHostile) {
-            this.playSound(this.getHostileSound(), 1.0F, 1.0F);
+            this.playSound(this.getHostileSound(), 3.0F, 1.0F);
         }
     }
 

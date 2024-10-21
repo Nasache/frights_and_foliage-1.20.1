@@ -72,14 +72,15 @@ public class ModBiomes {
     public static Biome violetBramble(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
-
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+
+        ModBiomeFeatures.addVioletAnimals(spawnBuilder);
+        ModBiomeFeatures.addVioletHostiles(spawnBuilder);
 
         ModBiomeFeatures.addMarnorVegetation(biomeBuilder);
 

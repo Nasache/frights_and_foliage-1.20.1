@@ -25,6 +25,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AUTUMN_PUMPKIN_PLACED_KEY = registerKey("autumn_pumpkin_placed");
     public static final RegistryKey<PlacedFeature> AUTUMN_FLOWER_PLACED_KEY = registerKey("autumn_flower_placed");
 
+    public static final RegistryKey<PlacedFeature> NOX_BERRY_BUSH_PLACED_KEY = registerKey("nox_berry_placed");
+    public static final RegistryKey<PlacedFeature> DARKROSE_BUSH_PLACED_KEY = registerKey("darkrose_placed");
+
     public static final RegistryKey<PlacedFeature> PATCH_CRIMSON_PUMPKIN_PLACED_KEY = registerKey("patch_crimson_placed");
     public static final RegistryKey<PlacedFeature> PATCH_WARPED_PUMPKIN_PLACED_KEY = registerKey("patch_warped_placed");
 
@@ -60,6 +63,14 @@ public class ModPlacedFeatures {
         PlacedFeatures.register(context, AUTUMN_FLOWER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.AUTUMN_FLOWER_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(2), RarityFilterPlacementModifier.of(5),
                         SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+
+        register(context, NOX_BERRY_BUSH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NOX_BERRY_BUSH_KEY),
+                new PlacementModifier[]{RarityFilterPlacementModifier.of(50), SquarePlacementModifier.of(),
+                        PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+
+        register(context, DARKROSE_BUSH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.DARKROSE_BUSH_KEY),
+                new PlacementModifier[]{RarityFilterPlacementModifier.of(15), SquarePlacementModifier.of(),
+                        PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
 
 
         register(context, PATCH_CRIMSON_PUMPKIN_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PATCH_CRIMSON_PUMPKIN_KEY),

@@ -22,6 +22,7 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.custom.NoxBerryBushBlock;
 import net.nathan.frights_and_foliage.world.tree.custom.AseriaFoliagePlacer;
 import net.nathan.frights_and_foliage.world.tree.custom.AseriaTrunkPlacer;
 import net.nathan.frights_and_foliage.world.tree.custom.MarnorFoliagePlacer;
@@ -41,6 +42,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_ROCK_KEY = registerKey("autumn_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_PUMPKIN_KEY = registerKey("autumn_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_FLOWER_KEY = registerKey("autumn_flower");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NOX_BERRY_BUSH_KEY = registerKey("nox_berry_bush_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DARKROSE_BUSH_KEY = registerKey("darkrose_bush_key");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CRIMSON_PUMPKIN_KEY = registerKey("crimson_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WARPED_PUMPKIN_KEY = registerKey("warped_pumpkin");
@@ -106,6 +110,14 @@ public class ModConfiguredFeatures {
                                         Blocks.RED_TULIP.getDefaultState(),
                                         Blocks.ORANGE_TULIP.getDefaultState()))))));
 
+        ConfiguredFeatures.register(context, NOX_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.NOX_BERRY_BUSH.getDefaultState()
+                                .with(NoxBerryBushBlock.AGE, 3))), List.of(Blocks.GRASS_BLOCK)));
+
+        ConfiguredFeatures.register(context, DARKROSE_BUSH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.DARKROSE_BUSH.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
 
         ConfiguredFeatures.register(context, PATCH_CRIMSON_PUMPKIN_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchFeatureConfig(48, 6, 3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,

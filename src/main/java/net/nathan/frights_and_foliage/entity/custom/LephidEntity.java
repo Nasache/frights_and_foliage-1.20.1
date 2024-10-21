@@ -1,5 +1,6 @@
 package net.nathan.frights_and_foliage.entity.custom;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
@@ -7,10 +8,17 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.nathan.frights_and_foliage.sound.ModSounds;
+import org.jetbrains.annotations.Nullable;
 
 public class LephidEntity extends HostileEntity {
 
@@ -53,9 +61,9 @@ public class LephidEntity extends HostileEntity {
 
     public static DefaultAttributeContainer.Builder createLephidAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 4)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2);
     }
 
     public EntityGroup getGroup() {
@@ -65,5 +73,22 @@ public class LephidEntity extends HostileEntity {
     @Override
     public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
         return false;
+    }
+
+    @Nullable
+    public SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_SILVERFISH_AMBIENT;
+    }
+
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_SILVERFISH_HURT;
+    }
+
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_SILVERFISH_DEATH;
+    }
+
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(SoundEvents.ENTITY_SPIDER_STEP, 0.15F, 1.0F);
     }
 }
