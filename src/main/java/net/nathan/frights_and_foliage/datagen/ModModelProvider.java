@@ -111,6 +111,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.WARPED_PUMPKIN_PIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRIMSON_PUMPKIN_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_CIDER, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASERIA_SYRUP_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASERIA_CANDY, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASERIA_SUGAR_COOKIE, Models.GENERATED);
@@ -122,11 +123,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ANTLERMEAL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STUFFED_PUMPKIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAFFROOT_OMELETTE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STARCH_SKEWER, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE_FRITTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEEPCORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.NOX_BERRIES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BERRY_BLEND, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRIED_NOX_BERRIES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NOX_BERRY_TRAIL_MIX, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_EYE, Models.GENERATED);
 

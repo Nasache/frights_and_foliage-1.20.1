@@ -11,6 +11,7 @@ import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.custom.AntlerMealItem;
+import net.nathan.frights_and_foliage.item.custom.SkewerItem;
 import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
 import net.nathan.frights_and_foliage.item.custom.VireArrowItem;
 
@@ -60,11 +61,17 @@ public class ModItems {
     public static final Item VIRE_FEATHER_ARROW = registerItem("vire_feather_arrow",
             new VireArrowItem(new FabricItemSettings()));
 
-    public static final Item STUFFED_PUMPKIN = registerItem("stuffed_pumpkin",
-            new Item(new FabricItemSettings().food(ModFoodComponents.STUFFED_PUMPKIN).maxCount(1)));
-
     public static final Item SAFFROOT = registerItem("saffroot",
             new AliasedBlockItem(ModBlocks.SAFFROOT_CROP, new FabricItemSettings().food(ModFoodComponents.SAFFROOT)));
+
+    public static final Item STUFFED_PUMPKIN = registerItem("stuffed_pumpkin",
+            new Item(new FabricItemSettings().food(ModFoodComponents.STUFFED_PUMPKIN)));
+    public static final Item STARCH_SKEWER = registerItem("starch_skewer",
+            new SkewerItem(new FabricItemSettings().food(ModFoodComponents.STARCH_SKEWER)));
+    public static final Item SAFFROOT_OMELETTE = registerItem("saffroot_omelette",
+            new Item(new FabricItemSettings().food(ModFoodComponents.SAFFROOT_OMELETTE)));
+
+
     public static final Item GAIZE = registerItem("gaize",
             new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE)));
     public static final Item GAIZE_BREAD = registerItem("gaize_bread",
@@ -77,6 +84,13 @@ public class ModItems {
     public static final Item NOX_BERRIES = registerItem("nox_berries",
             new AliasedBlockItem(ModBlocks.NOX_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.NOX_BERRIES)));
 
+    public static final Item DRIED_NOX_BERRIES = registerItem("dried_nox_berries",
+            new Item(new FabricItemSettings().food(ModFoodComponents.DRIED_NOX_BERRIES)));
+    public static final Item NOX_BERRY_TRAIL_MIX = registerItem("nox_berry_trail_mix",
+            new Item(new FabricItemSettings().food(ModFoodComponents.NOX_BERRY_TRAIL_MIX)));
+    public static final Item BERRY_BLEND = registerItem("berry_blend",
+            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.BERRY_BLEND)));
+
     public static final Item ASERIA_CANDY = registerItem("aseria_candy",
             new Item(new FabricItemSettings().food(ModFoodComponents.ASERIA_CANDY)));
     public static final Item ASERIA_WAFFLE = registerItem("aseria_waffle",
@@ -84,6 +98,8 @@ public class ModItems {
     public static final Item ASERIA_SUGAR_COOKIE = registerItem("aseria_sugar_cookie",
             new Item(new FabricItemSettings().food(ModFoodComponents.ASERIA_SUGAR_COOKIE)));
 
+    public static final Item APPLE_CIDER = registerItem("apple_cider",
+            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.APPLE_CIDER)));
 
     public static final Item STALK_EYE = registerItem("stalk_eye",
             new Item(new FabricItemSettings()));

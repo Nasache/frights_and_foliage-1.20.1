@@ -88,13 +88,16 @@ public class ModItemGroup {
                         entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
                         entries.add(ModItems.WARPED_PUMPKIN_PIE);
 
+                        entries.add(ModItems.APPLE_CIDER);
+
                         entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
                         entries.add(ModItems.ASERIA_CANDY);
                         entries.add(ModItems.ASERIA_SUGAR_COOKIE);
                         entries.add(ModItems.ASERIA_WAFFLE);
 
                         entries.add(ModItems.SAFFROOT);
-
+                        entries.add(ModItems.STARCH_SKEWER);
+                        entries.add(ModItems.SAFFROOT_OMELETTE);
                         entries.add(ModItems.STUFFED_PUMPKIN);
 
                         entries.add(ModItems.GAIZE);
@@ -103,6 +106,9 @@ public class ModItemGroup {
                         entries.add(ModItems.PEEPCORN);
 
                         entries.add(ModItems.NOX_BERRIES);
+                        entries.add(ModItems.DRIED_NOX_BERRIES);
+                        entries.add(ModItems.NOX_BERRY_TRAIL_MIX);
+                        entries.add(ModItems.BERRY_BLEND);
 
                         entries.add(ModItems.RAW_VENISON);
                         entries.add(ModItems.COOKED_VENISON);

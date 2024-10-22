@@ -218,6 +218,49 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GAIZE), conditionsFromItem(ModItems.GAIZE))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.APPLE_CIDER)
+                .input(Items.APPLE)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.SUGAR)
+                .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BERRY_BLEND)
+                .input(Items.GLASS_BOTTLE)
+                .input(ModItems.NOX_BERRIES)
+                .input(Items.GLOW_BERRIES)
+                .input(Items.SWEET_BERRIES)
+                .criterion(hasItem(Items.SWEET_BERRIES), conditionsFromItem(Items.SWEET_BERRIES))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.NOX_BERRY_TRAIL_MIX)
+                .input(ModItems.NOX_BERRIES)
+                .input(Items.PUMPKIN_SEEDS)
+                .input(Items.DRIED_KELP)
+                .criterion(hasItem(Items.SWEET_BERRIES), conditionsFromItem(Items.SWEET_BERRIES))
+                .offerTo(exporter);
+
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35F, 200).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter);
+        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
+        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SAFFROOT_OMELETTE)
+                .pattern("ESE")
+                .input('S', ModItems.SAFFROOT)
+                .input('E', Items.EGG)
+                .criterion(hasItem(ModItems.SAFFROOT), conditionsFromItem(ModItems.SAFFROOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.STARCH_SKEWER)
+                .pattern("  R")
+                .pattern(" P ")
+                .pattern("S  ")
+                .input('R', ModItems.SAFFROOT)
+                .input('P', Items.POTATO)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.SAFFROOT), conditionsFromItem(ModItems.SAFFROOT))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ANTLERMEAL)
                 .input(ModItems.FUMKIN_ANTLER)
                 .input(Items.BONE_MEAL)
