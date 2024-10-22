@@ -40,6 +40,7 @@ public class ModBiomeFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AMBERCUP_BUSH_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROTBUD_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.NOX_BERRY_BUSH_PLACED_KEY);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_ROCK_PLACED_KEY);
     }
 
     public static void addVioletAnimals(SpawnSettings.Builder builder) {

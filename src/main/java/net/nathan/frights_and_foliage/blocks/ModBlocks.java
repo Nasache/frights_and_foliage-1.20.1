@@ -145,6 +145,15 @@ public class ModBlocks {
             new NoxBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().noCollision()
                     .sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.PURPLE)));
 
+    public static final Block THORNY_COBBLESTONE = registerBlock("thorny_cobblestone",
+            new Block(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block THORNY_COBBLESTONE_STAIRS = registerBlock("thorny_cobblestone_stairs",
+            new StairsBlock(ModBlocks.ASERIA_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block THORNY_COBBLESTONE_SLAB = registerBlock("thorny_cobblestone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block THORNY_COBBLESTONE_WALL = registerBlock("thorny_cobblestone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
 
     public static final Block WARPED_PUMPKIN = registerBlock("warped_pumpkin",
             new WarpedPumpkinBlock(FabricBlockSettings.copyOf(PUMPKIN).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.NETHER_WOOD)));
@@ -191,7 +200,7 @@ public class ModBlocks {
             new SaffrootCropBlock(FabricBlockSettings.copyOf(CARROTS)));
 
     public static final Block DARKROSE_BUSH = registerBlock("darkrose_bush",
-            new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.BLACK)));
+            new DarkroseBushBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.BLACK)));
     public static final Block AMBERCUP_BUSH = registerBlock("ambercup_bush",
             new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.ORANGE)));
 

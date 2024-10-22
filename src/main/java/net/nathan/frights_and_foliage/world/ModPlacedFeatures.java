@@ -33,6 +33,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ROTBUD_PLACED_KEY = registerKey("rotbud_placed");
     public static final RegistryKey<PlacedFeature> TWINFIRE_BLOOM_PLACED_KEY = registerKey("twinfire_placed");
     public static final RegistryKey<PlacedFeature> PATCH_TALL_GRASS_VIOLET = registerKey("tall_grass_placed");
+    public static final RegistryKey<PlacedFeature> VIOLET_ROCK_PLACED_KEY = registerKey("violet_rock_placed");
 
     public static final RegistryKey<PlacedFeature> PATCH_CRIMSON_PUMPKIN_PLACED_KEY = registerKey("patch_crimson_placed");
     public static final RegistryKey<PlacedFeature> PATCH_WARPED_PUMPKIN_PLACED_KEY = registerKey("patch_warped_placed");
@@ -60,6 +61,10 @@ public class ModPlacedFeatures {
 
         PlacedFeatures.register(context, AUTUMN_ROCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.AUTUMN_ROCK_KEY),
                 new PlacementModifier[]{RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+
+        PlacedFeatures.register(context, VIOLET_ROCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VIOLET_ROCK_KEY),
+                new PlacementModifier[]{RarityFilterPlacementModifier.of(2), SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
 
         PlacedFeatures.register(context, AUTUMN_PUMPKIN_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.AUTUMN_PUMPKIN_KEY),

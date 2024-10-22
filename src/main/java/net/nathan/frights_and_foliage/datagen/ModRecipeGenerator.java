@@ -109,6 +109,23 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerBoatRecipe(exporter, ModItems.MARNOR_BOAT, ModBlocks.MARNOR_PLANKS);
         offerChestBoatRecipe(exporter, ModItems.MARNOR_CHEST_BOAT, ModItems.MARNOR_BOAT);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE)
+                .input(Blocks.COBBLESTONE)
+                .input(ModBlocks.MARNOR_VINES)
+                .criterion(hasItem(ModBlocks.MARNOR_VINES), conditionsFromItem(ModBlocks.MARNOR_VINES))
+                .offerTo(exporter);
+
+        createStairsRecipe(ModBlocks.THORNY_COBBLESTONE_STAIRS, Ingredient.ofItems(ModBlocks.THORNY_COBBLESTONE))
+                .criterion(hasItem(ModBlocks.THORNY_COBBLESTONE), conditionsFromItem(ModBlocks.THORNY_COBBLESTONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.THORNY_COBBLESTONE_STAIRS)));
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE_SLAB, Ingredient.ofItems(ModBlocks.THORNY_COBBLESTONE))
+                .criterion(hasItem(ModBlocks.THORNY_COBBLESTONE), conditionsFromItem(ModBlocks.THORNY_COBBLESTONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.THORNY_COBBLESTONE_SLAB)));
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE_WALL, ModBlocks.THORNY_COBBLESTONE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE_STAIRS, ModBlocks.THORNY_COBBLESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE_SLAB, ModBlocks.THORNY_COBBLESTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THORNY_COBBLESTONE_WALL, ModBlocks.THORNY_COBBLESTONE);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARPED_PUMPKIN_SEEDS, 4)
                 .group("pumpkin_seeds")
@@ -187,6 +204,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.FUMKIN_ANTLER)
                 .input(Items.BONE_MEAL)
                 .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.PUMPKIN)
+                .pattern("AA")
+                .pattern("AA")
+                .input('A', ModItems.FUMKIN_ANTLER)
+                .criterion(hasItem(ModItems.FUMKIN_ANTLER), conditionsFromItem(ModItems.FUMKIN_ANTLER))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIRE_FEATHER_ARROW)

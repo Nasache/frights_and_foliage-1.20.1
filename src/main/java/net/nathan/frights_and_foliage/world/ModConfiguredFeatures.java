@@ -49,6 +49,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROTBUD_KEY = registerKey("rotbud_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TWINFIRE_BLOOM_KEY = registerKey("twinfire_bloom_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TALL_GRASS_KEY = registerKey("tall_grass_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> VIOLET_ROCK_KEY = registerKey("violet_rock");
+
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CRIMSON_PUMPKIN_KEY = registerKey("crimson_pumpkin");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WARPED_PUMPKIN_KEY = registerKey("warped_pumpkin");
@@ -100,6 +102,7 @@ public class ModConfiguredFeatures {
                         new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(builder)))));
 
         ConfiguredFeatures.register(context, AUTUMN_ROCK_KEY, Feature.FOREST_ROCK, new SingleStateFeatureConfig(Blocks.MOSSY_COBBLESTONE.getDefaultState()));
+        ConfiguredFeatures.register(context, VIOLET_ROCK_KEY, Feature.FOREST_ROCK, new SingleStateFeatureConfig(ModBlocks.THORNY_COBBLESTONE.getDefaultState()));
 
         ConfiguredFeatures.register(context, AUTUMN_PUMPKIN_KEY, Feature.RANDOM_PATCH,
                 createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,

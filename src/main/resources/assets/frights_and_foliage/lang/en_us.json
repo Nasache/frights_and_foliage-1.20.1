@@ -61,7 +61,12 @@
   "block.frights_and_foliage.marnor_vines": "Marnor Vines",
   "block.frights_and_foliage.marnor_vines_plant": "Marnor Vines",
 
-  
+  "block.frights_and_foliage.thorny_cobblestone": "Thorny Cobblestone",
+  "block.frights_and_foliage.thorny_cobblestone_stairs": "Thorny Cobblestone Stairs",
+  "block.frights_and_foliage.thorny_cobblestone_slab": "Thorny Cobblestone Slab",
+  "block.frights_and_foliage.thorny_cobblestone_wall": "Thorny Cobblestone Wall",
+
+
   "item.frights_and_foliage.warped_pumpkin_seeds": "Warped Pumpkin Seeds",
   "block.frights_and_foliage.warped_pumpkin": "Warped Pumpkin",
   "block.frights_and_foliage.carved_warped_pumpkin": "Carved Warped Pumpkin",

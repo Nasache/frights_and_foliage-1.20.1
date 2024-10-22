@@ -105,5 +105,10 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARKROSE_BUSH, doorDrops(ModBlocks.DARKROSE_BUSH));
         addDrop(ModBlocks.AMBERCUP_BUSH, doorDrops(ModBlocks.AMBERCUP_BUSH));
 
+        addDrop(ModBlocks.THORNY_COBBLESTONE);
+        addDrop(ModBlocks.THORNY_COBBLESTONE_STAIRS);
+        addDrop(ModBlocks.THORNY_COBBLESTONE_SLAB);
+        addDrop(ModBlocks.THORNY_COBBLESTONE_WALL);
+
     }
 }

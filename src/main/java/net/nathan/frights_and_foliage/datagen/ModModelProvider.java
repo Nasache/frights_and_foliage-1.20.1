@@ -68,6 +68,10 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MARNOR_SAPLING, ModBlocks.POTTED_MARNOR_SAPLING, NOT_TINTED);
 
+        BlockStateModelGenerator.BlockTexturePool thornyCobblestoneTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THORNY_COBBLESTONE);
+        thornyCobblestoneTexturePool.stairs(ModBlocks.THORNY_COBBLESTONE_STAIRS);
+        thornyCobblestoneTexturePool.slab(ModBlocks.THORNY_COBBLESTONE_SLAB);
+        thornyCobblestoneTexturePool.wall(ModBlocks.THORNY_COBBLESTONE_WALL);
 
         blockStateModelGenerator.registerSingleton(ModBlocks.WARPED_PUMPKIN, TexturedModel.CUBE_COLUMN);
         blockStateModelGenerator.registerGourd(ModBlocks.WARPED_PUMPKIN_STEM, ModBlocks.ATTACHED_WARPED_PUMPKIN_STEM);

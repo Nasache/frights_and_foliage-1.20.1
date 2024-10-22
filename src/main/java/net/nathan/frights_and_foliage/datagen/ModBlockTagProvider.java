@@ -59,6 +59,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.CARVED_WARPED_PUMPKIN,
                         ModBlocks.WARPED_JACK_O_LANTERN);
 
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.THORNY_COBBLESTONE,
+                        ModBlocks.THORNY_COBBLESTONE_STAIRS,
+                        ModBlocks.THORNY_COBBLESTONE_SLAB,
+                        ModBlocks.THORNY_COBBLESTONE_WALL);
+
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.ASERIA_PLANKS, ModBlocks.MARNOR_PLANKS);
 
@@ -113,6 +119,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.POTTED_ORANGE_ASERIA_SAPLING,
                         ModBlocks.POTTED_RED_ASERIA_SAPLING,
                         ModBlocks.POTTED_YELLOW_ASERIA_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.THORNY_COBBLESTONE_WALL);
 
         getOrCreateTagBuilder(ModTags.Blocks.ASERIA_LOGS)
                 .add(ModBlocks.ASERIA_LOG, ModBlocks.ASERIA_SYRUP_LOG, ModBlocks.ASERIA_WOOD,

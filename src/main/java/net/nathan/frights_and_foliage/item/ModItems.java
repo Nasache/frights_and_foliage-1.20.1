@@ -43,7 +43,8 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.CRIMSON_PUMPKIN_PIE)));
 
     public static final Item ASERIA_SYRUP_BOTTLE = registerItem("aseria_syrup_bottle",
-            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ASERIA_SYRUP_BOTTLE).maxCount(16)));
+            new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.ASERIA_SYRUP_BOTTLE)
+                    .recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)));
 
     public static final Item RAW_VENISON = registerItem("raw_venison",
             new Item(new FabricItemSettings().food(ModFoodComponents.RAW_VENISON)));
