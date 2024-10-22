@@ -67,6 +67,12 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.SAFFROOT_CROP, new FabricItemSettings().food(ModFoodComponents.SAFFROOT)));
     public static final Item GAIZE = registerItem("gaize",
             new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE)));
+    public static final Item GAIZE_BREAD = registerItem("gaize_bread",
+            new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE_BREAD)));
+    public static final Item GAIZE_FRITTER = registerItem("gaize_fritter",
+            new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE_FRITTER)));
+    public static final Item PEEPCORN = registerItem("peepcorn",
+            new Item(new FabricItemSettings().food(ModFoodComponents.PEEPCORN)));
 
     public static final Item NOX_BERRIES = registerItem("nox_berries",
             new AliasedBlockItem(ModBlocks.NOX_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.NOX_BERRIES)));

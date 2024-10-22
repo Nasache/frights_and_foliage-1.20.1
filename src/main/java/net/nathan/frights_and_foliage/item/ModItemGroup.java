@@ -33,16 +33,15 @@ public class ModItemGroup {
                         entries.add(ModBlocks.ASERIA_TRAPDOOR);
                         entries.add(ModItems.ASERIA_SIGN);
                         entries.add(ModItems.ASERIA_HANGING_SIGN);
+                        entries.add(ModItems.ASERIA_BOAT);
+                        entries.add(ModItems.ASERIA_CHEST_BOAT);
+
                         entries.add(ModBlocks.RED_ASERIA_SAPLING);
                         entries.add(ModBlocks.ORANGE_ASERIA_SAPLING);
                         entries.add(ModBlocks.YELLOW_ASERIA_SAPLING);
                         entries.add(ModBlocks.RED_ASERIA_LEAVES);
                         entries.add(ModBlocks.ORANGE_ASERIA_LEAVES);
                         entries.add(ModBlocks.YELLOW_ASERIA_LEAVES);
-                        entries.add(ModBlocks.FALLEN_LEAVES);
-
-                        entries.add(ModItems.ASERIA_BOAT);
-                        entries.add(ModItems.ASERIA_CHEST_BOAT);
 
                         entries.add(ModBlocks.MARNOR_LOG);
                         entries.add(ModBlocks.MARNOR_WOOD);
@@ -59,45 +58,57 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_TRAPDOOR);
                         entries.add(ModItems.MARNOR_SIGN);
                         entries.add(ModItems.MARNOR_HANGING_SIGN);
+                        entries.add(ModItems.MARNOR_BOAT);
+                        entries.add(ModItems.MARNOR_CHEST_BOAT);
+
                         entries.add(ModBlocks.MARNOR_SAPLING);
                         entries.add(ModBlocks.MARNOR_LEAVES);
                         entries.add(ModBlocks.INFESTED_MARNOR_LEAVES);
 
                         entries.add(ModBlocks.MARNOR_VINES);
+
+                        entries.add(ModBlocks.FALLEN_LEAVES);
+                        entries.add(ModBlocks.WILD_GAIZE_CROP);
                         entries.add(ModBlocks.DARKROSE_BUSH);
                         entries.add(ModBlocks.AMBERCUP_BUSH);
                         entries.add(ModBlocks.TWINFIRE_BLOOM);
                         entries.add(ModBlocks.ROTBUD);
 
-                        entries.add(ModItems.MARNOR_BOAT);
-                        entries.add(ModItems.MARNOR_CHEST_BOAT);
+                        entries.add(ModBlocks.WARPED_PUMPKIN);
+                        entries.add(ModBlocks.CARVED_WARPED_PUMPKIN);
+                        entries.add(ModBlocks.WARPED_JACK_O_LANTERN);
+
+                        entries.add(ModBlocks.CRIMSON_PUMPKIN);
+                        entries.add(ModBlocks.CARVED_CRIMSON_PUMPKIN);
+                        entries.add(ModBlocks.CRIMSON_JACK_O_LANTERN);
+
+                        entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
+                        entries.add(ModItems.CRIMSON_PUMPKIN_SEEDS);
+
+                        entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
+                        entries.add(ModItems.WARPED_PUMPKIN_PIE);
 
                         entries.add(ModItems.ASERIA_SYRUP_BOTTLE);
                         entries.add(ModItems.ASERIA_CANDY);
                         entries.add(ModItems.ASERIA_SUGAR_COOKIE);
                         entries.add(ModItems.ASERIA_WAFFLE);
 
-                        entries.add(ModItems.WARPED_PUMPKIN_SEEDS);
-                        entries.add(ModBlocks.WARPED_PUMPKIN);
-                        entries.add(ModBlocks.CARVED_WARPED_PUMPKIN);
-                        entries.add(ModBlocks.WARPED_JACK_O_LANTERN);
-                        entries.add(ModItems.WARPED_PUMPKIN_PIE);
+                        entries.add(ModItems.SAFFROOT);
 
-                        entries.add(ModItems.CRIMSON_PUMPKIN_SEEDS);
-                        entries.add(ModBlocks.CRIMSON_PUMPKIN);
-                        entries.add(ModBlocks.CARVED_CRIMSON_PUMPKIN);
-                        entries.add(ModBlocks.CRIMSON_JACK_O_LANTERN);
-                        entries.add(ModItems.CRIMSON_PUMPKIN_PIE);
+                        entries.add(ModItems.STUFFED_PUMPKIN);
+
+                        entries.add(ModItems.GAIZE);
+                        entries.add(ModItems.GAIZE_BREAD);
+                        entries.add(ModItems.GAIZE_FRITTER);
+                        entries.add(ModItems.PEEPCORN);
+
+                        entries.add(ModItems.NOX_BERRIES);
 
                         entries.add(ModItems.RAW_VENISON);
                         entries.add(ModItems.COOKED_VENISON);
+
                         entries.add(ModItems.FUMKIN_ANTLER);
                         entries.add(ModItems.ANTLERMEAL);
-
-                        entries.add(ModItems.STUFFED_PUMPKIN);
-                        entries.add(ModItems.SAFFROOT);
-                        entries.add(ModItems.GAIZE);
-                        entries.add(ModItems.NOX_BERRIES);
 
                         entries.add(ModItems.STALK_EYE);
 

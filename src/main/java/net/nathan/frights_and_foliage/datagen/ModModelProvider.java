@@ -3,7 +3,6 @@ package net.nathan.frights_and_foliage.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.state.property.Properties;
@@ -91,6 +90,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.SAFFROOT_CROP, SaffrootCropBlock.AGE, 0, 1, 2, 3);
 
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.WILD_GAIZE_CROP, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         blockStateModelGenerator.registerDoubleBlock(ModBlocks.DARKROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(ModBlocks.AMBERCUP_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ROTBUD, ModBlocks.POTTED_ROTBUD, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -122,6 +123,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.STUFFED_PUMPKIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GAIZE_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GAIZE_FRITTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PEEPCORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.NOX_BERRIES, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STALK_EYE, Models.GENERATED);

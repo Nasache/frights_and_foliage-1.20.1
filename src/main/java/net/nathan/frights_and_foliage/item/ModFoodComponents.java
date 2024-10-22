@@ -8,7 +8,7 @@ public class ModFoodComponents {
     public static final FoodComponent WARPED_PUMPKIN_PIE = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
     public static final FoodComponent CRIMSON_PUMPKIN_PIE = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f).build();
 
-    public static final FoodComponent ASERIA_SYRUP_BOTTLE = new FoodComponent.Builder().hunger(8).saturationModifier(4.8f)
+    public static final FoodComponent ASERIA_SYRUP_BOTTLE = new FoodComponent.Builder().hunger(1).saturationModifier(1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 0), 1.0F).build();
 
     public static final FoodComponent RAW_VENISON = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
@@ -18,6 +18,9 @@ public class ModFoodComponents {
 
     public static final FoodComponent SAFFROOT = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
     public static final FoodComponent GAIZE = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
+    public static final FoodComponent GAIZE_BREAD = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
+    public static final FoodComponent GAIZE_FRITTER = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
+    public static final FoodComponent PEEPCORN = new FoodComponent.Builder().snack().hunger(1).saturationModifier(1f).build();
 
     public static final FoodComponent ASERIA_CANDY = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
     public static final FoodComponent ASERIA_WAFFLE = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();

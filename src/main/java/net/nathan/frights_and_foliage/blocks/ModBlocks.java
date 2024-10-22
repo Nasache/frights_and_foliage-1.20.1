@@ -199,6 +199,9 @@ public class ModBlocks {
     public static final Block SAFFROOT_CROP = registerBlockWithoutBlockItem("saffroot_crop",
             new SaffrootCropBlock(FabricBlockSettings.copyOf(CARROTS)));
 
+    public static final Block WILD_GAIZE_CROP = registerBlock("wild_gaize_crop",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.PURPLE)));
+
     public static final Block DARKROSE_BUSH = registerBlock("darkrose_bush",
             new DarkroseBushBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.BLACK)));
     public static final Block AMBERCUP_BUSH = registerBlock("ambercup_bush",

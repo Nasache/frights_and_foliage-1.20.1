@@ -189,7 +189,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ASERIA_WAFFLE)
-                .group("jack_o_lanterns")
                 .pattern(" A ")
                 .pattern("WEW")
                 .pattern(" S ")
@@ -198,6 +197,25 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('E', Items.EGG)
                 .input('S', Items.SUGAR)
                 .criterion(hasItem(ModItems.ASERIA_SYRUP_BOTTLE), conditionsFromItem(ModItems.ASERIA_SYRUP_BOTTLE))
+                .offerTo(exporter);
+
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35F, 200).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter);
+        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
+        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GAIZE_BREAD)
+                .pattern("WGW")
+                .input('G', ModItems.GAIZE)
+                .input('W', Items.WHEAT)
+                .criterion(hasItem(ModItems.GAIZE), conditionsFromItem(ModItems.GAIZE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GAIZE_FRITTER)
+                .input(ModItems.GAIZE)
+                .input(ModItems.ASERIA_SYRUP_BOTTLE)
+                .input(Items.WHEAT)
+                .input(Items.SUGAR)
+                .criterion(hasItem(ModItems.GAIZE), conditionsFromItem(ModItems.GAIZE))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ANTLERMEAL)
@@ -238,6 +256,5 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35F, 200).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter);
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);
-
     }
 }
