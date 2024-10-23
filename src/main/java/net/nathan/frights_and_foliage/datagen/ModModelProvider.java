@@ -97,7 +97,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ROTBUD, ModBlocks.POTTED_ROTBUD, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.TWINFIRE_BLOOM, ModBlocks.POTTED_TWINFIRE_BLOOM, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-
+        blockStateModelGenerator.registerTorch(ModBlocks.SPOOKY_TORCH, ModBlocks.WALL_SPOOKY_TORCH);
+        blockStateModelGenerator.registerLantern(ModBlocks.SPOOKY_LANTERN);
+        blockStateModelGenerator.registerCampfire(ModBlocks.SPOOKY_CAMPFIRE);
     }
 
     @Override

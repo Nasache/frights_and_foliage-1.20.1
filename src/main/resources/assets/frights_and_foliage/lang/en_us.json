@@ -118,6 +118,12 @@
 
   "item.frights_and_foliage.apple_cider": "Apple Cider",
 
+  "item.frights_and_foliage.spooky_torch": "Spooky Torch",
+  "block.frights_and_foliage.spooky_torch": "Spooky Torch",
+  "block.frights_and_foliage.wall_spooky_torch": "Wall Spooky Torch",
+  "block.frights_and_foliage.spooky_lantern": "Spooky Lantern",
+  "block.frights_and_foliage.spooky_campfire": "Spooky Campfire",
+
   "item.frights_and_foliage.stalk_eye": "Stalk Eye",
 
   "item.frights_and_foliage.vire_feather": "Vire Feather",

@@ -7,6 +7,8 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -217,6 +219,16 @@ public class ModBlocks {
     public static final Block POTTED_TWINFIRE_BLOOM = registerBlock("potted_twinfire_bloom",
             new FlowerPotBlock(ModBlocks.TWINFIRE_BLOOM, FabricBlockSettings.copyOf(POTTED_ORANGE_TULIP).mapColor(MapColor.ORANGE)));
 
+
+    public static final Block SPOOKY_TORCH = registerBlockWithoutBlockItem("spooky_torch",
+            new TorchBlock(FabricBlockSettings.copyOf(TORCH), ParticleTypes.SOUL_FIRE_FLAME));
+    public static final Block WALL_SPOOKY_TORCH = registerBlockWithoutBlockItem("wall_spooky_torch",
+            new WallTorchBlock(FabricBlockSettings.copyOf(WALL_TORCH), ParticleTypes.SOUL_FIRE_FLAME));
+
+    public static final Block SPOOKY_LANTERN = registerBlock("spooky_lantern",
+            new LanternBlock(FabricBlockSettings.copyOf(LANTERN)));
+    public static final Block SPOOKY_CAMPFIRE = registerBlock("spooky_campfire",
+            new ModCampfireBlock(false, 1, FabricBlockSettings.copyOf(SOUL_CAMPFIRE)));
 
 
     private static Block registerBlock(String name, Block block) {

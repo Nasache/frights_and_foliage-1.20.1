@@ -4,6 +4,7 @@ import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
@@ -13,6 +14,7 @@ import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.blocks.entity.ModBlockEntities;
+import net.nathan.frights_and_foliage.blocks.entity.ModCampfireBlockEntityRenderer;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.entity.client.*;
@@ -84,6 +86,10 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROTBUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_ROTBUD, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPOOKY_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_SPOOKY_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPOOKY_CAMPFIRE, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TWINFIRE_BLOOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_TWINFIRE_BLOOM, RenderLayer.getCutout());
 
@@ -100,5 +106,6 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.VIRE, VireRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.VIRE_FEATHER_ARROW, VireArrowEntityRenderer::new);
+        BlockEntityRendererRegistry.register(ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, ModCampfireBlockEntityRenderer::new);
     }
 }

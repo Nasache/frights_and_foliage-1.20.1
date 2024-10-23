@@ -123,6 +123,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.THORNY_COBBLESTONE_WALL);
 
+        getOrCreateTagBuilder(BlockTags.CAMPFIRES)
+                .add(ModBlocks.SPOOKY_CAMPFIRE);
+
         getOrCreateTagBuilder(ModTags.Blocks.ASERIA_LOGS)
                 .add(ModBlocks.ASERIA_LOG, ModBlocks.ASERIA_SYRUP_LOG, ModBlocks.ASERIA_WOOD,
                         ModBlocks.STRIPPED_ASERIA_LOG, ModBlocks.STRIPPED_ASERIA_WOOD);

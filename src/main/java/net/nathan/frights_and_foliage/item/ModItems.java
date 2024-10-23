@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
@@ -104,6 +105,9 @@ public class ModItems {
     public static final Item STALK_EYE = registerItem("stalk_eye",
             new Item(new FabricItemSettings()));
 
+    public static final Item SPOOKY_TORCH = registerItem("spooky_torch",
+            new VerticallyAttachableBlockItem(ModBlocks.SPOOKY_TORCH, ModBlocks.WALL_SPOOKY_TORCH,
+                    new Item.Settings(), Direction.DOWN));
 
     public static final Item STALK_SPAWN_EGG = registerItem("stalk_spawn_egg",
             new SpawnEggItem(ModEntities.STALK, 0x362141, 0x100d12, new Item.Settings()));

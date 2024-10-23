@@ -65,6 +65,10 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_LEAVES);
                         entries.add(ModBlocks.INFESTED_MARNOR_LEAVES);
 
+                        entries.add(ModItems.SPOOKY_TORCH);
+                        entries.add(ModBlocks.SPOOKY_LANTERN);
+                        entries.add(ModBlocks.SPOOKY_CAMPFIRE);
+
                         entries.add(ModBlocks.MARNOR_VINES);
 
                         entries.add(ModBlocks.FALLEN_LEAVES);
