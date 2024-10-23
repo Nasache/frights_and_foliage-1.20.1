@@ -15,6 +15,9 @@ public class ModParticles {
     public static final DefaultParticleType YELLOW_ASERIA_PARTICLE =
             registerParticle("yellow_aseria_leaves", FabricParticleTypes.simple());
 
+    public static final DefaultParticleType SPOOKY_FIRE_FLAME =
+            registerParticle("spooky_fire_flame", FabricParticleTypes.simple());
+
 
     private static DefaultParticleType registerParticle(String name, DefaultParticleType particleType) {
         return Registry.register(Registries.PARTICLE_TYPE, new Identifier(FrightsAndFoliage.MOD_ID, name), particleType);

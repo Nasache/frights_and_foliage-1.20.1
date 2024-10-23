@@ -12,6 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.item.ModItems;
@@ -271,6 +272,33 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("AA")
                 .input('A', ModItems.FUMKIN_ANTLER)
                 .criterion(hasItem(ModItems.FUMKIN_ANTLER), conditionsFromItem(ModItems.FUMKIN_ANTLER))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPOOKY_TORCH)
+                .pattern("C")
+                .pattern("S")
+                .pattern("R")
+                .input('C', Items.COAL)
+                .input('S', Items.STICK)
+                .input('R', Items.ROTTEN_FLESH)
+                .criterion(hasItem(Items.ROTTEN_FLESH), conditionsFromItem(Items.ROTTEN_FLESH))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SPOOKY_LANTERN)
+                .pattern("III")
+                .pattern("ITI")
+                .pattern("III")
+                .input('I', Items.IRON_NUGGET)
+                .input('T', ModItems.SPOOKY_TORCH)
+                .criterion(hasItem(ModItems.SPOOKY_TORCH), conditionsFromItem(ModItems.SPOOKY_TORCH))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SPOOKY_CAMPFIRE)
+                .pattern(" S ")
+                .pattern("SRS")
+                .pattern("WWW")
+                .input('S', Items.STICK)
+                .input('R', Items.ROTTEN_FLESH)
+                .input('W', ItemTags.LOGS)
+                .criterion(hasItem(Items.ROTTEN_FLESH), conditionsFromItem(Items.ROTTEN_FLESH))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIRE_FEATHER_ARROW)

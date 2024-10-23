@@ -66,6 +66,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_MARNOR_LOG);
         addDrop(ModBlocks.STRIPPED_MARNOR_WOOD);
         addDrop(ModBlocks.MARNOR_LEAVES, leavesDrops(ModBlocks.MARNOR_LEAVES, ModBlocks.MARNOR_SAPLING, .05f));
+        addDrop(ModBlocks.INFESTED_MARNOR_LEAVES, leavesDrops(ModBlocks.MARNOR_LEAVES, ModBlocks.MARNOR_SAPLING, .05f));
         addDrop(ModBlocks.MARNOR_STAIRS);
         addDrop(ModBlocks.MARNOR_SLAB, slabDrops(ModBlocks.MARNOR_SLAB));
         addDrop(ModBlocks.MARNOR_BUTTON);
@@ -106,6 +107,11 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CARVED_CRIMSON_PUMPKIN);
         addDrop(ModBlocks.CRIMSON_JACK_O_LANTERN);
+
+        addDrop(ModBlocks.SPOOKY_TORCH);
+        addDrop(ModBlocks.WALL_SPOOKY_TORCH);
+        addDrop(ModBlocks.SPOOKY_LANTERN);
+        addDrop(ModBlocks.SPOOKY_CAMPFIRE, drops(ModBlocks.SPOOKY_CAMPFIRE, Items.ROTTEN_FLESH));
 
         addDrop(ModBlocks.TWINFIRE_BLOOM);
         addDrop(ModBlocks.POTTED_TWINFIRE_BLOOM, pottedPlantDrops(ModBlocks.TWINFIRE_BLOOM));

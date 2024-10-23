@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.custom.*;
 import net.nathan.frights_and_foliage.item.ModItems;
+import net.nathan.frights_and_foliage.particle.ModParticles;
 import net.nathan.frights_and_foliage.util.ModWoodTypes;
 import net.nathan.frights_and_foliage.world.tree.MarnorSaplingGenerator;
 import net.nathan.frights_and_foliage.world.tree.OrangeAseriaSaplingGenerator;
@@ -81,11 +82,11 @@ public class ModBlocks {
     public static final Block ASERIA_SIGN = registerBlockWithoutBlockItem("aseria_sign",
             new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN), ModWoodTypes.ASERIA));
     public static final Block ASERIA_WALL_SIGN = registerBlockWithoutBlockItem("aseria_wall_sign",
-            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN), ModWoodTypes.ASERIA));
+            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).dropsLike(ASERIA_SIGN), ModWoodTypes.ASERIA));
     public static final Block ASERIA_HANGING_SIGN = registerBlockWithoutBlockItem("aseria_hanging_sign",
             new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ASERIA));
     public static final Block ASERIA_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("aseria_wall_hanging_sign",
-            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ASERIA));
+            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN).dropsLike(ASERIA_HANGING_SIGN), ModWoodTypes.ASERIA));
 
     public static final Block ASERIA_SYRUP_LOG = registerBlock("aseria_syrup_log",
             new SyrupLogBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
@@ -118,13 +119,13 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.PURPLE)));
 
     public static final Block MARNOR_SIGN = registerBlockWithoutBlockItem("marnor_sign",
-            new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
+            new ModStandingSignBlock(FabricBlockSettings.copyOf(DARK_OAK_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_WALL_SIGN = registerBlockWithoutBlockItem("marnor_wall_sign",
-            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
+            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WALL_SIGN).dropsLike(MARNOR_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_HANGING_SIGN = registerBlockWithoutBlockItem("marnor_hanging_sign",
-            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
+            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
     public static final Block MARNOR_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("marnor_wall_hanging_sign",
-            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
+            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WALL_HANGING_SIGN).dropsLike(MARNOR_HANGING_SIGN).mapColor(MapColor.PURPLE), ModWoodTypes.MARNOR));
 
     public static final Block MARNOR_LEAVES = registerBlock("marnor_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.PURPLE)));
@@ -221,9 +222,9 @@ public class ModBlocks {
 
 
     public static final Block SPOOKY_TORCH = registerBlockWithoutBlockItem("spooky_torch",
-            new TorchBlock(FabricBlockSettings.copyOf(TORCH), ParticleTypes.SOUL_FIRE_FLAME));
+            new TorchBlock(FabricBlockSettings.copyOf(TORCH), ModParticles.SPOOKY_FIRE_FLAME));
     public static final Block WALL_SPOOKY_TORCH = registerBlockWithoutBlockItem("wall_spooky_torch",
-            new WallTorchBlock(FabricBlockSettings.copyOf(WALL_TORCH), ParticleTypes.SOUL_FIRE_FLAME));
+            new WallTorchBlock(FabricBlockSettings.copyOf(WALL_TORCH), ModParticles.SPOOKY_FIRE_FLAME));
 
     public static final Block SPOOKY_LANTERN = registerBlock("spooky_lantern",
             new LanternBlock(FabricBlockSettings.copyOf(LANTERN)));

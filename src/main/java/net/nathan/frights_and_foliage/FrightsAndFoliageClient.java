@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -70,6 +71,8 @@ public class FrightsAndFoliageClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.RED_ASERIA_PARTICLE, RedAseriaParticles.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.ORANGE_ASERIA_PARTICLE, OrangeAseriaParticles.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.YELLOW_ASERIA_PARTICLE, YellowAseriaParticles.Factory::new);
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.SPOOKY_FIRE_FLAME, FlameParticle.Factory::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_PUMPKIN_STEM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_CRIMSON_PUMPKIN_STEM, RenderLayer.getCutout());

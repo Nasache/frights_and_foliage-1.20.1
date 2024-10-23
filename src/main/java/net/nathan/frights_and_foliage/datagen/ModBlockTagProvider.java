@@ -57,13 +57,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.CRIMSON_JACK_O_LANTERN,
                         ModBlocks.WARPED_PUMPKIN,
                         ModBlocks.CARVED_WARPED_PUMPKIN,
-                        ModBlocks.WARPED_JACK_O_LANTERN);
+                        ModBlocks.WARPED_JACK_O_LANTERN,
+                        ModBlocks.SPOOKY_CAMPFIRE);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.THORNY_COBBLESTONE,
                         ModBlocks.THORNY_COBBLESTONE_STAIRS,
                         ModBlocks.THORNY_COBBLESTONE_SLAB,
-                        ModBlocks.THORNY_COBBLESTONE_WALL);
+                        ModBlocks.THORNY_COBBLESTONE_WALL,
+                        ModBlocks.SPOOKY_LANTERN);
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.ASERIA_PLANKS, ModBlocks.MARNOR_PLANKS);

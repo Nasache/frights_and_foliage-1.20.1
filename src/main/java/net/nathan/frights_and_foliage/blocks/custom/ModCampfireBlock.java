@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CampfireBlock;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -18,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import net.nathan.frights_and_foliage.blocks.entity.ModBlockEntities;
 import net.nathan.frights_and_foliage.blocks.entity.ModCampfireBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -83,5 +86,12 @@ public class ModCampfireBlock extends CampfireBlock {
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new ModCampfireBlockEntity(pos, state);
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return world.isClient ? checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::clientTick)
+                : (state.get(CampfireBlock.LIT) ? checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::litServerTick)
+                : checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::unlitServerTick));
     }
 }

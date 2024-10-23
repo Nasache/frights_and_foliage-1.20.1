@@ -65,6 +65,11 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MARNOR_LEAVES);
                         entries.add(ModBlocks.INFESTED_MARNOR_LEAVES);
 
+                        entries.add(ModBlocks.THORNY_COBBLESTONE);
+                        entries.add(ModBlocks.THORNY_COBBLESTONE_STAIRS);
+                        entries.add(ModBlocks.THORNY_COBBLESTONE_SLAB);
+                        entries.add(ModBlocks.THORNY_COBBLESTONE_WALL);
+
                         entries.add(ModItems.SPOOKY_TORCH);
                         entries.add(ModBlocks.SPOOKY_LANTERN);
                         entries.add(ModBlocks.SPOOKY_CAMPFIRE);
