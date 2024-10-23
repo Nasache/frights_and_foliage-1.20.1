@@ -6,15 +6,13 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.math.Direction;
 import net.nathan.frights_and_foliage.FrightsAndFoliage;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.entity.ModBoats;
 import net.nathan.frights_and_foliage.entity.ModEntities;
-import net.nathan.frights_and_foliage.item.custom.AntlerMealItem;
-import net.nathan.frights_and_foliage.item.custom.SkewerItem;
-import net.nathan.frights_and_foliage.item.custom.SyrupBottleItem;
-import net.nathan.frights_and_foliage.item.custom.VireArrowItem;
+import net.nathan.frights_and_foliage.item.custom.*;
 
 public class ModItems {
     public static final Item ASERIA_SIGN = registerItem("aseria_sign",
@@ -103,7 +101,7 @@ public class ModItems {
             new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.APPLE_CIDER)));
 
     public static final Item STALK_EYE = registerItem("stalk_eye",
-            new Item(new FabricItemSettings()));
+            new StalkEyeItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).food(ModFoodComponents.STALK_EYE)));
 
     public static final Item SPOOKY_TORCH = registerItem("spooky_torch",
             new VerticallyAttachableBlockItem(ModBlocks.SPOOKY_TORCH, ModBlocks.WALL_SPOOKY_TORCH,

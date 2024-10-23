@@ -38,5 +38,12 @@ public class ModFoodComponents {
     public static final FoodComponent BERRY_BLEND = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
     public static final FoodComponent NOX_BERRY_TRAIL_MIX = new FoodComponent.Builder().hunger(1).saturationModifier(1f).build();
 
+    public static final FoodComponent STALK_EYE = new FoodComponent.Builder().hunger(0).saturationModifier(0f).alwaysEdible().snack()
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 1200, 1), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200, 1), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1200, 1), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1200, 1), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 1), 1.0F).build();
+
 
 }

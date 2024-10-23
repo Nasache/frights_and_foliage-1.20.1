@@ -49,6 +49,7 @@ public class FrightsAndFoliage implements ModInitializer {
 
 		ModEventHandler.registerEvents();
 
+
 		ModDispenserBehavior.registerDispenserBehaviors();
 	}
 }
