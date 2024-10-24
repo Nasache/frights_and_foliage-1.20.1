@@ -30,10 +30,6 @@ public class ModRegistries {
         FabricDefaultAttributeRegistry.register(ModEntities.VIRE, VireEntity.createVireAttributes());
     }
 
-    private static void registerArthropods() {
-
-    }
-
     private static void registerFuels() {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
@@ -91,6 +87,11 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.INFESTED_MARNOR_LEAVES, 0.5f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_SAPLING, 0.3f);
 
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.DARKROSE_BUSH, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.AMBERCUP_BUSH, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.TWINFIRE_BLOOM, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.ROTBUD, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.WILD_GAIZE_CROP, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_VINES, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.MARNOR_VINES_PLANT, 0.3f);
 
@@ -108,6 +109,7 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.SAFFROOT, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STUFFED_PUMPKIN, 1f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GAIZE, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GAIZE_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.NOX_BERRIES, 0.3f);
     }
 
