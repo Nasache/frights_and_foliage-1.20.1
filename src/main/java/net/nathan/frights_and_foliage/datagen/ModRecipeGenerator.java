@@ -274,7 +274,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FUMKIN_ANTLER), conditionsFromItem(ModItems.FUMKIN_ANTLER))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPOOKY_TORCH)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPOOKY_TORCH, 4)
                 .pattern("C")
                 .pattern("S")
                 .pattern("R")

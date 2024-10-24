@@ -19,22 +19,19 @@ public class StalkEyeItem extends Item {
     private static final int MAX_USE_TIME = 1;
 
     public StalkEyeItem(Item.Settings settings) {
-        super(settings.maxDamage(3));
+        super(settings);
     }
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         super.finishUsing(stack, world, user);
+        ((PlayerEntity) user).getItemCooldownManager().set(this, 200);
         if (user instanceof ServerPlayerEntity serverPlayerEntity) {
             Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
 
-        if (stack.damage(1, world.random, user instanceof ServerPlayerEntity ? (ServerPlayerEntity) user : null)) {
-            stack.decrement(1);
-        }
-
-        return stack;
+        return stack.isEmpty() ? ItemStack.EMPTY : stack;
     }
 
     @Override

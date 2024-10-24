@@ -101,7 +101,7 @@ public class ModItems {
             new SyrupBottleItem(new FabricItemSettings().food(ModFoodComponents.APPLE_CIDER)));
 
     public static final Item STALK_EYE = registerItem("stalk_eye",
-            new StalkEyeItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).food(ModFoodComponents.STALK_EYE)));
+            new StalkEyeItem(new FabricItemSettings().maxCount(8).rarity(Rarity.RARE).food(ModFoodComponents.STALK_EYE)));
 
     public static final Item SPOOKY_TORCH = registerItem("spooky_torch",
             new VerticallyAttachableBlockItem(ModBlocks.SPOOKY_TORCH, ModBlocks.WALL_SPOOKY_TORCH,
