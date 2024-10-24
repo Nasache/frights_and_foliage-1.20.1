@@ -44,6 +44,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_FLOWER_KEY = registerKey("autumn_flower");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> NOX_BERRY_BUSH_KEY = registerKey("nox_berry_bush_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_GAIZE_KEY = registerKey("wild_gaize_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DARKROSE_BUSH_KEY = registerKey("darkrose_bush_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMBERCUP_BUSH_KEY = registerKey("ambercup_bush_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROTBUD_KEY = registerKey("rotbud_key");
@@ -121,6 +122,10 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
                         (BlockStateProvider.of((BlockState) ModBlocks.NOX_BERRY_BUSH.getDefaultState()
                                 .with(NoxBerryBushBlock.AGE, 3))), List.of(Blocks.GRASS_BLOCK)));
+
+        ConfiguredFeatures.register(context, WILD_GAIZE_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
+                        (BlockStateProvider.of((BlockState) ModBlocks.WILD_GAIZE_CROP.getDefaultState())), List.of(Blocks.GRASS_BLOCK)));
 
         ConfiguredFeatures.register(context, DARKROSE_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig

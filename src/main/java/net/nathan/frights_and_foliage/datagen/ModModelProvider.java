@@ -8,6 +8,7 @@ import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.custom.GaizeCropBlock;
 import net.nathan.frights_and_foliage.blocks.custom.SaffrootCropBlock;
 import net.nathan.frights_and_foliage.item.ModItems;
 
@@ -88,6 +89,10 @@ public class ModModelProvider extends FabricModelProvider {
             return BlockStateVariant.create().put(VariantSettings.MODEL, blockStateModelGenerator.createSubModel(ModBlocks.NOX_BERRY_BUSH, "_stage" + stage, Models.CROSS, TextureMap::cross));
         })));
 
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.GAIZE_CROP).coordinate(BlockStateVariantMap.create(GaizeCropBlock.AGE).register((stage) -> {
+            return BlockStateVariant.create().put(VariantSettings.MODEL, blockStateModelGenerator.createSubModel(ModBlocks.GAIZE_CROP, "_stage" + stage, Models.CROSS, TextureMap::cross));
+        })));
+
         blockStateModelGenerator.registerCrop(ModBlocks.SAFFROOT_CROP, SaffrootCropBlock.AGE, 0, 1, 2, 3);
 
         blockStateModelGenerator.registerDoubleBlock(ModBlocks.WILD_GAIZE_CROP, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -128,6 +133,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAFFROOT_OMELETTE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARCH_SKEWER, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GAIZE_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.GAIZE_FRITTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEEPCORN, Models.GENERATED);

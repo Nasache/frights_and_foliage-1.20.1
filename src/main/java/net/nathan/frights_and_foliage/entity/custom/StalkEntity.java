@@ -2,6 +2,7 @@ package net.nathan.frights_and_foliage.entity.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -158,16 +159,17 @@ public class StalkEntity extends HostileEntity {
 
     public void playAlertSound() {
         if (!this.isHostile) {
-            this.playSound(this.getAlertSound(), 3.0F, 1.0F);
+            this.playSound(this.getAlertSound(), 3.0F, this.getSoundPitch());
             this.lastWarningTime = this.getWorld().getTime();
         }
     }
 
     public void playHostileSound() {
         if (!this.isHostile) {
-            this.playSound(this.getHostileSound(), 3.0F, 1.0F);
+            this.playSound(this.getHostileSound(), 3.0F, this.getSoundPitch());
         }
     }
+
 
     private boolean canPlayWarningScream(long currentTime) {
         return currentTime - lastWarningTime >= WARNING_COOLDOWN_TICKS;

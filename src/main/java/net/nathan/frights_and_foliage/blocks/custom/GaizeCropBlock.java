@@ -13,17 +13,17 @@ import net.minecraft.world.BlockView;
 import net.nathan.frights_and_foliage.item.ModItems;
 
 
-public class SaffrootCropBlock extends CropBlock {
+public class GaizeCropBlock extends CropBlock {
     public static final int MAX_AGE = 3;
     public static final IntProperty AGE = IntProperty.of("age", 0, 3);
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
             Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0),
-            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 6.0, 16.0),
-            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 11.0, 16.0),
-            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0)
+            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 12.0, 16.0),
+            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 12.0, 16.0),
+            Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 12.0, 16.0)
     };
 
-    public SaffrootCropBlock(Settings settings) {
+    public GaizeCropBlock(Settings settings) {
         super(settings);
     }
 
@@ -34,7 +34,7 @@ public class SaffrootCropBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.SAFFROOT;
+        return ModItems.GAIZE_SEEDS;
     }
 
     @Override

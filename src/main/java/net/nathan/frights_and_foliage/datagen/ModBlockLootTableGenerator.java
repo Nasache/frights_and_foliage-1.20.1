@@ -17,6 +17,7 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
+import net.nathan.frights_and_foliage.blocks.custom.GaizeCropBlock;
 import net.nathan.frights_and_foliage.blocks.custom.NoxBerryBushBlock;
 import net.nathan.frights_and_foliage.blocks.custom.SaffrootCropBlock;
 import net.nathan.frights_and_foliage.item.ModItems;
@@ -92,6 +93,10 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         LootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.SAFFROOT_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(SaffrootCropBlock.AGE, 3));
         this.addDrop(ModBlocks.SAFFROOT_CROP, this.cropDrops(ModBlocks.SAFFROOT_CROP, ModItems.SAFFROOT, ModItems.SAFFROOT, builder2));
+
+        LootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.GAIZE_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(GaizeCropBlock.AGE, 3));
+        this.addDrop(ModBlocks.GAIZE_CROP, this.cropDrops(ModBlocks.GAIZE_CROP, ModItems.GAIZE, ModItems.GAIZE_SEEDS, builder3));
 
         addDrop(ModBlocks.WARPED_PUMPKIN_STEM, attachedCropStemDrops(ModBlocks.WARPED_PUMPKIN_STEM,
                 ModItems.WARPED_PUMPKIN_SEEDS));

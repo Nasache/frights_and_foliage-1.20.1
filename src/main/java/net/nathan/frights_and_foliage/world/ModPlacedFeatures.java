@@ -28,6 +28,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AUTUMN_FLOWER_PLACED_KEY = registerKey("autumn_flower_placed");
 
     public static final RegistryKey<PlacedFeature> NOX_BERRY_BUSH_PLACED_KEY = registerKey("nox_berry_placed");
+    public static final RegistryKey<PlacedFeature> WILD_GAIZE_CROP_PLACED_KEY = registerKey("wild_gaize_placed");
     public static final RegistryKey<PlacedFeature> DARKROSE_BUSH_PLACED_KEY = registerKey("darkrose_placed");
     public static final RegistryKey<PlacedFeature> AMBERCUP_BUSH_PLACED_KEY = registerKey("ambercup_placed");
     public static final RegistryKey<PlacedFeature> ROTBUD_PLACED_KEY = registerKey("rotbud_placed");
@@ -90,6 +91,10 @@ public class ModPlacedFeatures {
                         PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
         register(context, TWINFIRE_BLOOM_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TWINFIRE_BLOOM_KEY),
                 new PlacementModifier[]{RarityFilterPlacementModifier.of(20), SquarePlacementModifier.of(),
+                        PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+
+        register(context, WILD_GAIZE_CROP_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GAIZE_KEY),
+                new PlacementModifier[]{RarityFilterPlacementModifier.of(40), SquarePlacementModifier.of(),
                         PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
 
         PlacedFeatures.register(context, PATCH_TALL_GRASS_VIOLET, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TALL_GRASS_KEY),

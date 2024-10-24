@@ -301,6 +301,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.ROTTEN_FLESH), conditionsFromItem(Items.ROTTEN_FLESH))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GAIZE_SEEDS)
+                .input(ModItems.GAIZE)
+                .criterion(hasItem(ModItems.GAIZE), conditionsFromItem(ModItems.GAIZE))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIRE_FEATHER_ARROW)
                 .input(ModItems.VIRE_FEATHER)
                 .input(Items.ARROW)

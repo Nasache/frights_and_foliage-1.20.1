@@ -97,6 +97,7 @@
 
   "block.frights_and_foliage.wild_gaize_crop": "Wild Gaize",
   "item.frights_and_foliage.gaize": "Gaize",
+  "item.frights_and_foliage.gaize_seeds": "Gaize Seeds",
   "item.frights_and_foliage.gaize_bread": "Gaize Bread",
   "item.frights_and_foliage.gaize_fritter": "Gaize Fritter",
   "item.frights_and_foliage.peepcorn": "Peepcorn",
@@ -157,6 +158,9 @@
 
   "biome.frights_and_foliage.autumnal_forest": "Autumnal Forest",
   "biome.frights_and_foliage.violet_bramble": "Violet Bramble",
+
+  "structure.frights_and_foliage.autumn_cottage": "Autumn Cottage",
+  "structure.frights_and_foliage.hedge_maze": "Hedge Maze",
 
 
   "itemgroup.frights_and_foliage": "Frights And Foliage"

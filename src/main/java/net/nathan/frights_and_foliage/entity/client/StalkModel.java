@@ -60,8 +60,6 @@ public class StalkModel<T extends StalkEntity> extends SinglePartEntityModel<T> 
         this.animateMovement(StalkAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
     }
 
-
-
     private void setHeadAngles(StalkEntity entity, float headYaw, float headPitch, float animationProgress) {
             headYaw = MathHelper.clamp(headYaw, -10.0F, 30.0F);
             headPitch = MathHelper.clamp(headPitch, -45.0F, 45.0F);

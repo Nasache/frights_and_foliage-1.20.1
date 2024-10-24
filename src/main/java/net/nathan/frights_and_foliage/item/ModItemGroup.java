@@ -110,6 +110,7 @@ public class ModItemGroup {
                         entries.add(ModItems.STUFFED_PUMPKIN);
 
                         entries.add(ModItems.GAIZE);
+                        entries.add(ModItems.GAIZE_SEEDS);
                         entries.add(ModItems.GAIZE_BREAD);
                         entries.add(ModItems.GAIZE_FRITTER);
                         entries.add(ModItems.PEEPCORN);

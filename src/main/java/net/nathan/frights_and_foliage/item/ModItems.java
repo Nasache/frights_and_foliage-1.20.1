@@ -73,6 +73,8 @@ public class ModItems {
 
     public static final Item GAIZE = registerItem("gaize",
             new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE)));
+    public static final Item GAIZE_SEEDS = registerItem("gaize_seeds",
+            new AliasedBlockItem(ModBlocks.GAIZE_CROP, new FabricItemSettings()));
     public static final Item GAIZE_BREAD = registerItem("gaize_bread",
             new Item(new FabricItemSettings().food(ModFoodComponents.GAIZE_BREAD)));
     public static final Item GAIZE_FRITTER = registerItem("gaize_fritter",

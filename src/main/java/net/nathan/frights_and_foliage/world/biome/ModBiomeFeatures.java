@@ -36,6 +36,7 @@ public class ModBiomeFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MARNOR_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_GRASS_PLAIN);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_TALL_GRASS_VIOLET);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_GAIZE_CROP_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DARKROSE_BUSH_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AMBERCUP_BUSH_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROTBUD_PLACED_KEY);
