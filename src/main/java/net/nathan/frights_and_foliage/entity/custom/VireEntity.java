@@ -62,6 +62,7 @@ public class VireEntity extends AnimalEntity {
         this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.SWEET_BERRIES}), false));
         this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.GLOW_BERRIES}), false));
         this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), false));
+        this.goalSelector.add(2, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), false));
         this.goalSelector.add(3, new FollowParentGoal(this, 1.0));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(5, new FlyOntoTreeGoal(this, 1.0));
@@ -88,7 +89,8 @@ public class VireEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(Items.SWEET_BERRIES) || stack.isOf(Items.GLOW_BERRIES) || stack.isOf(ModItems.NOX_BERRIES);
+        return stack.isOf(Items.SWEET_BERRIES) || stack.isOf(Items.GLOW_BERRIES)
+                || stack.isOf(ModItems.NOX_BERRIES) || stack.isOf(ModItems.GAIZE);
     }
 
 
