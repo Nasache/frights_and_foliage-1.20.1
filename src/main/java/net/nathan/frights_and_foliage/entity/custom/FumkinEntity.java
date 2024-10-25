@@ -57,7 +57,7 @@ public class FumkinEntity extends AnimalEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.0));
-        this.goalSelector.add(3, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{Items.APPLE}), false));
+        this.goalSelector.add(3, new TemptGoal(this, 1.1, Ingredient.ofItems(new ItemConvertible[]{ModItems.SAFFROOT}), false));
         this.goalSelector.add(4, new FollowParentGoal(this, 1.0));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.1));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
@@ -72,7 +72,7 @@ public class FumkinEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(Items.APPLE);
+        return stack.isOf(ModItems.SAFFROOT);
     }
 
     public static DefaultAttributeContainer.Builder createFumkinAttributes() {
