@@ -21,7 +21,6 @@ public class ModBiomeFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_ROCK_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_PUMPKIN_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_FLOWER_PLACED_KEY);
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.TWINFIRE_BLOOM_PLACED_KEY);
     }
 
     public static void addAutumnalAnimals(SpawnSettings.Builder builder) {
@@ -38,7 +37,6 @@ public class ModBiomeFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_TALL_GRASS_VIOLET);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_GAIZE_CROP_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DARKROSE_BUSH_PLACED_KEY);
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AMBERCUP_BUSH_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROTBUD_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.NOX_BERRY_BUSH_PLACED_KEY);
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.VIOLET_ROCK_PLACED_KEY);

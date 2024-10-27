@@ -214,14 +214,14 @@ public class ModBlocks {
             new TallFlowerBlock(FabricBlockSettings.copyOf(ROSE_BUSH).mapColor(MapColor.ORANGE)));
 
     public static final Block ROTBUD = registerBlock("rotbud",
-            new FlowerBlock(StatusEffects.POISON, 15, FabricBlockSettings.copyOf(PEONY).mapColor(MapColor.LIME)));
+            new FlowerBlock(StatusEffects.POISON, 15, FabricBlockSettings.copyOf(LILY_OF_THE_VALLEY).mapColor(MapColor.LIME)));
     public static final Block POTTED_ROTBUD = registerBlock("potted_rotbud",
-            new FlowerPotBlock(ModBlocks.ROTBUD, FabricBlockSettings.copyOf(POTTED_ORANGE_TULIP).mapColor(MapColor.LIME)));
+            new FlowerPotBlock(ModBlocks.ROTBUD, FabricBlockSettings.copyOf(POTTED_LILY_OF_THE_VALLEY).mapColor(MapColor.LIME)));
 
     public static final Block TWINFIRE_BLOOM = registerBlock("twinfire_bloom",
-            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 15, FabricBlockSettings.copyOf(PEONY).mapColor(MapColor.ORANGE)));
+            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 15, FabricBlockSettings.copyOf(LILY_OF_THE_VALLEY).mapColor(MapColor.ORANGE)));
     public static final Block POTTED_TWINFIRE_BLOOM = registerBlock("potted_twinfire_bloom",
-            new FlowerPotBlock(ModBlocks.TWINFIRE_BLOOM, FabricBlockSettings.copyOf(POTTED_ORANGE_TULIP).mapColor(MapColor.ORANGE)));
+            new FlowerPotBlock(ModBlocks.TWINFIRE_BLOOM, FabricBlockSettings.copyOf(POTTED_LILY_OF_THE_VALLEY).mapColor(MapColor.ORANGE)));
 
 
     public static final Block SPOOKY_TORCH = registerBlockWithoutBlockItem("spooky_torch",

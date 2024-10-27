@@ -312,7 +312,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.ARROW), conditionsFromItem(Items.ARROW))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.MAGENTA_DYE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.MAGENTA_DYE, 2)
                 .input(ModBlocks.DARKROSE_BUSH)
                 .criterion(hasItem(ModBlocks.DARKROSE_BUSH), conditionsFromItem(ModBlocks.DARKROSE_BUSH))
                 .offerTo(exporter);
@@ -320,11 +320,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModBlocks.ROTBUD)
                 .criterion(hasItem(ModBlocks.ROTBUD), conditionsFromItem(ModBlocks.ROTBUD))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.YELLOW_DYE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.YELLOW_DYE, 2)
                 .input(ModBlocks.TWINFIRE_BLOOM)
                 .criterion(hasItem(ModBlocks.TWINFIRE_BLOOM), conditionsFromItem(ModBlocks.TWINFIRE_BLOOM))
                 .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.ORANGE_DYE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.ORANGE_DYE, 2)
                 .input(ModBlocks.AMBERCUP_BUSH)
                 .criterion(hasItem(ModBlocks.AMBERCUP_BUSH), conditionsFromItem(ModBlocks.AMBERCUP_BUSH))
                 .offerTo(exporter);
