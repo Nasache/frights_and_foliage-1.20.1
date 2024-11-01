@@ -225,9 +225,13 @@ public class ModBlocks {
 
 
     public static final Block SPOOKY_TORCH = registerBlockWithoutBlockItem("spooky_torch",
-            new TorchBlock(FabricBlockSettings.copyOf(TORCH), ModParticles.SPOOKY_FIRE_FLAME));
+            new TorchBlock(FabricBlockSettings.create().noCollision().breakInstantly().luminance((state) -> {
+                return 10;
+            }).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ModParticles.SPOOKY_FIRE_FLAME));
     public static final Block WALL_SPOOKY_TORCH = registerBlockWithoutBlockItem("wall_spooky_torch",
-            new WallTorchBlock(FabricBlockSettings.copyOf(WALL_TORCH), ModParticles.SPOOKY_FIRE_FLAME));
+            new WallTorchBlock(FabricBlockSettings.create().noCollision().breakInstantly().luminance((state) -> {
+                return 10;
+            }).sounds(BlockSoundGroup.WOOD).dropsLike(SPOOKY_TORCH).pistonBehavior(PistonBehavior.DESTROY), ModParticles.SPOOKY_FIRE_FLAME));
 
     public static final Block SPOOKY_LANTERN = registerBlock("spooky_lantern",
             new LanternBlock(FabricBlockSettings.copyOf(LANTERN)));
